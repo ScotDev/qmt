@@ -1,0 +1,54 @@
+$grid-item-height: 250px;
+$grid-item-width: 250px;
+
+.instagram-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: auto auto auto;
+  width: 750px;
+
+  &-item {
+    max-height: $grid-item-height;
+    max-width: $grid-item-width;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+
+    transition: filter 0.3s ease;
+    -webkit-transition: filter 0.3s ease;
+    -moz-transition: filter 0.3s ease;
+    -ms-transition: filter 0.3s ease;
+    -o-transition: filter 0.3s ease;
+
+    &:hover,
+    &:focus {
+      filter: brightness(60%);
+      -webkit-filter: brightness(60%);
+    }
+    // &:hover + &-text,
+    // &:focus + &-text {
+    //   filter: brightness(100%);
+    //   -webkit-filter: brightness(100%);
+    // }
+
+    &-text {
+      height: calc(#{$grid-item-height} - 10%);
+      width: calc(#{$grid-item-width} - 10%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
+
+    img {
+      height: $grid-item-height;
+      width: $grid-item-width;
+    }
+  }
+}
