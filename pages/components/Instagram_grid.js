@@ -1,7 +1,7 @@
 // import Link from 'next/link'
 
 export default function Instagram_grid() {
-    return (<section className="instagram">
+    return (<div className="instagram">
         <div className="instagram-grid">
             <a href="https://www.instagram.com/p/CC6kM18KGf8/" target="_blank">
                 <div className="instagram-grid-item">
@@ -50,7 +50,7 @@ export default function Instagram_grid() {
 
         </div>
         <button className="btn-primary"><a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile">Show more</a></button>
-    </section>
+    </div>
     )
 }
 

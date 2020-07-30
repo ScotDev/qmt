@@ -1,7 +1,7 @@
-$grid-item-height: 300px;
-$grid-item-width: 300px;
+$grid-item-height: 350px;
+$grid-item-width: 350px;
 
-.instagram {
+.review {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,14 +12,13 @@ $grid-item-width: 300px;
   &-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: auto auto auto;
-    // Width equal to 3x 300px + gap of 1.5rem x2
-    // width: 898px;
-    margin-bottom: 2rem;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    margin: 2rem 0;
 
     &-item {
-      max-height: $grid-item-height;
-      max-width: $grid-item-width;
+      height: $grid-item-height;
+      width: $grid-item-width;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -37,17 +36,20 @@ $grid-item-width: 300px;
         filter: brightness(60%);
         -webkit-filter: brightness(60%);
       }
-      // &:hover + &-text,
-      // &:focus + &-text {
-      //   filter: brightness(100%);
-      //   -webkit-filter: brightness(100%);
-      // }
 
       &-text {
-        height: calc(#{$grid-item-height} - 10%);
-        width: calc(#{$grid-item-width} - 10%);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+        // height: 30%;
+        width: 100%;
+        padding: 0.75rem;
+        background: rgba(transparent, $alpha: 0.6);
+
         position: absolute;
-        top: 50%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
@@ -55,16 +57,25 @@ $grid-item-width: 300px;
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
 
-        text-overflow: ellipsis;
+        &-title {
+          font-size: 2rem;
+          font-weight: 500;
+          text-overflow: ellipsis;
 
-        /* Required for text-overflow to do anything */
-        white-space: pre-wrap;
-        overflow: hidden;
+          /* Required for text-overflow to do anything */
+          white-space: pre-wrap;
+          overflow: hidden;
+        }
+
+        &-date {
+          font-size: 1.5rem;
+          color: $primary-accent;
+        }
       }
 
       img {
-        height: $grid-item-height;
-        width: $grid-item-width;
+        height: 100%;
+        width: 100%;
       }
     }
   }
