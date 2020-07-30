@@ -1,26 +1,22 @@
 .btn {
-  // border: 2px solid;
   border: none;
   outline: 0;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: $standard-text;
+  font-weight: $medium-text-weight;
   padding: 0 2rem;
   height: 2.5rem;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-
-  //Change below
-  // box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+  border-radius: $btn-radius;
+  -webkit-border-radius: $btn-radius;
+  -moz-border-radius: $btn-radius;
+  -ms-border-radius: $btn-radius;
+  -o-border-radius: $btn-radius;
 }
 
 .btn-primary {
   @extend .btn;
-  color: #fff;
+  color: $text;
   background-color: $primary-accent;
-  font-weight: 500;
   transition: transform 0.2s ease;
   -webkit-transition: transform 0.2s ease;
   -moz-transition: transform 0.2s ease;
@@ -30,7 +26,7 @@
   &:hover,
   &:focus {
     color: $primary-accent;
-    background-color: #fff;
+    background-color: $text;
     transform: translateY(-3px);
     -webkit-transform: translateY(-3px);
     -moz-transform: translateY(-3px);

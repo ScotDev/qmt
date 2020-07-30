@@ -49,10 +49,19 @@ ul {
 }
 
 .section-title {
-  font-size: 2rem;
-  border-bottom: 2px solid;
+  font-size: $giant-text;
+  font-weight: $giant-text-weight;
+  border-bottom: 3px solid;
   align-self: flex-start;
   margin-bottom: 3rem;
-  color: $primary-accent;
+  color: $secondary-accent;
   text-transform: uppercase;
+}
+
+.section-description {
+  font-size: $medium-text;
+  font-weight: $medium-text-weight;
+  align-self: center;
+  margin-bottom: 3rem;
+  color: $text;
 }

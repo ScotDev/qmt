@@ -4,4 +4,33 @@
 $primary-bg: #111111;
 $text: #fff;
 
-$primary-accent: #0070f3;
+$primary-accent: #00a6ff;
+$secondary-accent: #f27ea9;
+
+// Border-radius
+$card-radius: 16px;
+$btn-radius: 7px;
+
+// Font-size
+$small-text: 0.75rem;
+$standard-text: 1rem;
+$medium-text: 1.5rem;
+$large-text: 1.75rem;
+$giant-text: 5rem;
+
+// Font-weight
+$small-text-weight: 400;
+$standard-text-weight: 400;
+$medium-text-weight: 500;
+$large-text-weight: 600;
+$giant-text-weight: 700;
+
+// Animations
+@keyframes hoverReveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

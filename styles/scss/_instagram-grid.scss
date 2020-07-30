@@ -13,39 +13,26 @@ $grid-item-width: 300px;
     display: grid;
     gap: 1.5rem;
     grid-template-columns: auto auto auto;
-    // Width equal to 3x 300px + gap of 1.5rem x2
-    // width: 898px;
     margin-bottom: 2rem;
 
     &-item {
-      max-height: $grid-item-height;
-      max-width: $grid-item-width;
+      height: $grid-item-height;
+      width: $grid-item-width;
       display: flex;
       flex-direction: column;
       text-align: center;
       justify-content: center;
       position: relative;
+      border-radius: $card-radius;
+      -webkit-border-radius: $card-radius;
+      -moz-border-radius: $card-radius;
+      -ms-border-radius: $card-radius;
+      -o-border-radius: $card-radius;
 
-      transition: filter 0.3s ease;
-      -webkit-transition: filter 0.3s ease;
-      -moz-transition: filter 0.3s ease;
-      -ms-transition: filter 0.3s ease;
-      -o-transition: filter 0.3s ease;
-
-      &:hover,
-      &:focus {
-        filter: brightness(60%);
-        -webkit-filter: brightness(60%);
-      }
-      // &:hover + &-text,
-      // &:focus + &-text {
-      //   filter: brightness(100%);
-      //   -webkit-filter: brightness(100%);
-      // }
-
-      &-text {
-        height: calc(#{$grid-item-height} - 10%);
-        width: calc(#{$grid-item-width} - 10%);
+      &-overlay {
+        height: 100%;
+        width: 100%;
+        padding: 0.2rem 0.75rem 0.3rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -54,17 +41,39 @@ $grid-item-width: 300px;
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
+        background-color: rgba(transparent, 0.7);
 
-        text-overflow: ellipsis;
+        border-radius: $card-radius;
+        -webkit-border-radius: $card-radius;
+        -moz-border-radius: $card-radius;
+        -ms-border-radius: $card-radius;
+        -o-border-radius: $card-radius;
 
-        /* Required for text-overflow to do anything */
-        white-space: pre-wrap;
-        overflow: hidden;
+        opacity: 0;
+
+        &:hover,
+        &:focus {
+          animation-name: hoverReveal;
+          animation-duration: 0.2s;
+          animation-fill-mode: forwards;
+        }
+
+        &-text {
+          color: $text;
+          overflow: hidden;
+          height: calc(#{$grid-item-height} - 7.5%);
+          // max-height: 20ch;
+        }
       }
 
       img {
         height: $grid-item-height;
         width: $grid-item-width;
+        border-radius: $card-radius;
+        -webkit-border-radius: $card-radius;
+        -moz-border-radius: $card-radius;
+        -ms-border-radius: $card-radius;
+        -o-border-radius: $card-radius;
       }
     }
   }
