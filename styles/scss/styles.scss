@@ -5,6 +5,7 @@
 @import '_header';
 @import '_social';
 @import '_instagram-grid';
+@import '_spotify';
 
 $primary-bg: #111111;
 $text: #fff;
@@ -44,8 +45,8 @@ ul {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .btn {
@@ -70,6 +71,7 @@ ul {
   @extend .btn;
   color: #fff;
   background-color: #0070f3;
+  font-weight: 500;
   transition: transform 0.2s ease;
   -webkit-transition: transform 0.2s ease;
   -moz-transition: transform 0.2s ease;

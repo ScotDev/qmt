@@ -1,7 +1,9 @@
 import Head from 'next/head'
 
-import Instagram from './components/Instagram_grid';
 import Header from './components/Header';
+import Instagram from './components/Instagram_grid';
+import Spotify from './components/Spotify';
+import Twitter from './components/Twitter';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       </Head>
       <Header></Header>
       <Instagram></Instagram>
+      <Spotify></Spotify>
+      <Twitter></Twitter>
     </div>
   )
 }
