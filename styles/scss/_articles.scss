@@ -1,0 +1,102 @@
+$card-height: 350px;
+$card-width: 350px;
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  width: 100%;
+
+  &-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    margin: 2rem 0;
+
+    &-card {
+      height: $card-height;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 6px 40px 0 rgba($secondary-accent, 0.2);
+      border-radius: $card-radius;
+      -webkit-border-radius: $card-radius;
+      -moz-border-radius: $card-radius;
+      -ms-border-radius: $card-radius;
+      -o-border-radius: $card-radius;
+      transition: transform 0.2s ease;
+      -webkit-transition: transform 0.2s ease;
+      -moz-transition: transform 0.2s ease;
+      -ms-transition: transform 0.2s ease;
+      -o-transition: transform 0.2s ease;
+
+      &:first-child {
+        grid-column: auto / span 2;
+        grid-column-start: auto;
+        grid-column-end: span 2;
+      }
+
+      &:hover,
+      &:focus {
+        transform: translateY(-4px);
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px);
+        -ms-transform: translateY(-4px);
+        -o-transform: translateY(-4px);
+        box-shadow: 0 8px 50px 0 rgba($secondary-accent, 0.2);
+        cursor: pointer;
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+
+        border-bottom-left-radius: $card-radius;
+        border-bottom-right-radius: $card-radius;
+        padding: 1rem 1.5rem;
+
+        &-subtitle {
+          font-size: $standard-text;
+          font-weight: $standard-text-weight;
+          color: $secondary-accent;
+          margin: 0 0 0.5rem 0;
+        }
+
+        &-title {
+          font-size: $large-text;
+          font-weight: $large-text-weight;
+          color: $primary-accent;
+          margin: 0 0 0.4rem 0;
+        }
+
+        &-date {
+          font-size: $small-text;
+          font-weight: $small-text-weight;
+          color: $text;
+        }
+
+        &-description {
+          font-size: $standard-text;
+          font-weight: $standard-text-weight;
+          color: $text;
+
+          // width: $card-width;
+          // overflow: hidden;
+          // display: -webkit-box;
+          // -webkit-line-clamp: 3;
+          // -webkit-box-orient: vertical;
+
+          // text-overflow: ellipsis;
+          // // white-space: pre-line;
+          // // max-width: $card-width;
+          // // height: calc(#{$card-height} - 65%);
+        }
+      }
+    }
+  }
+}

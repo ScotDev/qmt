@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import '../styles/styles.min.css'
 
+
 import Navbar from './components/Navbar'
 import Social from './components/Social'
 
