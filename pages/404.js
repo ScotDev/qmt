@@ -11,7 +11,7 @@ export default function Custom404() {
             <div className="not-found">
                 <h1>Page not found</h1>
                 <Link href="/">
-                    <a alt="Return to homepage">Go Back <i class="las la-arrow-right"></i></a>
+                    <a alt="Return to homepage">Go Back <i className="las la-arrow-right"></i></a>
                 </Link>
             </div>
         </>
