@@ -18,7 +18,7 @@ $card-width: 350px;
 
     &-card {
       height: $card-height;
-      // width: $card-width;
+      //width: $card-width;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -28,6 +28,11 @@ $card-width: 350px;
       -moz-border-radius: $card-radius;
       -ms-border-radius: $card-radius;
       -o-border-radius: $card-radius;
+      transition: transform 0.2s ease;
+      -webkit-transition: transform 0.2s ease;
+      -moz-transition: transform 0.2s ease;
+      -ms-transition: transform 0.2s ease;
+      -o-transition: transform 0.2s ease;
 
       &:first-child {
         grid-column: auto / span 2;
@@ -42,9 +47,10 @@ $card-width: 350px;
         -moz-transform: translateY(-4px);
         -ms-transform: translateY(-4px);
         -o-transform: translateY(-4px);
-        box-shadow: 0 6px 50px 0 rgba($secondary-accent, 0.2);
+        box-shadow: 0 8px 50px 0 rgba($secondary-accent, 0.2);
         cursor: pointer;
       }
+
       img {
         height: calc(#{$card-height} - 30%);
         width: 100%;
