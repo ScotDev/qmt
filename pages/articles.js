@@ -7,14 +7,12 @@ export default function articles() {
             <title>thequarantinemixtape | Articles</title>
         </Head>
 
-
         <section className="article">
             <h1 className="section-title">Articles</h1>
 
 
             <div className="article-grid">
                 <div className="article-grid-card">
-                    {/* <img src="/images/emily-rudolph-I-oARMjzXow-unsplash.jpg" className="article-img"></img> */}
                     <div className="article-grid-card-text">
 
                         <p className="article-grid-card-text-title">Women and Children First</p>
