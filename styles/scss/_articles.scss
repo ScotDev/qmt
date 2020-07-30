@@ -34,9 +34,9 @@ $card-width: 350px;
       -o-transition: transform 0.2s ease;
 
       &:first-child {
-        // grid-column: 1 / span 2;
-        grid-column-start: 1;
-        grid-column-end: span 2;
+        grid-column: 1 / span 2;
+        // grid-column-start: 1;
+        // grid-column-end: span 2;
       }
 
       &:hover,
