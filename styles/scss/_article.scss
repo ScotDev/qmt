@@ -1,0 +1,78 @@
+$post-text-width: 55%;
+
+.article-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   justify-content: space-evenly;
+  margin-bottom: 3rem;
+  width: 75%;
+  flex-grow: 2;
+
+  &-title {
+    font-size: $giant-text;
+    font-weight: $giant-text-weight;
+    color: $primary-accent;
+    border-bottom: 2px solid $primary-accent;
+    max-width: $post-text-width;
+    text-align: center;
+  }
+  &-description {
+    font-size: $medium-text;
+    font-weight: $medium-text-weight;
+    margin-bottom: 3rem;
+    max-width: $post-text-width;
+    text-align: center;
+  }
+  &-author-chip {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: auto;
+    margin-bottom: 4rem;
+    &-icon {
+      height: 3.75rem;
+      width: 3.75rem;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      margin-right: 1.25rem;
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-name {
+        font-size: $small-text;
+        font-weight: $giant-text-weight;
+        margin: 0;
+        padding: 0;
+      }
+      &-date {
+        font-size: $small-text;
+        font-weight: $small-text-weight;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &-main-img {
+    width: 75%;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    margin-bottom: 4rem;
+  }
+  &-main-text {
+    font-size: $standard-text;
+    font-weight: $standard-text-weight;
+    max-width: $post-text-width;
+    line-height: 1.7;
+  }
+}

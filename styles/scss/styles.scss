@@ -7,6 +7,7 @@
 @import '_btn';
 @import '_reviews';
 @import '_articles';
+@import '_article';
 
 * {
   box-sizing: border-box;
@@ -40,8 +41,8 @@ ul {
   margin-top: 1rem;
   a {
     color: $text;
-    font-size: $standard-text;
-    font-weight: $standard-text-weight;
+    font-size: $small-text;
+    font-weight: $small-text-weight;
     &:hover,
     &:focus {
       color: $secondary-accent;
