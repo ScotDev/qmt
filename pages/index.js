@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 import Header from './components/Header';
 import Instagram from './components/Instagram_grid';

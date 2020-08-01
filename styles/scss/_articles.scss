@@ -35,6 +35,7 @@ $card-width: 350px;
 
       &:first-child {
         grid-column: 1 / span 2;
+        // For some reason the below lines break the next build, bug reported on GitHub by someone else
         // grid-column-start: 1;
         // grid-column-end: span 2;
       }
