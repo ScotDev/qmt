@@ -8,6 +8,7 @@ $card-width: 350px;
   justify-content: center;
   margin-bottom: 3rem;
   width: 100%;
+  flex-grow: 2;
 
   &-grid {
     display: grid;
@@ -70,7 +71,7 @@ $card-width: 350px;
         border-bottom-right-radius: $card-radius;
         padding: 1rem 1.5rem;
         background: rgba(transparent, 0.7);
-        height: calc(#{$card-height} - 70%);
+        // height: calc(#{$card-height} - 70%);
 
         &-subtitle {
           font-size: $standard-text;

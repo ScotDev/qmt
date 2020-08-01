@@ -1,10 +1,10 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import '../styles/styles.min.css'
+import '../styles/styles.min.css';
 
-
-import Navbar from './components/Navbar'
-import Social from './components/Social'
+import Navbar from './components/Navbar';
+import Social from './components/Social';
+import Credits from './components/Credits';
 
 export default function MyApp({ Component, pageProps }) {
   return <>
@@ -16,6 +16,7 @@ export default function MyApp({ Component, pageProps }) {
     <Social></Social>
     <div className="container">
       <Component {...pageProps} />
+      <Credits></Credits>
     </div>
   </>
 }

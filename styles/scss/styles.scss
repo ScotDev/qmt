@@ -35,8 +35,28 @@ ul {
   list-style-type: none;
 }
 
+.credits {
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  a {
+    color: $text;
+    font-size: $standard-text;
+    font-weight: $standard-text-weight;
+    &:hover,
+    &:focus {
+      color: $secondary-accent;
+      border-bottom: 1px solid $secondary-accent;
+    }
+  }
+}
+
 .not-found {
   margin-top: 7rem;
+  flex-grow: 2;
+}
+
+.about {
+  flex-grow: 2;
 }
 
 // Move util classes to separate file
@@ -44,7 +64,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: 100vh;
   padding: 0 15rem;
 }
@@ -65,4 +85,12 @@ ul {
   align-self: center;
   margin-bottom: 3rem;
   color: $text;
+}
+
+.error {
+  &-title {
+    font-size: $large-text;
+    font-weight: $large-text-weight;
+    color: $text;
+  }
 }
