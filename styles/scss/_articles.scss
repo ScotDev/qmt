@@ -13,7 +13,8 @@ $card-width: 350px;
   &-grid {
     display: grid;
     gap: 1.25rem;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     width: 100%;
     margin: 2rem 0;
 
@@ -35,6 +36,8 @@ $card-width: 350px;
       -ms-transition: transform 0.2s ease;
       -o-transition: transform 0.2s ease;
       overflow: hidden;
+
+      background: rgba(transparent, 0.7);
 
       &:first-child {
         grid-column: 1 / span 2;
