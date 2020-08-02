@@ -1,9 +1,14 @@
 import React from 'react';
-
 import Moment from 'react-moment';
 
-export default function Article_post({ data, API_URL }) {
-    const { API_URL } = process.env;
+import Error from '../components/Error'
+
+export default function Article_post({ data }) {
+    // const { API_URL } = process.env;
+    if (!data) {
+        return <Error statusCode={404}></Error>
+    }
+
     return (
         <div className="article-post" key={data.id}>
             <h1 className="article-post-title">{data.title}</h1>
