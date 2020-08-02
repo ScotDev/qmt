@@ -53,6 +53,7 @@ ul {
 
 .page-intro {
   flex-grow: 2;
+  max-width: 95%;
 }
 
 // Move util classes to separate file
@@ -63,6 +64,7 @@ ul {
   justify-content: space-between;
   min-height: 100vh;
   padding: 0 15rem;
+  max-width: 100%;
 }
 
 .section-title {
@@ -116,6 +118,9 @@ ul {
 }
 
 @media only screen and (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
   .container {
     padding: 0 1rem;
   }
