@@ -45,33 +45,17 @@ export default function reviews() {
                 <div className="review-grid-card">
                     <img src="/images/Childish_Gambino_-_Awaken,_My_Love!.png" className="review-grid-card-img"></img>
                     <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Childish Gambino</p>
-                        <p className="review-grid-card-text-title">Awaken, My Love!</p>
-                        <span className="review-grid-card-text-date">11 July, 2020</span>
+                        <p className="review-grid-card-text-subtitle">Arctic Monkeys</p>
+                        <p className="review-grid-card-text-title">Humbug </p>
+                        <span className="review-grid-card-text-date">19 August, 2009</span>
                     </div>
                 </div>
                 <div className="review-grid-card">
                     <img src="/images/Childish_Gambino_-_Awaken,_My_Love!.png" className="review-grid-card-img"></img>
                     <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Childish Gambino</p>
-                        <p className="review-grid-card-text-title">Awaken, My Love!</p>
-                        <span className="review-grid-card-text-date">11 July, 2020</span>
-                    </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/Childish_Gambino_-_Awaken,_My_Love!.png" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Childish Gambino</p>
-                        <p className="review-grid-card-text-title">Awaken, My Love!</p>
-                        <span className="review-grid-card-text-date">11 July, 2020</span>
-                    </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/Childish_Gambino_-_Awaken,_My_Love!.png" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Childish Gambino</p>
-                        <p className="review-grid-card-text-title">Awaken, My Love!</p>
-                        <span className="review-grid-card-text-date">11 July, 2020</span>
+                        <p className="review-grid-card-text-subtitle">Dr. Dre</p>
+                        <p className="review-grid-card-text-title">The Chronic</p>
+                        <span className="review-grid-card-text-date">15 December, 1992</span>
                     </div>
                 </div>
                 <div className="review-grid-card">
