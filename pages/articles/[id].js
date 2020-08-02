@@ -26,10 +26,9 @@ export default function Article({ data }) {
 
 
 export async function getServerSideProps(context) {
-    const { id } = context.query;
-    const { API_URL } = process.env;
-
     try {
+        const { id } = context.query;
+        const { API_URL } = process.env;
         const res = await axios.get(`${API_URL}/articles/${id}`);
         const data = res.data;
         return {

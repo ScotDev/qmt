@@ -44,9 +44,8 @@ export default function articles({ articles }) {
 
 
 export async function getServerSideProps() {
-    const { API_URL } = process.env;
-
     try {
+        const { API_URL } = process.env;
         const res = await axios.get(`${API_URL}/articles`)
         const data = res.data;
 
