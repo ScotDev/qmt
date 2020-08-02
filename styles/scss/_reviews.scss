@@ -11,7 +11,7 @@ $card-img-height: 300px;
 
   &-grid {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     width: 100%;
@@ -24,7 +24,7 @@ $card-img-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      box-shadow: 0 6px 40px 0 rgba($secondary-accent, 0.2);
+      box-shadow: 0 0 40px 2px rgba($primary-accent, 0.15);
       border-radius: $card-radius;
       -webkit-border-radius: $card-radius;
       -moz-border-radius: $card-radius;
@@ -52,7 +52,7 @@ $card-img-height: 300px;
         -moz-transform: translateY(-4px);
         -ms-transform: translateY(-4px);
         -o-transform: translateY(-4px);
-        box-shadow: 0 8px 50px 0 rgba($secondary-accent, 0.2);
+        box-shadow: 0 0 50px 3px rgba($primary-accent, 0.2);
         cursor: pointer;
       }
 
