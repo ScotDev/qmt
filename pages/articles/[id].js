@@ -10,15 +10,16 @@ import Article_post from '../components/Article_post';
 
 export default function Article({ data }) {
 
-    const { API_URL } = process.env;
+    if (!data) {
+        return <Error statusCode={404}></Error>
+    }
+
 
     return (<>
         <Head>
             <title>thequarantinemixtape | Article</title>
         </Head>
-
-        {data ? <Article_post data={data} API_URL={API_URL}></Article_post> : <Error statusCode={404}></Error>}
-
+        <Article_post data={data} ></Article_post>
     </>
     )
 }

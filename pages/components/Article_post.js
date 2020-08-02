@@ -3,6 +3,7 @@ import React from 'react';
 import Moment from 'react-moment';
 
 export default function Article_post({ data, API_URL }) {
+    const { API_URL } = process.env;
     return (
         <div className="article-post" key={data.id}>
             <h1 className="article-post-title">{data.title}</h1>
