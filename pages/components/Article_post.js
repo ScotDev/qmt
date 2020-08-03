@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import Spinner from './Spinner';
 
 const DynamicImg = dynamic(
-    () => import('../components/Img'),
+    () => import('./Img'),
     { ssr: false, loading: () => <Spinner></Spinner> }
 )
 
