@@ -9,13 +9,11 @@ const { publicRuntimeConfig } = getConfig()
 
 export default function Img({ imgPath, imgClass, imgAlt }) {
 
-    try {
-        return (
-            <img src={`${publicRuntimeConfig.API_URL}${imgPath}`} className={imgClass} alt={imgAlt}>
-            </img>
-        )
-    } catch (error) {
-        console.log(error)
-    }
+
+    return (
+        <img src={publicRuntimeConfig.API_URL + imgPath} className={imgClass} alt={imgAlt}>
+        </img>
+    )
+
 
 }
