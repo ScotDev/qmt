@@ -6,13 +6,13 @@ import dynamic from 'next/dynamic';
 
 import Spinner from './Spinner';
 
-const DynamicImg = dynamic(
-    () => import('./Img'),
-    { ssr: false, loading: () => <Spinner></Spinner> }
-)
+// const DynamicImg = dynamic(
+//     () => import('./Img'),
+//     { ssr: false, loading: () => <Spinner></Spinner> }
+// )
 
 import Error from './Error'
-// import Img from '../components/Img'
+import Img from '../components/Img'
 
 export default function Article_post({ data }) {
 
@@ -78,7 +78,7 @@ export default function Article_post({ data }) {
                     <p className="article-post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>
                 </div>
             </div>
-            {/* <Img imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></Img> */}
+            <Img imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></Img>
             <DynamicImg imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></DynamicImg>
             <p className="article-post-main-text">{data.text}</p>
         </div>
