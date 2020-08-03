@@ -12,7 +12,7 @@ const DynamicImg = dynamic(
 )
 
 import Error from './Error'
-import Img from '../components/Img'
+// import Img from '../components/Img'
 
 export default function Article_post({ data }) {
 
@@ -59,7 +59,7 @@ export default function Article_post({ data }) {
 
     useEffect(() => {
         getWordCount()
-        pageLoadDelay()
+        // pageLoadDelay()
     }, [readTimeEstimate])
 
     if (!data) {
