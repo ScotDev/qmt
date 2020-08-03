@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
+import NProgress from 'nprogress';
 
-import dynamic from 'next/dynamic';
 
 import Spinner from './Spinner';
 
-// const DynamicImg = dynamic(
-//     () => import('../components/Img'),
-//     { loading: () => <Spinner></Spinner> }
-// )
-
-import Error from '../components/Error'
+import Error from './Error'
 import Img from '../components/Img'
 
 export default function Article_post({ data }) {
 
     const imgPath = data.main_img.url;
     const imgAlt = "article header picture"
-
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState(data.text)
     const [readTimeEstimate, setreadTimeEstimate] = useState(false)
+
+    // const [loading, setloading] = useState(true)
 
     const getWordCount = () => {
         const avgWordsPerMinute = 265;
@@ -46,9 +42,18 @@ export default function Article_post({ data }) {
         console.log(totalWordCount)
     }
 
+    // const pageLoadDelay = () => {
+    //     NProgress.start()
+    //     const delay = setTimeout(() => {
+    //         // setloading(false)
+    //         NProgress.done()
+    //     }, 2000)
+    //     return () => clearTimeout(delay)
+    // }
+
     useEffect(() => {
         getWordCount()
-        console.log(readTimeEstimate)
+        // pageLoadDelay()
     }, [readTimeEstimate])
 
     if (!data) {
@@ -68,7 +73,6 @@ export default function Article_post({ data }) {
                 </div>
             </div>
             <Img imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></Img>
-            {/* <DynamicImg imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt} /> */}
             <p className="article-post-main-text">{data.text}</p>
         </div>
     )
