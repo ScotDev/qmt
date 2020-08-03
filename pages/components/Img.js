@@ -11,7 +11,7 @@ export default function Img({ imgPath, imgClass, imgAlt }) {
 
 
     return (
-        <img src={publicRuntimeConfig.API_URL + imgPath} className={imgClass} alt={imgAlt}>
+        <img src={`${publicRuntimeConfig.API_URL}${imgPath}`} className={imgClass} alt={imgAlt}>
         </img>
     )
 

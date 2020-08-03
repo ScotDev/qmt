@@ -11,11 +11,10 @@ import Moment from 'react-moment';
 // )
 
 import Error from './Error'
-import Img from '../components/Img'
+import Img from './Img'
 
 export default function Article_post({ data }) {
 
-    const imgPath = data.main_img.url;
     const imgAlt = "article header picture"
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState(data.text)
@@ -63,7 +62,7 @@ export default function Article_post({ data }) {
                     <p className="article-post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>
                 </div>
             </div>
-            <Img imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></Img>
+            <Img imgPath={data.main_img.url} imgClass={"article-post-main-img"} imgAlt={imgAlt}></Img>
             {/* <DynamicImg imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></DynamicImg> */}
             <p className="article-post-main-text">{data.text}</p>
         </div>
