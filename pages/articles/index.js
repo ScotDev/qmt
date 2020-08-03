@@ -55,13 +55,8 @@ export async function getServerSideProps() {
             }
         }
     } catch (error) {
-        // res.statusCode = 404;
         return {
             props: {}
         }
     }
-
-
-
-
 }
