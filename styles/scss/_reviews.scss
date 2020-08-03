@@ -16,11 +16,11 @@
     margin: 2rem 0;
 
     &-card {
-      // height: $card-height;
-      // max-height: 50%;
+      height: auto;
+      //max-height: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       box-shadow: 0 0 40px 2px rgba($primary-accent, 0.15);
       border-radius: $card-radius;
       -webkit-border-radius: $card-radius;

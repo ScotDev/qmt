@@ -87,6 +87,12 @@ ul {
   color: $text;
 }
 
+hr {
+  width: 100%;
+  margin: 2rem 0;
+  color: rgba($text, 0.8);
+}
+
 .section-title {
   font-size: $large-text;
   font-weight: $large-text-weight;

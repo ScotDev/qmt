@@ -66,6 +66,8 @@ export default function Instagram_grid() {
         <Link href="/">
             <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile" className="cta-link">View more <i className="las la-arrow-right"></i></a>
         </Link>
+
+        <hr></hr>
     </div>
     )
 }

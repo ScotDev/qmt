@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
   margin-bottom: 3rem;
+  width: $section-width;
 
   &-embed {
     border-radius: 16px;
@@ -12,8 +12,8 @@
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
-
-    height: 500px;
-    width: 450px;
+    height: 350px;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 }
