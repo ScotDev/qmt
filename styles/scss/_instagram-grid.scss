@@ -1,22 +1,11 @@
-$grid-item-height: 300px;
-$grid-item-width: 300px;
-
 .instagram {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
-  width: 100%;
-  width: calc(#{$grid-item-width * 3 + 24px});
-
-  &-title {
-    font-size: $large-text;
-    font-weight: $large-text-weight;
-    color: $primary-accent;
-    // border-bottom: 2px solid $primary-accent;
-    // align-self: flex-start;
-  }
+  // width: calc(#{$grid-item-width * 3 + 24px});
+  width: $section-width;
 
   &-grid {
     display: grid;

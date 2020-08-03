@@ -8,7 +8,7 @@ export default function reviews() {
         </Head>
 
         <section className="review">
-            <h1 className="section-title">Album Reviews</h1>
+            <h1 className="page-title">Album Reviews</h1>
             <div className="review-grid">
                 <div className="review-grid-card">
                     <img src="/images/emily-rudolph-I-oARMjzXow-unsplash.jpg" className="review-grid-card-img"></img>

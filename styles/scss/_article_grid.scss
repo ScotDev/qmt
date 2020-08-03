@@ -1,19 +1,19 @@
-.article-page {
+.article-homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
-  width: 100%;
-  flex-grow: 2;
+  width: $section-width;
 
   &-grid {
     display: grid;
-    gap: 1.25rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    // grid-template-columns: repeat(3, $card-width);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     width: 100%;
-    margin: 2rem 0;
+    // margin: 1.5rem 0;
 
     &-card {
       // height: $card-height;
@@ -84,27 +84,6 @@
           font-size: $standard-text;
           font-weight: $standard-text-weight;
           color: $text;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .article-page {
-    &-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin: 0;
-
-      &-card {
-        margin: 0;
-        &-img {
-          height: 320px;
-        }
-
-        &:first-child {
-          grid-column: 1 / span 1;
         }
       }
     }

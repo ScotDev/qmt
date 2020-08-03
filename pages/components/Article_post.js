@@ -28,7 +28,6 @@ export default function Article_post({ data }) {
 
         let minutes;
 
-
         if (totalWordCount <= avgWordsPerMinute) {
             minutes = 1;
         } else {
@@ -38,8 +37,6 @@ export default function Article_post({ data }) {
         const formattedMinutes = minutes.toFixed(0)
 
         setreadTimeEstimate(formattedMinutes.toString())
-
-        // console.log(totalWordCount)
     }
 
 

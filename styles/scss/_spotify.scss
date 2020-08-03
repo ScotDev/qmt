@@ -5,4 +5,15 @@
   align-items: center;
   height: 500px;
   margin-bottom: 3rem;
+
+  &-embed {
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+
+    height: 500px;
+    width: 450px;
+  }
 }

@@ -16,7 +16,7 @@ export default function Article({ data }) {
 
     return (<>
         <Head>
-            <title>thequarantinemixtape | Article</title>
+            <title>thequarantinemixtape | {data.title}</title>
         </Head>
         <Article_post data={data}></Article_post>
     </>
