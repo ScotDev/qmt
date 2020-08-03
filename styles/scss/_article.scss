@@ -16,7 +16,15 @@ $post-text-width: 55%;
     border-bottom: 2px solid $primary-accent;
     max-width: $post-text-width;
     text-align: center;
+    margin-bottom: 2.5rem;
   }
+
+  &-read-time {
+    font-size: $small-text;
+    font-weight: $small-text-weight;
+    color: $secondary-accent;
+  }
+
   &-description {
     font-size: $medium-text;
     font-weight: $medium-text-weight;
@@ -74,5 +82,6 @@ $post-text-width: 55%;
     font-weight: $standard-text-weight;
     max-width: $post-text-width;
     line-height: 1.7;
+    text-align: left;
   }
 }
