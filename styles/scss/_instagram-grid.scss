@@ -88,3 +88,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .instagram {
+    width: 95%;
+    &-grid {
+      grid-template-columns: 1fr 1fr;
+
+      &-item {
+        &-overlay {
+          &-text {
+            padding: 0.25rem 0.35rem 1rem 0.35rem;
+
+            height: calc(#{$grid-item-height} - 40%);
+          }
+        }
+      }
+    }
+  }
+}
