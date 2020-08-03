@@ -17,11 +17,12 @@ export default function Article_post({ data }) {
 
     const imgAlt = "article header picture"
     const [totalWordCount, settotalWordCount] = useState(0)
-    const [rawText, setrawText] = useState(data.text)
+    const [rawText, setrawText] = useState("")
     const [readTimeEstimate, setreadTimeEstimate] = useState(false)
 
     const getWordCount = () => {
         const avgWordsPerMinute = 265;
+        setrawText(data.text)
         const words = rawText.split(" ");
         settotalWordCount(words.length);
 
