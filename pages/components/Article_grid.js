@@ -3,7 +3,7 @@ import Moment from 'react-moment';
 
 export default function Article_grid({ articles }) {
     if (!articles) {
-        return <p>Nothing found</p>
+        return null
     }
     return (<>
 
@@ -24,10 +24,11 @@ export default function Article_grid({ articles }) {
                         </div>
                     </Link>
                 ))}
-                <Link href="/">
-                    <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Full article list" className="cta-link">View more <i className="las la-arrow-right"></i></a>
-                </Link>
+
             </div>
+            <Link href="/articles">
+                <a alt="Full article list" className="cta-link">View more <i className="las la-arrow-right"></i></a>
+            </Link>
         </div>
     </>
     )
