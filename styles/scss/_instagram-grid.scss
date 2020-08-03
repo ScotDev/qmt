@@ -8,6 +8,15 @@ $grid-item-width: 300px;
   justify-content: center;
   margin-bottom: 3rem;
   width: 100%;
+  width: calc(#{$grid-item-width * 3 + 24px});
+
+  &-title {
+    font-size: $large-text;
+    font-weight: $large-text-weight;
+    color: $primary-accent;
+    // border-bottom: 2px solid $primary-accent;
+    // align-self: flex-start;
+  }
 
   &-grid {
     display: grid;

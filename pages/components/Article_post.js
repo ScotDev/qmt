@@ -1,9 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 
+import dynamic from 'next/dynamic';
+
+import Spinner from './Spinner';
+
+// const DynamicImg = dynamic(
+//     () => import('../components/Img'),
+//     { loading: () => <Spinner></Spinner> }
+// )
+
 import Error from '../components/Error'
+import Img from '../components/Img'
 
 export default function Article_post({ data }) {
+
+    const imgPath = data.main_img.url;
+    const imgAlt = "article header picture"
 
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState(data.text)
@@ -11,11 +24,8 @@ export default function Article_post({ data }) {
 
     const getWordCount = () => {
         const avgWordsPerMinute = 265;
-        // settext(data.text)
         const words = rawText.split(" ");
         settotalWordCount(words.length);
-
-        // There is a better way to do this
 
         let minutes;
 
@@ -57,7 +67,8 @@ export default function Article_post({ data }) {
                     <p className="article-post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>
                 </div>
             </div>
-            {/* <img className="article-post-main-img" src={`${API_URL}${data.main_img.url}`} ></img> */}
+            <Img imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt}></Img>
+            {/* <DynamicImg imgPath={imgPath} imgClass={"article-post-main-img"} imgAlt={imgAlt} /> */}
             <p className="article-post-main-text">{data.text}</p>
         </div>
     )

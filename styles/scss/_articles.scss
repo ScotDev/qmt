@@ -23,7 +23,7 @@ $card-width: 350px;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       box-shadow: 0 6px 40px 0 rgba($secondary-accent, 0.2);
       border-radius: $card-radius;
       -webkit-border-radius: $card-radius;
@@ -67,18 +67,18 @@ $card-width: 350px;
         border-bottom-right-radius: $card-radius;
         // padding: 1rem 1.5rem;
 
+        &-title {
+          font-size: $medium-text;
+          font-weight: $medium-text-weight;
+          color: $primary-accent;
+          margin: 0 0 0.4rem 0;
+        }
+
         &-subtitle {
           font-size: $standard-text;
           font-weight: $standard-text-weight;
           color: $secondary-accent;
           margin: 0 0 0.5rem 0;
-        }
-
-        &-title {
-          font-size: $large-text;
-          font-weight: $large-text-weight;
-          color: $primary-accent;
-          margin: 0 0 0.4rem 0;
         }
 
         &-date {

@@ -10,7 +10,6 @@ export default function Navbar() {
                 <li className="nav-link"><Link href="/reviews"><a>Reviews</a></Link></li>
                 <li className="nav-link"><Link href="/about"><a>About</a></Link></li>
                 <li className="nav-link"><Link href="/submit"><a>Submit music</a></Link></li>
-                <li className="nav-link"><Link href="/pr"><a>PR</a></Link></li>
             </ul>
         </nav>
     )

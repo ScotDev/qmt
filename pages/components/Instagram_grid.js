@@ -1,7 +1,8 @@
-// import Link from 'next/link'
+import Link from 'next/link'
 
 export default function Instagram_grid() {
     return (<div className="instagram">
+        <h2 className="instagram-title">Instagram</h2>
         <div className="instagram-grid">
             <a href="https://www.instagram.com/p/CC6kM18KGf8/" target="_blank">
                 <div className="instagram-grid-item">
@@ -62,6 +63,9 @@ export default function Instagram_grid() {
 
         </div>
         <button className="btn-primary"><a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile">Show more</a></button>
+        <Link href="/">
+            <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile" className="cta-link">View more <i className="las la-arrow-right"></i></a>
+        </Link>
     </div>
     )
 }

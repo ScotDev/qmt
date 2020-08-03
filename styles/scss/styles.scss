@@ -8,6 +8,7 @@
 @import '_reviews';
 @import '_articles';
 @import '_article';
+@import '_spinner';
 
 * {
   box-sizing: border-box;
@@ -79,10 +80,28 @@ ul {
 
 .section-description {
   font-size: $medium-text;
-  font-weight: $medium-text-weight;
+  font-weight: $standard-text-weight;
   align-self: center;
   margin-bottom: 3rem;
   color: $text;
+}
+
+.cta-link {
+  font-size: $standard-text;
+  font-weight: $standard-text-weight;
+  color: $text;
+  align-self: flex-end;
+  border-bottom: 2px solid transparent;
+
+  i {
+    vertical-align: middle;
+    font-size: $medium-text;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $text;
+  }
 }
 
 .error {
@@ -100,6 +119,7 @@ ul {
     color: $secondary-accent;
   }
 
+  // Duplicate of .cta-link
   &-return-link {
     font-size: $standard-text;
     font-weight: $standard-text-weight;
