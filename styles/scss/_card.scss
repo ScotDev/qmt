@@ -1,0 +1,36 @@
+.card {
+  //   height: auto;
+  //max-height: 50%;
+  box-shadow: 0 6px 40px 0 rgba($secondary-accent, 0.2);
+
+  border-radius: $card-radius;
+  -webkit-border-radius: $card-radius;
+  -moz-border-radius: $card-radius;
+  -ms-border-radius: $card-radius;
+  -o-border-radius: $card-radius;
+  transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -ms-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  background: rgba(transparent, 0.7);
+  overflow: hidden;
+
+  &:first-child {
+    grid-column: 1 / span 2;
+    // For some reason the below lines break the next build, bug reported on GitHub by someone else
+    // grid-column-start: 1;
+    // grid-column-end: span 2;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+
+    cursor: pointer;
+  }
+}

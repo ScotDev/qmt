@@ -23,7 +23,7 @@ export default function Navbar() {
                 <div></div>
 
                 <ul className="hamburger-links" >
-                    <li className="hamburger-link"><Link href="/"><a href="#" className="hamburger-link-anchor">Home</a></Link></li>
+                    <li className="hamburger-link"><Link href="/"><a className="hamburger-link-anchor">Home</a></Link></li>
                     <li className="hamburger-link"><Link href="/articles"><a className="hamburger-link-anchor">Articles</a></Link></li>
                     <li className="hamburger-link"><Link href="/reviews"><a className="hamburger-link-anchor">Reviews</a></Link></li>
                     <li className="hamburger-link"><Link href="/submit"><a className="hamburger-link-anchor">Submit music</a></Link></li>

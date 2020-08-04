@@ -4,9 +4,8 @@ import Header from './components/Header';
 import Instagram from './components/Instagram_grid';
 import Spotify from './components/Spotify';
 import Article_grid from './components/Article_grid';
-// import Twitter from './components/Twitter';
 
-export default function Home({ articles }) {
+export default function Home({ articles, posts }) {
   return (
     <>
       <Head>
@@ -15,10 +14,9 @@ export default function Home({ articles }) {
       </Head>
 
       <Header></Header>
-      <Instagram></Instagram>
+      <Instagram posts={posts}></Instagram>
       <Article_grid articles={articles}></Article_grid>
       <Spotify></Spotify>
-      {/* <Twitter></Twitter> */}
     </>
   )
 }
@@ -26,17 +24,20 @@ export default function Home({ articles }) {
 
 export async function getServerSideProps() {
 
-
+  // Get articles for article grid
   try {
     const { API_URL } = process.env;
 
-    const res = await axios.get(`${API_URL}/articles?_limit=5`)
-    const data = res.data;
-
+    const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
+    const res_2 = await axios.get(`${API_URL}/instagram-posts?_sort=post_position:ASC`)
+    console.log(res_2)
+    const articles = res_1.data;
+    const posts = res_2.data;
 
     return {
       props: {
-        articles: data
+        articles: articles,
+        posts: posts
       }
     }
   } catch (error) {
@@ -44,4 +45,6 @@ export async function getServerSideProps() {
       props: {}
     }
   }
+
+
 }

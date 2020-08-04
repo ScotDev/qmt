@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 3rem;
   width: 100%;
   flex-grow: 2;
@@ -10,48 +10,22 @@
   &-grid {
     display: grid;
     gap: 1.25rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     width: 100%;
     margin: 2rem 0;
 
     &-card {
-      // height: $card-height;
+      @extend .card;
+
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 6px 40px 0 rgba($secondary-accent, 0.2);
-      border-radius: $card-radius;
-      -webkit-border-radius: $card-radius;
-      -moz-border-radius: $card-radius;
-      -ms-border-radius: $card-radius;
-      -o-border-radius: $card-radius;
-      transition: transform 0.2s ease;
-      -webkit-transition: transform 0.2s ease;
-      -moz-transition: transform 0.2s ease;
-      -ms-transition: transform 0.2s ease;
-      -o-transition: transform 0.2s ease;
-      overflow: hidden;
-
-      background: rgba(transparent, 0.7);
-
-      &:first-child {
-        grid-column: 1 / span 2;
-        // For some reason the below lines break the next build, bug reported on GitHub by someone else
-        // grid-column-start: 1;
-        // grid-column-end: span 2;
-      }
 
       &:hover,
       &:focus {
-        transform: translateY(-4px);
-        -webkit-transform: translateY(-4px);
-        -moz-transform: translateY(-4px);
-        -ms-transform: translateY(-4px);
-        -o-transform: translateY(-4px);
         box-shadow: 0 8px 50px 0 rgba($secondary-accent, 0.2);
-        cursor: pointer;
       }
 
       &-text {
