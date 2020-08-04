@@ -18,7 +18,7 @@ export default function Article_post({ data }) {
     const imgAlt = "article header picture"
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState("")
-    const [readTimeEstimate, setreadTimeEstimate] = useState(false)
+    const [readTimeEstimate, setreadTimeEstimate] = useState(0)
 
     const getWordCount = () => {
         const avgWordsPerMinute = 265;
@@ -28,7 +28,9 @@ export default function Article_post({ data }) {
 
         let minutes;
 
-        if (totalWordCount <= avgWordsPerMinute) {
+        if (!rawText) {
+            minutes = 0
+        } else if (totalWordCount <= avgWordsPerMinute) {
             minutes = 1;
         } else {
             minutes = totalWordCount / avgWordsPerMinute;
@@ -36,13 +38,18 @@ export default function Article_post({ data }) {
 
         const formattedMinutes = minutes.toFixed(0)
 
-        setreadTimeEstimate(formattedMinutes.toString())
-    }
+        if (minutes === 0) {
+            setreadTimeEstimate(false)
+        } else {
+            setreadTimeEstimate(formattedMinutes.toString())
+        }
 
+
+    }
 
     useEffect(() => {
         getWordCount()
-    }, [readTimeEstimate])
+    })
 
     if (!data) {
         return <Error statusCode={404}></Error>

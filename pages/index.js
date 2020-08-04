@@ -30,7 +30,6 @@ export async function getServerSideProps() {
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
     const res_2 = await axios.get(`${API_URL}/instagram-posts?_sort=post_position:ASC`)
-    console.log(res_2)
     const articles = res_1.data;
     const posts = res_2.data;
 
