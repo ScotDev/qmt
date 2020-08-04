@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import Router from 'next/router';
+import React from 'react';
+
 
 export default function Navbar() {
+
     return (
         <nav className="navbar">
             <div className="nav-brand"><Link href="/"><a>QMT</a></Link></div>
@@ -13,13 +17,13 @@ export default function Navbar() {
             </ul>
 
             <div className='hamburger'>
-                <input type='checkbox'></input>
+                <input type='checkbox' id="hamburger-checkbox" ></input>
                 <div></div>
                 <div></div>
                 <div></div>
 
-                <ul className="hamburger-links">
-                    <li className="hamburger-link"><Link href="/"><a className="hamburger-link-anchor">Home</a></Link></li>
+                <ul className="hamburger-links" >
+                    <li className="hamburger-link"><Link href="/"><a href="#" className="hamburger-link-anchor">Home</a></Link></li>
                     <li className="hamburger-link"><Link href="/articles"><a className="hamburger-link-anchor">Articles</a></Link></li>
                     <li className="hamburger-link"><Link href="/reviews"><a className="hamburger-link-anchor">Reviews</a></Link></li>
                     <li className="hamburger-link"><Link href="/submit"><a className="hamburger-link-anchor">Submit music</a></Link></li>
