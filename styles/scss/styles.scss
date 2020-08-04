@@ -60,14 +60,20 @@ ul {
 }
 
 // Move util classes to separate file
-.container {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   min-height: 100vh;
   padding: 0 15rem;
-  max-width: 100%;
+  // width: 100%;
+}
+
+.container {
+  width: 100%;
+  background-color: $primary-bg;
+  overflow-x: hidden;
 }
 
 .page-title {
@@ -158,7 +164,7 @@ hr {
   html {
     font-size: calc(#{$base-size - 1px});
   }
-  .container {
+  .content {
     padding: 0 1rem;
   }
 }

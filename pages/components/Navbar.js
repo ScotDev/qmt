@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Navbar() {
     return (
         <nav className="navbar">
-            <div className="nav-brand"><Link href="/"><p>QMT</p></Link></div>
+            <div className="nav-brand"><Link href="/"><a>QMT</a></Link></div>
             <ul className="nav-links">
                 <li className="nav-link"><Link href="/"><a>Home</a></Link></li>
                 <li className="nav-link"><Link href="/articles"><a>Articles</a></Link></li>
