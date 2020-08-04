@@ -91,3 +91,26 @@
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .article-homepage {
+    width: 95%;
+
+    &-grid {
+      gap: 1rem;
+
+      grid-template-columns: 1fr;
+
+      &-card {
+        padding: 1.25rem;
+
+        &:first-child {
+          grid-column: 1 / span 1;
+          // For some reason the below lines break the next build, bug reported on GitHub by someone else
+          // grid-column-start: 1;
+          // grid-column-end: span 2;
+        }
+      }
+    }
+  }
+}

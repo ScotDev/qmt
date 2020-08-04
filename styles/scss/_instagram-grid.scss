@@ -98,9 +98,26 @@
       &-item {
         &-overlay {
           &-text {
-            padding: 0.25rem 0.35rem 1rem 0.35rem;
+            padding: 1.5rem 0.4rem 1rem 0.4rem;
+            height: calc(#{$grid-item-height} + 10%);
+          }
+        }
+      }
+    }
+  }
+}
 
-            height: calc(#{$grid-item-height} - 40%);
+@media only screen and (max-width: 700px) {
+  .instagram {
+    &-grid {
+      grid-template-columns: 1fr 1fr;
+
+      &-item {
+        &-overlay {
+          &-text {
+            padding: 0 0.1rem 1rem 0.1rem;
+            font-size: calc(#{$small-text - 0.25rem});
+            height: calc(#{$grid-item-height} - 98%);
           }
         }
       }
