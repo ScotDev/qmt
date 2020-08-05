@@ -98,7 +98,6 @@
 
     &-grid {
       gap: 1rem;
-
       grid-template-columns: 1fr;
 
       &-card {
@@ -109,6 +108,12 @@
           // For some reason the below lines break the next build, bug reported on GitHub by someone else
           // grid-column-start: 1;
           // grid-column-end: span 2;
+        }
+        &:nth-child(4) {
+          display: none;
+        }
+        &:nth-child(5) {
+          display: none;
         }
       }
     }

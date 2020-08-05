@@ -107,11 +107,18 @@
 
     &-main-img {
       width: 100%;
-      margin-bottom: 2.75rem;
+      margin-bottom: 1.7rem;
     }
     &-main-text {
       max-width: $mobile-post-text-width;
       line-height: 1.8;
+
+      &::first-letter {
+        font-size: calc(#{$large-text + 0.5rem});
+        font-weight: $large-text-weight;
+        line-height: 1.2;
+        letter-spacing: 4px;
+      }
     }
   }
 }
