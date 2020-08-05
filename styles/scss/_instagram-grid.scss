@@ -5,12 +5,12 @@
   justify-content: center;
   // width: calc(#{$grid-item-width * 3 + 24px});
   width: $section-width;
+  margin-bottom: 2rem;
 
   &-grid {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 2rem;
 
     &-item {
       // height: $grid-item-height;
@@ -98,6 +98,7 @@
       &-item {
         &-overlay {
           &-text {
+            font-size: $standard-text;
             padding: 1.5rem 0.4rem 1rem 0.4rem;
             height: calc(#{$grid-item-height} + 10%);
           }
@@ -117,6 +118,7 @@
           &-text {
             padding: 0 0.1rem 1rem 0.1rem;
             font-size: calc(#{$small-text - 0.25rem});
+            // font-size: $small-text;
             height: calc(#{$grid-item-height} - 98%);
           }
         }

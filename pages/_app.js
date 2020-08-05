@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import 'nprogress/nprogress.css'
 
+import 'nprogress/nprogress.css'
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());

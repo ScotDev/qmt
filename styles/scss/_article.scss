@@ -12,7 +12,7 @@
     font-weight: $giant-text-weight;
     color: $primary-accent;
     border-bottom: 2px solid $primary-accent;
-    max-width: $post-text-width;
+    max-width: $desktop-post-text-width;
     text-align: center;
     margin-bottom: 2.5rem;
   }
@@ -27,7 +27,7 @@
     font-size: $medium-text;
     font-weight: $medium-text-weight;
     margin-bottom: 3rem;
-    max-width: $post-text-width;
+    max-width: $desktop-post-text-width;
     text-align: center;
   }
   &-author-chip {
@@ -68,18 +68,50 @@
 
   &-main-img {
     width: 75%;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    border-radius: $card-radius;
+    -webkit-border-radius: $card-radius;
+    -moz-border-radius: $card-radius;
+    -ms-border-radius: $card-radius;
+    -o-border-radius: $card-radius;
     margin-bottom: 4rem;
   }
   &-main-text {
     font-size: $standard-text;
     font-weight: $standard-text-weight;
-    max-width: $post-text-width;
+    max-width: $desktop-post-text-width;
     line-height: 1.7;
     text-align: left;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .article-post {
+    width: 95%;
+
+    &-title {
+      max-width: $mobile-post-text-width;
+      margin-bottom: 2rem;
+    }
+
+    &-read-time {
+      font-size: $standard-text;
+      font-weight: $standard-text-weight;
+    }
+
+    &-description {
+      font-size: $standard-text;
+      font-weight: $standard-text-weight;
+      margin-bottom: 2.5rem;
+      max-width: $mobile-post-text-width;
+    }
+
+    &-main-img {
+      width: 100%;
+      margin-bottom: 2.75rem;
+    }
+    &-main-text {
+      max-width: $mobile-post-text-width;
+      line-height: 1.8;
+    }
   }
 }
