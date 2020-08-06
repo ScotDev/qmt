@@ -12,7 +12,7 @@
 @import '_card';
 @import '_reviews';
 @import '_articles';
-@import '_article';
+@import '_single_post';
 @import '_spinner';
 @import '_articles_homepage';
 
@@ -63,21 +63,6 @@ hr {
       border-bottom: 1px solid $secondary-accent;
     }
   }
-}
-
-.page-intro {
-  flex-grow: 2;
-  max-width: 95%;
-}
-
-.section-title {
-  font-size: $large-text;
-  font-weight: $large-text-weight;
-  color: $primary-accent;
-  text-transform: uppercase;
-  border-bottom: 2px solid $primary-accent;
-  align-self: flex-start;
-  margin: 0 0 3rem 0;
 }
 
 .cta-link {

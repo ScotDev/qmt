@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link';
 import axios from 'axios';
 import Moment from 'react-moment';
 
@@ -22,16 +23,16 @@ export default function reviews({ reviews }) {
             <div className="review-grid">
 
                 {reviews.map(item => (
-
-                    <div className="review-grid-card" key={item.id}>
-                        {/* <img src="/images/emily-rudolph-I-oARMjzXow-unsplash.jpg" className="card-img"></img> */}
-                        <Img imgPath={item.album_img} imgClass={"card-img"} imgAlt={item.title}></Img>
-                        <div className="review-grid-card-text">
-                            <p className="card-text-subtitle">{item.artist}</p>
-                            <p className="card-text-title">{item.title}</p>
-                            <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
+                    <Link href="/reviews/[id]" as={`/reviews/${item.id}`} key={item.id}>
+                        <div className="review-grid-card" key={item.id}>
+                            <Img imgPath={item.album_img} imgClass={"card-img"} imgAlt={item.title}></Img>
+                            <div className="review-grid-card-text">
+                                <p className="card-text-subtitle">{item.artist}</p>
+                                <p className="card-text-title">{item.title}</p>
+                                <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
 
             </div>

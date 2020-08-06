@@ -31,6 +31,21 @@
   color: $text;
 }
 
+.page-intro {
+  flex-grow: 2;
+  max-width: 95%;
+}
+
+.section-title {
+  font-size: $large-text;
+  font-weight: $large-text-weight;
+  color: $primary-accent;
+  text-transform: uppercase;
+  border-bottom: 2px solid $primary-accent;
+  align-self: flex-start;
+  margin: 0 0 3rem 0;
+}
+
 @media only screen and (max-width: 900px) {
   .page-title {
     font-size: calc(#{$large-text + 0.5rem});

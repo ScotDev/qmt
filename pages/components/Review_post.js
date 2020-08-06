@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 
-// import dynamic from 'next/dynamic';
-
-// import Spinner from './Spinner';
-
-// const DynamicImg = dynamic(
-//     () => import('./Img'),
-//     { loading: () => <Spinner></Spinner> }
-// )
-
 import Error from './Error'
 import Img from './Img'
 
 export default function Article_post({ data }) {
 
-    const imgAlt = "Article header picture"
+    const imgAlt = "Review header picture"
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState("")
     const [readTimeEstimate, setreadTimeEstimate] = useState(0)
@@ -61,14 +52,14 @@ export default function Article_post({ data }) {
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <h2 className="post-description">{data.description_preview}</h2>
             <div className="post-author-chip">
-                <img className="post-author-chip-icon" src="/images/profile.jpg"></img>
+                {/* Change img src for production */}
+                <Img imgClass={"post-author-chip-icon"} src="/images/profile.jpg"></Img>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
                     <p className="post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>
                 </div>
             </div>
-            <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
-            {/* <DynamicImg imgPath={imgPath} imgClass={"post-main-img"} imgAlt={imgAlt}></DynamicImg> */}
+            <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
             <p className="post-main-text">{data.text}</p>
         </div>
     )

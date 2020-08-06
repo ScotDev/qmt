@@ -1,4 +1,4 @@
-.article-post {
+.post {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +92,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .article-post {
+  .post {
     width: 95%;
 
     &-title {
