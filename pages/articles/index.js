@@ -16,19 +16,19 @@ export default function articles({ articles }) {
             <title>thequarantinemixtape | Articles</title>
         </Head>
 
-        <div className="article-page">
+        <div className="articles">
             <h1 className="page-title">Articles</h1>
 
-            <div className="article-page-grid">
+            <div className="articles-grid">
 
                 {articles.map(item => (
                     <Link href="/articles/[id]" as={`/articles/${item.id}`} key={item.id}>
-                        <div className="article-page-grid-card">
-                            <div className="article-page-grid-card-text">
-                                <p className="article-page-grid-card-text-title">{item.title}</p>
-                                <p className="article-page-grid-card-text-subtitle">{item.category}</p>
-                                <p className="article-page-grid-card-text-description">{item.description_preview}</p>
-                                <span className="article-page-grid-card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
+                        <div className="articles-grid-card">
+                            <div className="articles-grid-card-text">
+                                <p className="card-text-title">{item.title}</p>
+                                <p className="card-text-subtitle">{item.category}</p>
+                                <p className="card-text-description">{item.description_preview}</p>
+                                <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
                             </div>
                         </div>
                     </Link>

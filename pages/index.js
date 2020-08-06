@@ -5,12 +5,7 @@ import Header from './components/Header';
 import Banner from './components/Banner';
 import Instagram from './components/Instagram_grid';
 import Spotify from './components/Spotify';
-import Article_grid from './components/Article_grid';
-
-
-
-import ImageCarousel from "./components/ImageCarousel";
-
+import Articles_homepage from './components/Articles_homepage';
 
 
 export default function Home({ articles, posts, banner }) {
@@ -22,11 +17,9 @@ export default function Home({ articles, posts, banner }) {
       </Head>
 
       <Header></Header>
-      {/* <ImageCarousel></ImageCarousel>
-       */}
       <Banner banner={banner}></Banner>
       <Instagram posts={posts}></Instagram>
-      <Article_grid articles={articles}></Article_grid>
+      <Articles_homepage articles={articles}></Articles_homepage>
       <Spotify></Spotify>
     </>
   )

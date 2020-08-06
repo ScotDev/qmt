@@ -9,14 +9,12 @@
   &-grid {
     display: grid;
     gap: 1.5rem;
-    // grid-template-columns: repeat(3, $card-width);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     width: 100%;
     margin-bottom: 2rem;
 
     &-card {
-      // height: $card-height;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -108,7 +106,7 @@
           grid-column: 1 / span 1;
           // For some reason the below lines break the next build, bug reported on GitHub by someone else
           // grid-column-start: 1;
-          // grid-column-end: span 2;
+          // grid-column-end: span 1;
         }
 
         &:nth-child(n + 4) {

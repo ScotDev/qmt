@@ -81,6 +81,13 @@
     max-width: $desktop-post-text-width;
     line-height: 1.7;
     text-align: left;
+
+    &::first-letter {
+      font-size: calc(#{$large-text + 0.5rem});
+      font-weight: $large-text-weight;
+      line-height: 1.2;
+      letter-spacing: 4px;
+    }
   }
 }
 
@@ -112,13 +119,6 @@
     &-main-text {
       max-width: $mobile-post-text-width;
       line-height: 1.8;
-
-      &::first-letter {
-        font-size: calc(#{$large-text + 0.5rem});
-        font-weight: $large-text-weight;
-        line-height: 1.2;
-        letter-spacing: 4px;
-      }
     }
   }
 }

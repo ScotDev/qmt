@@ -1,4 +1,4 @@
-.article-page {
+.articles {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,19 +8,14 @@
   flex-grow: 2;
 
   &-grid {
-    display: grid;
+    @extend .grid;
     gap: 1.25rem;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    width: 100%;
-    margin: 2rem 0;
 
     &-card {
       @extend .card;
 
       padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
 
       &:hover,
@@ -29,57 +24,7 @@
       }
 
       &-text {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        text-align: left;
-
-        &-title {
-          font-size: $medium-text;
-          font-weight: $medium-text-weight;
-          color: $primary-accent;
-          margin: 0 0 0.4rem 0;
-        }
-
-        &-subtitle {
-          font-size: $standard-text;
-          font-weight: $standard-text-weight;
-          color: $secondary-accent;
-          margin: 0 0 0.5rem 0;
-        }
-
-        &-date {
-          font-size: $small-text;
-          font-weight: $small-text-weight;
-          color: $text;
-        }
-
-        &-description {
-          font-size: $standard-text;
-          font-weight: 300;
-          color: $text;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .article-page {
-    &-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin: 0;
-
-      &-card {
-        margin: 0;
-        &-img {
-          height: 320px;
-        }
-
-        &:first-child {
-          grid-column: 1 / span 1;
-        }
       }
     }
   }

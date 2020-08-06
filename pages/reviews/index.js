@@ -1,6 +1,16 @@
 import Head from 'next/head'
+import axios from 'axios';
+import Moment from 'react-moment';
 
-export default function reviews() {
+import Error from '../components/Error'
+import Img from '../components/Img'
+
+export default function reviews({ reviews }) {
+
+    if (!reviews) {
+        return <Error statusCode={404}></Error>
+    }
+
     return (<>
 
         <Head>
@@ -10,58 +20,42 @@ export default function reviews() {
         <section className="review">
             <h1 className="page-title">Album Reviews</h1>
             <div className="review-grid">
-                <div className="review-grid-card">
-                    <img src="/images/emily-rudolph-I-oARMjzXow-unsplash.jpg" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Van Halen</p>
-                        <p className="review-grid-card-text-title">Women and Children First</p>
-                        <span className="review-grid-card-text-date">11 July, 2020</span>
+
+                {reviews.map(item => (
+
+                    <div className="review-grid-card" key={item.id}>
+                        {/* <img src="/images/emily-rudolph-I-oARMjzXow-unsplash.jpg" className="card-img"></img> */}
+                        <Img imgPath={item.album_img} imgClass={"card-img"} imgAlt={item.title}></Img>
+                        <div className="review-grid-card-text">
+                            <p className="card-text-subtitle">{item.artist}</p>
+                            <p className="card-text-title">{item.title}</p>
+                            <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
+                        </div>
                     </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/Childish_Gambino_-_Awaken,_My_Love!.png" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Childish Gambino</p>
-                        <p className="review-grid-card-text-title">Awaken, My Love!</p>
-                        <span className="review-grid-card-text-date">11 July, 2020</span>
-                    </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/album2.jpg" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Some Rapper</p>
-                        <p className="review-grid-card-text-title">Badass Rap Album</p>
-                        <span className="review-grid-card-text-date">12 January, 2019</span>
-                    </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/album3.jfif" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Fake Folk Band</p>
-                        <p className="review-grid-card-text-title">The Old Days</p>
-                        <span className="review-grid-card-text-date">3 March, 2020</span>
-                    </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/album4.jpg" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Arctic Monkeys</p>
-                        <p className="review-grid-card-text-title">Humbug </p>
-                        <span className="review-grid-card-text-date">19 August, 2009</span>
-                    </div>
-                </div>
-                <div className="review-grid-card">
-                    <img src="/images/album3.jpg" className="review-grid-card-img"></img>
-                    <div className="review-grid-card-text">
-                        <p className="review-grid-card-text-subtitle">Dr. Dre</p>
-                        <p className="review-grid-card-text-title">The Chronic</p>
-                        <span className="review-grid-card-text-date">15 December, 1992</span>
-                    </div>
-                </div>
+                ))}
 
             </div>
 
         </section>
     </>
     )
+}
+
+
+export async function getServerSideProps() {
+    try {
+        const { API_URL } = process.env;
+        const res = await axios.get(`${API_URL}/reviews`)
+        const data = res.data;
+
+        return {
+            props: {
+                reviews: data
+            }
+        }
+    } catch (error) {
+        return {
+            props: {}
+        }
+    }
 }

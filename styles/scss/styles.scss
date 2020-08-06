@@ -1,9 +1,12 @@
 @import '_config';
+@import '_utils';
+@import '_error';
 @import '_navbar';
 @import '_header';
 @import '_banner';
 @import '_social';
-@import '_instagram-grid';
+@import '_grid';
+@import '_instagram_grid';
 @import '_spotify';
 @import '_btn';
 @import '_card';
@@ -11,7 +14,7 @@
 @import '_articles';
 @import '_article';
 @import '_spinner';
-@import '_article_grid';
+@import '_articles_homepage';
 
 * {
   box-sizing: border-box;
@@ -41,6 +44,12 @@ ul {
   list-style-type: none;
 }
 
+hr {
+  width: 100%;
+  margin: 2rem 0;
+  color: $text;
+}
+
 .credits {
   padding-bottom: 2rem;
   margin-top: 1rem;
@@ -59,47 +68,6 @@ ul {
 .page-intro {
   flex-grow: 2;
   max-width: 95%;
-}
-
-// Move util classes to separate file
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 0 15rem;
-  // width: 100%;
-}
-
-.container {
-  width: 100%;
-  background-color: $primary-bg;
-  overflow-x: hidden;
-}
-
-.page-title {
-  font-size: $giant-text;
-  font-weight: $giant-text-weight;
-  border-bottom: 3px solid;
-  align-self: flex-start;
-  margin-bottom: 3rem;
-  color: $secondary-accent;
-  text-transform: uppercase;
-}
-
-.page-description {
-  font-size: $medium-text;
-  font-weight: $standard-text-weight;
-  align-self: center;
-  margin-bottom: 3rem;
-  color: $text;
-}
-
-hr {
-  width: 100%;
-  margin: 2rem 0;
-  color: rgba($text, 0.8);
 }
 
 .section-title {
@@ -127,39 +95,6 @@ hr {
   &:hover,
   &:focus {
     border-bottom: 2px solid $text;
-  }
-}
-
-.error {
-  flex-grow: 2;
-  margin-top: 5rem;
-  &-title {
-    font-size: $large-text;
-    font-weight: $large-text-weight;
-    color: $primary-accent;
-  }
-
-  &-status-code {
-    font-size: $medium-text;
-    font-weight: $medium-text-weight;
-    color: $secondary-accent;
-  }
-
-  // Duplicate of .cta-link
-  &-return-link {
-    font-size: $standard-text;
-    font-weight: $standard-text-weight;
-    color: $text;
-
-    i {
-      vertical-align: middle;
-      font-size: $medium-text;
-    }
-
-    &:hover,
-    &:focus {
-      border-bottom: 2px solid $text;
-    }
   }
 }
 

@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0 15rem;
+}
+
+.container {
+  width: 100%;
+  background-color: $primary-bg;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-size: $giant-text;
+  font-weight: $giant-text-weight;
+  border-bottom: 3px solid;
+  align-self: flex-start;
+  margin-bottom: 3rem;
+  color: $secondary-accent;
+  text-transform: uppercase;
+}
+
+.page-description {
+  font-size: $medium-text;
+  font-weight: $standard-text-weight;
+  align-self: center;
+  margin-bottom: 3rem;
+  color: $text;
+}
+
+@media only screen and (max-width: 900px) {
+  .page-title {
+    font-size: calc(#{$large-text + 0.5rem});
+  }
+
+  .page-description {
+    font-size: calc(#{$medium-text - 0.5rem});
+  }
+}

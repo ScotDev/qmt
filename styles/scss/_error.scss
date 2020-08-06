@@ -1,0 +1,32 @@
+.error {
+  flex-grow: 2;
+  margin-top: 5rem;
+  &-title {
+    font-size: $large-text;
+    font-weight: $large-text-weight;
+    color: $primary-accent;
+  }
+
+  &-status-code {
+    font-size: $medium-text;
+    font-weight: $medium-text-weight;
+    color: $secondary-accent;
+  }
+
+  // Duplicate of .cta-link
+  &-return-link {
+    font-size: $standard-text;
+    font-weight: $standard-text-weight;
+    color: $text;
+
+    i {
+      vertical-align: middle;
+      font-size: $medium-text;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid $text;
+    }
+  }
+}
