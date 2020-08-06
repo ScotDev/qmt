@@ -68,12 +68,15 @@
 
   &-main-img {
     width: 75%;
+    height: 550px;
     border-radius: $card-radius;
     -webkit-border-radius: $card-radius;
     -moz-border-radius: $card-radius;
     -ms-border-radius: $card-radius;
     -o-border-radius: $card-radius;
     margin-bottom: 4rem;
+    object-fit: cover;
+    object-position: center;
   }
   &-main-text {
     font-size: $standard-text;

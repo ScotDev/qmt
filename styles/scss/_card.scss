@@ -53,7 +53,7 @@
 
     &-description {
       font-size: $standard-text;
-      font-weight: 300;
+      font-weight: $standard-text-weight;
       color: $text;
     }
   }

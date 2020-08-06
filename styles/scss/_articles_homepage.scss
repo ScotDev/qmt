@@ -1,4 +1,4 @@
-.article-homepage {
+.post-homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,81 +7,26 @@
   margin-bottom: 1rem;
 
   &-grid {
-    display: grid;
-    gap: 1.5rem;
+    @extend .grid;
+
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    width: 100%;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
 
     &-card {
+      @extend .card;
+
       padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 6px 40px 0 rgba($secondary-accent, 0.2);
-      border-radius: $card-radius;
-      -webkit-border-radius: $card-radius;
-      -moz-border-radius: $card-radius;
-      -ms-border-radius: $card-radius;
-      -o-border-radius: $card-radius;
-      transition: transform 0.2s ease;
-      -webkit-transition: transform 0.2s ease;
-      -moz-transition: transform 0.2s ease;
-      -ms-transition: transform 0.2s ease;
-      -o-transition: transform 0.2s ease;
-      overflow: hidden;
-
-      background: rgba(transparent, 0.7);
-
-      &:first-child {
-        grid-column: 1 / span 2;
-        // For some reason the below lines break the next build, bug reported on GitHub by someone else
-        // grid-column-start: 1;
-        // grid-column-end: span 2;
-      }
 
       &:hover,
       &:focus {
-        transform: translateY(-4px);
-        -webkit-transform: translateY(-4px);
-        -moz-transform: translateY(-4px);
-        -ms-transform: translateY(-4px);
-        -o-transform: translateY(-4px);
         box-shadow: 0 8px 50px 0 rgba($secondary-accent, 0.2);
-        cursor: pointer;
       }
 
       &-text {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        text-align: left;
-
-        &-title {
-          font-size: $medium-text;
-          font-weight: $medium-text-weight;
-          color: $primary-accent;
-          margin: 0 0 0.4rem 0;
-        }
-
-        &-subtitle {
-          font-size: $standard-text;
-          font-weight: $standard-text-weight;
-          color: $secondary-accent;
-          margin: 0 0 0.5rem 0;
-        }
-
-        &-date {
-          font-size: $small-text;
-          font-weight: $small-text-weight;
-          color: $text;
-        }
 
         &-description {
-          font-size: $standard-text;
-          font-weight: $standard-text-weight;
-          color: $text;
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
@@ -92,7 +37,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .article-homepage {
+  .post-homepage {
     width: 95%;
 
     &-grid {

@@ -87,6 +87,10 @@ hr {
   html {
     font-size: calc(#{$base-size - 1px});
   }
+
+  hr {
+    width: 90%;
+  }
   .content {
     padding: 0 1rem;
   }

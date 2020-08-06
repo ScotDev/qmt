@@ -3,8 +3,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-bottom: 1rem;
   width: $section-width;
+
+  &-grid {
+    @extend .grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    gap: 2rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-embed-title {
+    font-size: $medium-text;
+    font-weight: $large-text-weight;
+    color: $secondary-accent;
+    margin: 0 auto 1.5rem 0;
+  }
 
   &-embed {
     border-radius: 16px;
@@ -12,7 +32,7 @@
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
-    height: 350px;
+    height: 325px;
     width: 100%;
     margin-bottom: 2rem;
   }
@@ -22,9 +42,23 @@
   .spotify {
     width: 95%;
 
+    &-grid {
+      grid-template-columns: 1fr;
+
+      &-item {
+        &:first-child::after {
+          content: '';
+          width: 50%;
+          height: 2px;
+          color: $text;
+          border-bottom: 2px solid rgba($text, $alpha: 0.5);
+          align-self: center;
+          margin-top: 1rem;
+        }
+      }
+    }
+
     &-embed {
-      // height: 350px;
-      // width: 100%;
       margin-bottom: 2rem;
     }
   }
