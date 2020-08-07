@@ -8,8 +8,9 @@ export default function Article_grid({ articles }) {
     return (<>
 
         <div className="post-homepage">
-            <h2 className="section-title">Articles</h2>
-
+            <Link href="/articles">
+                <h2 className="section-title">Articles</h2>
+            </Link>
             <div className="post-homepage-grid">
 
                 {articles.map(item => (

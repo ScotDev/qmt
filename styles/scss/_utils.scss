@@ -44,6 +44,11 @@
   border-bottom: 2px solid $primary-accent;
   align-self: flex-start;
   margin: 0 0 3rem 0;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 900px) {
