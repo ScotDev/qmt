@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+import SubmitForm from './components/Functional/SubmitForm'
 
 export default function submit() {
     return (
@@ -11,6 +13,7 @@ export default function submit() {
                 <p className="page-description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
+            <SubmitForm></SubmitForm>
         </>
     )
 }

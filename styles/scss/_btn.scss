@@ -11,29 +11,46 @@
   -moz-border-radius: $btn-radius;
   -ms-border-radius: $btn-radius;
   -o-border-radius: $btn-radius;
+  transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -ms-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    cursor: pointer;
+  }
 }
 
 .btn-primary {
   @extend .btn;
   color: $text;
   background-color: $primary-accent;
-  transition: transform 0.2s ease;
-  -webkit-transition: transform 0.2s ease;
-  -moz-transition: transform 0.2s ease;
-  -ms-transition: transform 0.2s ease;
-  -o-transition: transform 0.2s ease;
 
   &:hover,
   &:focus {
     color: $primary-accent;
     background-color: $text;
-    transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
+    border: 2px solid $primary-accent;
   }
 }
 .btn-secondary {
   @extend .btn;
+  color: $text;
+  background-color: $secondary-accent;
+
+  &:hover,
+  &:focus {
+    color: $secondary-accent;
+    background-color: $text;
+    border: 2px solid $secondary-accent;
+  }
 }

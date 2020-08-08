@@ -16,8 +16,6 @@
     &-card {
       @extend .card;
 
-      padding: 1.5rem;
-
       &:hover,
       &:focus {
         box-shadow: 0 8px 50px 0 rgba($secondary-accent, 0.2);
@@ -25,6 +23,7 @@
 
       &-text {
         justify-content: center;
+        padding: 1.25rem;
 
         &-description {
           text-overflow: ellipsis;
@@ -45,8 +44,6 @@
       grid-template-columns: 1fr;
 
       &-card {
-        padding: 1.25rem;
-
         &:first-child {
           grid-column: 1 / span 1;
           // For some reason the below lines break the next build, bug reported on GitHub by someone else
@@ -56,6 +53,9 @@
 
         &:nth-child(n + 4) {
           display: none;
+        }
+        &-text {
+          padding: 1.25rem;
         }
       }
     }

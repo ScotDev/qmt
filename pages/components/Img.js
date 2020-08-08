@@ -12,7 +12,7 @@ const { publicRuntimeConfig } = getConfig()
 export default function Img({ imgPath, imgClass, imgAlt }) {
 
     const devImgPath = "https://source.unsplash.com/random?waves/1920x1080"
-    console.log(`${publicRuntimeConfig.API_URL}${imgPath}`)
+    // console.log(`${publicRuntimeConfig.API_URL}${imgPath}`)
 
 
     return (

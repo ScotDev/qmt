@@ -4,7 +4,7 @@ import axios from 'axios';
 import Moment from 'react-moment';
 
 import Error from '../components/Error'
-import Review_post from '../components/Review_post';
+import ReviewPost from '../components/ReviewPost';
 
 
 export default function Review({ data }) {
@@ -18,7 +18,7 @@ export default function Review({ data }) {
         <Head>
             <title>thequarantinemixtape | {data.title}</title>
         </Head>
-        <Review_post data={data}></Review_post>
+        <ReviewPost data={data}></ReviewPost>
     </>
     )
 }

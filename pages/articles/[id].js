@@ -4,7 +4,7 @@ import axios from 'axios';
 import Moment from 'react-moment';
 
 import Error from '../components/Error'
-import Article_post from '../components/Article_post';
+import ArticlePost from '../components/ArticlePost';
 
 
 export default function Article({ data }) {
@@ -18,7 +18,7 @@ export default function Article({ data }) {
         <Head>
             <title>thequarantinemixtape | {data.title}</title>
         </Head>
-        <Article_post data={data}></Article_post>
+        <ArticlePost data={data}></ArticlePost>
     </>
     )
 }

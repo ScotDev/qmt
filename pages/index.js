@@ -3,12 +3,13 @@ import axios from 'axios';
 
 import Header from './components/Header';
 import Banner from './components/Banner';
-import Instagram from './components/Instagram_grid';
+import Instagram from './components/InstagramGrid';
 import Spotify from './components/Spotify';
-import Articles_homepage from './components/Articles_homepage';
+import ArticlesHomepage from './components/ArticlesHomepage';
+import ReviewsHomepage from './components/ReviewsHomepage';
 
 
-export default function Home({ articles, posts, banner }) {
+export default function Home({ articles, posts, banner, reviews }) {
   return (
     <>
       <Head>
@@ -19,7 +20,8 @@ export default function Home({ articles, posts, banner }) {
       <Header></Header>
       <Banner banner={banner}></Banner>
       <Instagram posts={posts}></Instagram>
-      <Articles_homepage articles={articles}></Articles_homepage>
+      <ArticlesHomepage articles={articles}></ArticlesHomepage>
+      <ReviewsHomepage reviews={reviews}></ReviewsHomepage>
       <Spotify></Spotify>
     </>
   )
@@ -35,15 +37,19 @@ export async function getServerSideProps() {
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
     const res_2 = await axios.get(`${API_URL}/instagram-posts?_sort=post_position:ASC&_limit=6`)
     const res_3 = await axios.get(`${API_URL}/banners`)
+    const res_4 = await axios.get(`${API_URL}/reviews?_limit=5`)
     const articles = res_1.data;
     const posts = res_2.data;
     const banner = res_3.data;
+    const reviews = res_4.data;
+    console.log(reviews)
 
     return {
       props: {
         articles: articles,
         posts: posts,
-        banner: banner
+        banner: banner,
+        reviews: reviews
       }
     }
   } catch (error) {

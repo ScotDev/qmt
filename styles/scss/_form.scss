@@ -1,0 +1,53 @@
+// .form-wrapper{
+
+// }
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+
+  input {
+    outline: 0;
+    border: 0;
+    border-radius: $btn-radius;
+    -webkit-border-radius: $btn-radius;
+    -moz-border-radius: $btn-radius;
+    -ms-border-radius: $btn-radius;
+    -o-border-radius: $btn-radius;
+    padding: 0.4rem 0.25rem 0.4rem 0.75rem;
+    font-family: inherit;
+    font-size: $standard-text;
+    font-weight: $standard-text-weight;
+
+    &::-webkit-input-placeholder {
+      color: rgba($color: #000000, $alpha: 0.4);
+    }
+    // Fix this
+    &:hover,
+    &:focus input::-webkit-input-placeholder {
+      color: rgba($color: #000000, $alpha: 0.7);
+    }
+  }
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    @extend .btn-secondary;
+    cursor: pointer;
+  }
+
+  input[type='file'] {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+.form-label {
+  font-size: $standard-text;
+}
