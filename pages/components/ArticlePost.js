@@ -72,7 +72,7 @@ export default function Article_post({ data }) {
             <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
             {/* <DynamicImg imgPath={imgPath} imgClass={"post-main-img"} imgAlt={imgAlt}></DynamicImg> */}
             <p className="post-main-text">{data.text}</p>
-            <ShareGroup title={data.title} url={"www.twitter.com"}></ShareGroup>
+            <ShareGroup title={data.title}></ShareGroup>
         </div>
     )
 }

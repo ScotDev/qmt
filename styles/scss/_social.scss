@@ -1,3 +1,4 @@
+// Social media sidebar on homepage
 .social-group {
   color: $text;
   font-size: 2rem;
@@ -9,6 +10,49 @@
       color: $primary-accent;
       font-size: 2.5rem;
     }
+  }
+}
+
+// Shareable links at bottom of posts
+.share-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-title {
+    color: $secondary-accent;
+    font-size: $standard-text;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
+
+  .share-button {
+    font-size: calc(#{$standard-text + 0.75rem});
+  }
+
+  #twitter-share:hover,
+  #twitter-share:focus {
+    color: $primary-accent;
+  }
+  #whatsapp-share:hover,
+  #whatsapp-share:focus {
+    color: #00e676;
+  }
+  #reddit-share:hover,
+  #reddit-share:focus {
+    color: #ff4500;
+  }
+  #email-share:hover,
+  #email-share:focus {
+    color: $secondary-accent;
   }
 }
 

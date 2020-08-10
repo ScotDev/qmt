@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 
-import Error from './Error'
-import Img from './Img'
+import Error from './Error';
+import Img from './Img';
+import ShareGroup from './ShareGroup';
 
 export default function Article_post({ data }) {
 
@@ -62,6 +63,7 @@ export default function Article_post({ data }) {
             </div>
             <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
             <p className="post-main-text">{data.text}</p>
+            <ShareGroup title={data.title}></ShareGroup>
         </div>
     )
 }
