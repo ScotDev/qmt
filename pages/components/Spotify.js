@@ -10,7 +10,7 @@ export default function Spotify() {
                 </div>
                 <div className="spotify-grid-item">
                     <h3 className="spotify-embed-title">Podcasts</h3>
-                    <iframe className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pWvASC1XJkMvHrXlaB6GZ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pWvASC1XJkMvHrXlaB6GZ" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
             </div>
 

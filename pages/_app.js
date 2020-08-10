@@ -12,7 +12,7 @@ Router.events.on('routeChangeError', () => NProgress.done());
 import '../styles/styles.min.css';
 
 import Navbar from './components/Navbar';
-import Social from './components/Social';
+import SocialBar from './components/SocialBar';
 import Credits from './components/Credits';
 
 export default function MyApp({ Component, pageProps }) {
@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
     <div className="container">
 
       <Navbar></Navbar>
-      <Social></Social>
+      <SocialBar></SocialBar>
 
       <div className="content">
         <Component {...pageProps} />

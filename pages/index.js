@@ -42,7 +42,6 @@ export async function getServerSideProps() {
     const posts = res_2.data;
     const banner = res_3.data;
     const reviews = res_4.data;
-    console.log(reviews)
 
     return {
       props: {
