@@ -17,7 +17,7 @@ export default function SubmitForm() {
                 <input name="music" type="url" placeholder="Music"></input>
 
                 <label htmlFor="presskit" className="form-label">Presskit (If applicable)</label>
-                <button class="upload-btn-wrapper btn">Upload a file
+                <button class="upload-btn-wrapper btn"><span><i class="las la-upload"></i> Upload a file</span>
                     <input name="presskit" type="file"></input>
                 </button>
 

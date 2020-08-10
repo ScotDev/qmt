@@ -14,28 +14,50 @@
     border-bottom: 2px solid $primary-accent;
     max-width: $desktop-post-text-width;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
+  }
+
+  &-artist {
+    font-size: $medium-text;
+    font-weight: $medium-text-weight;
+    color: $secondary-accent;
+    margin: 0.5rem;
   }
 
   &-read-time {
     font-size: $small-text;
     font-weight: $small-text-weight;
     color: $secondary-accent;
+    margin: 0.5rem 0;
   }
 
   &-description {
-    font-size: $medium-text;
-    font-weight: $medium-text-weight;
-    margin-bottom: 3rem;
+    font-size: calc(#{$standard-text + 0.5rem});
+    font-weight: 300;
+    margin-bottom: 2rem;
     max-width: $desktop-post-text-width;
     text-align: center;
   }
+
+  &-category {
+    color: $secondary-accent;
+    font-size: $standard-text;
+    font-weight: $standard-text-weight;
+    margin: 0;
+
+    i {
+      margin-left: 0.25rem;
+      vertical-align: middle;
+      font-size: $medium-text;
+    }
+  }
+
   &-author-chip {
     display: flex;
     align-items: center;
     height: 4rem;
     width: auto;
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem 0;
     &-icon {
       height: 3.75rem;
       width: 3.75rem;
@@ -101,6 +123,8 @@
     &-title {
       max-width: $mobile-post-text-width;
       margin-bottom: 2rem;
+      font-size: calc(#{$giant-text - 0.5rem});
+      margin-top: 0.25rem;
     }
 
     &-read-time {
@@ -111,7 +135,7 @@
     &-description {
       font-size: $standard-text;
       font-weight: $standard-text-weight;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
       max-width: $mobile-post-text-width;
     }
 

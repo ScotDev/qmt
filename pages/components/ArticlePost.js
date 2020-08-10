@@ -15,7 +15,7 @@ import Img from './Img'
 
 export default function Article_post({ data }) {
 
-    const imgAlt = "Article header picture"
+    const imgAlt = "Article header"
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState("")
     const [readTimeEstimate, setreadTimeEstimate] = useState(0)
@@ -60,6 +60,7 @@ export default function Article_post({ data }) {
             <h1 className="post-title">{data.title}</h1>
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <h2 className="post-description">{data.description_preview}</h2>
+            {data.category === "Sponsored" ? <p className="post-category">Sponsored <i class="las la-comments-dollar"></i></p> : null}
             <div className="post-author-chip">
                 <img className="post-author-chip-icon" src="/images/profile.jpg"></img>
                 <div className="post-author-chip-details">

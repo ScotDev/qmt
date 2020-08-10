@@ -66,24 +66,6 @@ hr {
   }
 }
 
-.cta-link {
-  font-size: $standard-text;
-  font-weight: $standard-text-weight;
-  color: $text;
-  align-self: flex-end;
-  border-bottom: 2px solid transparent;
-
-  i {
-    vertical-align: middle;
-    font-size: $medium-text;
-  }
-
-  &:hover,
-  &:focus {
-    border-bottom: 2px solid $text;
-  }
-}
-
 @media only screen and (max-width: 900px) {
   html {
     font-size: calc(#{$base-size - 1px});

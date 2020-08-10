@@ -6,7 +6,7 @@ import Img from './Img'
 
 export default function Article_post({ data }) {
 
-    const imgAlt = "Review header picture"
+    const imgAlt = "Album cover"
     const [totalWordCount, settotalWordCount] = useState(0)
     const [rawText, setrawText] = useState("")
     const [readTimeEstimate, setreadTimeEstimate] = useState(0)
@@ -49,8 +49,9 @@ export default function Article_post({ data }) {
     return (
         <div className="post" key={data.id}>
             <h1 className="post-title">{data.title}</h1>
+            <h2 className="post-artist">{data.artist}</h2>
+            <h3 className="post-description">{data.description_preview}</h3>
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
-            <h2 className="post-description">{data.description_preview}</h2>
             <div className="post-author-chip">
                 {/* Change img src for production */}
                 <Img imgClass={"post-author-chip-icon"} src="/images/profile.jpg"></Img>
