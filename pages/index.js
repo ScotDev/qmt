@@ -31,7 +31,6 @@ export default function Home({ articles, posts, banner, reviews }) {
 
 export async function getServerSideProps() {
 
-  // Get articles for article grid
   try {
 
     const { publicRuntimeConfig } = getConfig();
