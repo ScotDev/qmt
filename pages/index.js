@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import getConfig from 'next/config';
 import axios from 'axios';
 
 import Header from './components/Header';
@@ -33,6 +34,7 @@ export async function getServerSideProps() {
   // Get articles for article grid
   try {
     // const { API_URL } = process.env;
+    const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
     const { API_URL } = serverRuntimeConfig.API_URL;
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
