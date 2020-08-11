@@ -45,7 +45,7 @@ export default function reviews({ reviews }) {
 
 export async function getServerSideProps() {
     try {
-        const { API_URL } = process.env;
+        const API_URL = "https://calm-depths-31916.herokuapp.com";
         const res = await axios.get(`${API_URL}/reviews`)
         const data = res.data;
 
