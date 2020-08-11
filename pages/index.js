@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import getConfig from 'next/config';
+// import getConfig from 'next/config';
 import axios from 'axios';
 
 import Header from './components/Header';
@@ -34,9 +34,11 @@ export async function getServerSideProps() {
   // Get articles for article grid
   try {
 
-    const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-    const API_URL = publicRuntimeConfig.NEXT_PUBLIC_API_URL;
+    // const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
+    // const API_URL = publicRuntimeConfig.NEXT_PUBLIC_API_URL;
+    const API_URL = "https://calm-depths-31916.herokuapp.com";
     // console.log(process.env.API_URL, publicRuntimeConfig.API_URL, serverRuntimeConfig.API_URL)
+    console.log(API_URL)
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
     const res_2 = await axios.get(`${API_URL}/instagrams?_sort=post_position:ASC&_limit=6`)
