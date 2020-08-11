@@ -10,7 +10,7 @@ export default function about({ data }) {
             <div className="page-intro">
                 <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
                 <p className="page-description">
-                    {data ? data.about : null}
+                    {data ? data.text : null}
                 </p>
             </div>
         </>
@@ -19,7 +19,6 @@ export default function about({ data }) {
 
 export async function getServerSideProps() {
 
-    // Get articles for article grid
     try {
         const { API_URL } = process.env;
 

@@ -69,7 +69,7 @@ export default function Article_post({ data }) {
                     <p className="post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>
                 </div>
             </div>
-            <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
+            {/* <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img> */}
             {/* <DynamicImg imgPath={imgPath} imgClass={"post-main-img"} imgAlt={imgAlt}></DynamicImg> */}
             <p className="post-main-text">{data.text}</p>
             <ShareGroup title={data.title}></ShareGroup>
