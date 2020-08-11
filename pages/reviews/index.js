@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link';
+import getConfig from 'next/config';
 import axios from 'axios';
 import Moment from 'react-moment';
 
@@ -45,7 +46,8 @@ export default function reviews({ reviews }) {
 
 export async function getServerSideProps() {
     try {
-        const API_URL = "https://calm-depths-31916.herokuapp.com";
+        const { publicRuntimeConfig } = getConfig();
+        const API_URL = publicRuntimeConfig.API_URL;
         const res = await axios.get(`${API_URL}/reviews`)
         const data = res.data;
 
