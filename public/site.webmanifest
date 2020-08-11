@@ -3,6 +3,12 @@
   "short_name": "QMT",
   "icons": [
     {
+      "src": "/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
@@ -11,15 +17,9 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "/maskable_icon.png",
-      "sizes": "196x196",
-      "type": "image/png",
-      "purpose": "maskable any"
     }
   ],
   "theme_color": "#f27ea9",
-  "background_color": "#00000",
+  "background_color": "#000",
   "display": "standalone"
 }
