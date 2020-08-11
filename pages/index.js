@@ -35,7 +35,7 @@ export async function getServerSideProps() {
   try {
     // const { API_URL } = process.env;
     const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-    const { API_URL } = publicRuntimeConfig.API_URL;
+    const { API_URL } = serverRuntimeConfig.API_URL;
 
     console.log(publicRuntimeConfig, serverRuntimeConfig)
 
