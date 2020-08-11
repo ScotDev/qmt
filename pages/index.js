@@ -36,10 +36,10 @@ export async function getServerSideProps() {
     const API_URL = process.env.API_URL;
     // const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
 
-    console.log(process.env.API_URL)
+    // console.log(process.env.API_URL, publicRuntimeConfig.API_URL, serverRuntimeConfig.API_URL)
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
-    const res_2 = await axios.get(`${API_URL}/instagram-posts?_sort=post_position:ASC&_limit=6`)
+    const res_2 = await axios.get(`${API_URL}/instagrams?_sort=post_position:ASC&_limit=6`)
     const res_3 = await axios.get(`${API_URL}/banners`)
     const res_4 = await axios.get(`${API_URL}/reviews?_limit=5`)
     const articles = res_1.data;
