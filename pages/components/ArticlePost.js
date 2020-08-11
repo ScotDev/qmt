@@ -63,7 +63,7 @@ export default function Article_post({ data }) {
             <h2 className="post-description">{data.description_preview}</h2>
             {data.category === "Sponsored" ? <p className="post-category">Sponsored <i class="las la-comments-dollar"></i></p> : null}
             <div className="post-author-chip">
-                <img className="post-author-chip-icon" src="/images/profile.jpg"></img>
+                <img className="post-author-chip-icon" src="https://bucketeer-22d646bf-cc53-432e-a8c1-70360c95d911.s3.amazonaws.com/avatar_690655d741.jpg"></img>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
                     <p className="post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>

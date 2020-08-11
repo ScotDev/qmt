@@ -55,10 +55,10 @@ export default function Article_post({ data }) {
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <div className="post-author-chip">
                 {/* Change img src for production */}
-                <Img imgClass={"post-author-chip-icon"} src="/images/profile.jpg"></Img>
+                <Img imgClass={"post-author-chip-icon"} src="https://bucketeer-22d646bf-cc53-432e-a8c1-70360c95d911.s3.amazonaws.com/avatar_690655d741.jpg"></Img>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
-                    <p className="post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.created_at}</Moment></p>
+                    <p className="post-author-chip-details-date"><Moment format="do MMM, YYYY">{data.createdAt}</Moment></p>
                 </div>
             </div>
             <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>

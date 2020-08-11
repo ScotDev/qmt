@@ -30,7 +30,7 @@ export default function reviews({ reviews }) {
                             <div className="review-grid-card-text">
                                 <p className="card-text-subtitle">{item.artist}</p>
                                 <p className="card-text-title">{item.title}</p>
-                                <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
+                                <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updatedAt}</Moment></span>
                             </div>
                         </div>
                     </Link>
