@@ -2,9 +2,9 @@
 import React from 'react'
 
 
-import getConfig from 'next/config';
+// import getConfig from 'next/config';
 
-const { publicRuntimeConfig } = getConfig()
+// const { publicRuntimeConfig } = getConfig()
 
 // console.log(publicRuntimeConfig.API_URL)
 
