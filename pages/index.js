@@ -35,7 +35,7 @@ export async function getServerSideProps() {
   try {
 
     const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-    const API_URL = publicRuntimeConfig.API_URL;
+    const API_URL = publicRuntimeConfig.NEXT_PUBLIC_API_URL;
     // console.log(process.env.API_URL, publicRuntimeConfig.API_URL, serverRuntimeConfig.API_URL)
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
