@@ -13,7 +13,7 @@ import {
 
 export default function ShareGroup({ title, id }) {
     const router = useRouter();
-    const baseUrl = "192.168.138.192:3000";
+    const baseUrl = "https://qmt.vercel.app";
     const relativeUrl = router.asPath;
     const url = baseUrl + relativeUrl;
     return (
