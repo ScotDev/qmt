@@ -11,6 +11,7 @@ export default function Banner({ banner }) {
 
     const baseRef = banner[0]
     // const banner_img = baseRef.main_img.url;
+    const banner_img = "https://source.unsplash.com/random/1920x1080"
     const bannerAlt = baseRef.title
 
     return (

@@ -25,7 +25,7 @@ export default function ShareGroup({ title, id }) {
                 <li className="share-button" id="reddit-share"><RedditShareButton title={title} url={url}><i className="lab la-reddit"></i></RedditShareButton></li>
                 {/* Facebook requires App ID to work first */}
                 {/* <li className="share-button"><FacebookShareButton title={title} url={url}><i className="lab la-facebook"></i></FacebookShareButton></li> */}
-                <li className="share-button" id="email-share"><EmailShareButton subject={title} url={url} body={"Check out this post from The Quarantine Mixtape: "}><i class="las la-envelope"></i></EmailShareButton></li>
+                <li className="share-button" id="email-share"><EmailShareButton subject={title} url={url} body={"Check out this post from The Quarantine Mixtape: "}><i className="las la-envelope"></i></EmailShareButton></li>
             </ul>
 
         </div>
