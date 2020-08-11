@@ -33,9 +33,9 @@ export async function getServerSideProps() {
 
   // Get articles for article grid
   try {
-    // const { API_URL } = process.env;
-    const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    const API_URL = process.env.API_URL;
+    // const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
+    // const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
     console.log(publicRuntimeConfig, serverRuntimeConfig)
 
