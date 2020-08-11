@@ -1,6 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import axios from 'axios'
 
-export default function about() {
+export default function about({ data }) {
     return (
         <>
             <Head>
@@ -9,8 +10,34 @@ export default function about() {
             <div className="page-intro">
                 <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
                 <p className="page-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    {data ? data.about : null}
+                </p>
             </div>
         </>
     )
+}
+
+export async function getServerSideProps() {
+
+    // Get articles for article grid
+    try {
+        const { API_URL } = process.env;
+
+        const res = await axios.get(`${API_URL}/about`)
+
+        const data = res.data;
+
+        return {
+            props: {
+                data: data,
+            }
+        }
+    } catch (error) {
+        console.log(error)
+        return {
+            props: {}
+        }
+    }
+
+
 }
