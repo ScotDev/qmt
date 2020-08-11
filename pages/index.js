@@ -35,7 +35,7 @@ export async function getServerSideProps() {
   try {
 
     // const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-    const API_URL = process.env_API_URL;
+    const API_URL = process.env.API_URL;
     // const API_URL = "https://calm-depths-31916.herokuapp.com";
     // console.log(process.env.API_URL, publicRuntimeConfig.API_URL, serverRuntimeConfig.API_URL)
 
