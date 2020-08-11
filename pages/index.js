@@ -33,7 +33,7 @@ export async function getServerSideProps() {
   // Get articles for article grid
   try {
     // const { API_URL } = process.env;
-    const { API_URL } = publicRuntimeConfig.API_URL;
+    const { API_URL } = serverRuntimeConfig.API_URL;
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
     const res_2 = await axios.get(`${API_URL}/instagram-posts?_sort=post_position:ASC&_limit=6`)
