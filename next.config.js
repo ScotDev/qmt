@@ -5,6 +5,6 @@ module.exports = {
     },
     publicRuntimeConfig: {
         // Will only be available on the client side
-        API_URL: process.env.API_URL
+        API_URL: "https://calm-depths-31916.herokuapp.com"
     }
 }

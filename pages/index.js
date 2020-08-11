@@ -36,7 +36,6 @@ export async function getServerSideProps() {
 
     const { publicRuntimeConfig } = getConfig();
     const API_URL = publicRuntimeConfig.API_URL;
-    // const API_URL = "https://calm-depths-31916.herokuapp.com";
     console.log(process.env.API_URL, publicRuntimeConfig.API_URL)
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
