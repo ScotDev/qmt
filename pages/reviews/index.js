@@ -26,7 +26,7 @@ export default function reviews({ reviews }) {
                 {reviews.map(item => (
                     <Link href="/reviews/[id]" as={`/reviews/${item.id}`} key={item.id}>
                         <div className="review-grid-card" key={item.id}>
-                            <Img imgPath={item.album_img} imgClass={"card-img"} imgAlt={item.title}></Img>
+                            <Img imgPath={"item.album_img"} imgClass={"card-img"} imgAlt={item.title}></Img>
                             <div className="review-grid-card-text">
                                 <p className="card-text-subtitle">{item.artist}</p>
                                 <p className="card-text-title">{item.title}</p>
