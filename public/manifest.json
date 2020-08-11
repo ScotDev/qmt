@@ -1,6 +1,7 @@
 {
   "short_name": "QMT",
   "name": "The Quarantine Mixtape",
+  "description": "The Quarantine Mixtape",
   "icons": [
     {
       "src": "/favicon.ico",
