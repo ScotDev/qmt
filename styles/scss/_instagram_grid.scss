@@ -3,13 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // width: calc(#{$grid-item-width * 3 + 24px});
   width: $section-width;
   margin-bottom: 1rem;
 
   &-grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 2rem;
 

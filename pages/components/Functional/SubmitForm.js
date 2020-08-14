@@ -5,7 +5,7 @@ export default function SubmitForm() {
         <div className="form-wrapper">
             <h3 className="form-title">Send us your music</h3>
             <p className="form-text">Contact us by email or fill in the form below!</p>
-            <a className="form-email" target="_blank" href="mailto:thequarantinemixtape@gmail.com"><i class="las la-envelope"></i>thequarantinemixtape@gmail.com</a>
+            <a className="form-email" target="_blank" href="mailto:thequarantinemixtape@gmail.com"><i className="las la-envelope"></i>thequarantinemixtape@gmail.com</a>
             <form>
                 <fieldset>
                     <label htmlFor="name" className="form-label">Artist/band name</label>
@@ -29,7 +29,7 @@ export default function SubmitForm() {
 
                 <fieldset>
                     <label htmlFor="presskit" className="form-label" id="presskit-label">Presskit (If applicable)</label>
-                    <button class="upload-btn-wrapper btn"><span><i class="las la-upload"></i> Upload a file</span>
+                    <button className="upload-btn-wrapper btn"><span><i className="las la-upload"></i> Upload a file</span>
                         <input name="presskit" type="file"></input>
                     </button>
                 </fieldset>
