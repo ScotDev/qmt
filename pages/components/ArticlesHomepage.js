@@ -20,7 +20,7 @@ export default function Article_grid({ articles }) {
                                 <p className="card-text-title">{item.title}</p>
                                 <p className="card-text-subtitle">{item.category}</p>
                                 <p className="post-homepage-grid-card-text-description card-text-description">{item.description_preview}</p>
-                                <span className="card-text-date"><Moment format="do MMM, YYYY">{item.created_at}</Moment></span>
+                                <span className="card-text-date"><Moment format="Do MMM, YYYY">{item.createdAt}</Moment></span>
                             </div>
                         </div>
                     </Link>

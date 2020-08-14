@@ -23,7 +23,7 @@ export default function Reviews_homepage({ reviews }) {
                                 <p className="card-text-title">{item.title}</p>
                                 <p className="card-text-subtitle">{item.artist}</p>
                                 <p className="post-homepage-grid-card-text-description card-text-description">{item.description_preview}</p>
-                                <span className="card-text-date"><Moment format="do MMM, YYYY">{item.updated_at}</Moment></span>
+                                <span className="card-text-date"><Moment format="Do MMM, YYYY">{item.createdAt}</Moment></span>
                             </div>
                         </div>
                     </Link>
