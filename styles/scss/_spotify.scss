@@ -38,17 +38,16 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .spotify {
     width: 95%;
-
     &-grid {
       grid-template-columns: 1fr;
 
       &-item {
         &:first-child::after {
           content: '';
-          width: 50%;
+          width: 60%;
           height: 2px;
           color: $text;
           border-bottom: 2px solid rgba($text, $alpha: 0.5);

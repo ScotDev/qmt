@@ -35,10 +35,17 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .post-homepage {
     width: 95%;
+    &-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
 
+@media only screen and (max-width: 900px) {
+  .post-homepage {
     &-grid {
       gap: 1.75rem;
       grid-template-columns: 1fr;
