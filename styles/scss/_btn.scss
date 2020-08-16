@@ -1,31 +1,31 @@
 .btn {
-  border: none;
+  border: 2px solid transparent;
   outline: 0;
   font-family: inherit;
   font-size: $small-text;
   font-weight: $medium-text-weight;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   height: 2.5rem;
   border-radius: $btn-radius;
   -webkit-border-radius: $btn-radius;
   -moz-border-radius: $btn-radius;
   -ms-border-radius: $btn-radius;
   -o-border-radius: $btn-radius;
-  transition: transform 0.2s ease;
-  -webkit-transition: transform 0.2s ease;
-  -moz-transition: transform 0.2s ease;
-  -ms-transition: transform 0.2s ease;
-  -o-transition: transform 0.2s ease;
+  // transition: transform 0.2s ease;
+  // -webkit-transition: transform 0.2s ease;
+  // -moz-transition: transform 0.2s ease;
+  // -ms-transition: transform 0.2s ease;
+  // -o-transition: transform 0.2s ease;
   text-align: center;
   vertical-align: middle;
 
   &:hover,
   &:focus {
-    transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
+    // transform: translateY(-3px);
+    // -webkit-transform: translateY(-3px);
+    // -moz-transform: translateY(-3px);
+    // -ms-transform: translateY(-3px);
+    // -o-transform: translateY(-3px);
     cursor: pointer;
   }
 }
@@ -53,4 +53,47 @@
     background-color: $text;
     border: 2px solid $secondary-accent;
   }
+}
+.btn-info {
+  @extend .btn;
+  color: $text;
+  background-color: $primary-bg;
+  border: 2px solid $text;
+  padding: 0 1rem;
+
+  &:hover,
+  &:focus {
+    cursor: default;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+
+.btn-disabled {
+  @extend .btn;
+  color: grey;
+  background-color: $primary-bg;
+  border: 2px solid grey;
+
+  &:hover,
+  &:focus {
+    cursor: default;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    color: grey;
+    background-color: $primary-bg;
+    border: 2px solid grey;
+  }
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
 }
