@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import getConfig from 'next/config';
-import React from 'react';
+import { NextSeo } from 'next-seo';
+
 import axios from 'axios';
 import Moment from 'react-moment';
 
@@ -9,6 +9,14 @@ import ArticlePost from '../components/ArticlePost';
 
 
 export default function Article({ data }) {
+    const pageSEO = {
+        title: `${data.title}`,
+        description: `${data.description_preview}`,
+        openGraph: {
+            title: `${data.title}`,
+            description: `${data.description_preview}`
+        }
+    }
 
 
     if (!data) {
@@ -16,9 +24,7 @@ export default function Article({ data }) {
     }
 
     return (<>
-        <Head>
-            <title>thequarantinemixtape | {data.title}</title>
-        </Head>
+        <NextSeo {...pageSEO}></NextSeo>
         <ArticlePost data={data}></ArticlePost>
     </>
     )

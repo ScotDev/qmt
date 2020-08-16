@@ -1,13 +1,23 @@
-import Head from 'next/head';
 import getConfig from 'next/config';
+import { NextSeo } from 'next-seo';
+
 import axios from 'axios'
 
 export default function about({ data }) {
+    const pageSEO = {
+        title: "About",
+        description: "About The Quarantine Mixtape",
+        openGraph: {
+            title: "About",
+            description: "About The Quarantine Mixtape"
+        }
+    }
+
     return (
         <>
-            <Head>
-                <title>thequarantinemixtape | About</title>
-            </Head>
+
+            <NextSeo {...pageSEO}></NextSeo>
+
             <div className="page-intro">
                 <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
                 <p className="page-description">

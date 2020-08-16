@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import getConfig from 'next/config';
-import React from 'react';
+import { NextSeo } from 'next-seo';
+
 import axios from 'axios';
 import Moment from 'react-moment';
 
@@ -9,16 +9,21 @@ import ReviewPost from '../components/ReviewPost';
 
 
 export default function Review({ data }) {
-
+    const pageSEO = {
+        title: `${data.title}`,
+        description: `${data.description_preview}`,
+        openGraph: {
+            title: `${data.title}`,
+            description: `${data.description_preview}`
+        }
+    }
 
     if (!data) {
         return <Error statusCode={404}></Error>
     }
 
     return (<>
-        <Head>
-            <title>thequarantinemixtape | {data.title}</title>
-        </Head>
+        <NextSeo {...pageSEO}></NextSeo>
         <ReviewPost data={data}></ReviewPost>
     </>
     )

@@ -105,7 +105,7 @@
     font-weight: $standard-text-weight;
     max-width: $desktop-post-text-width;
     line-height: 1.7;
-    text-align: justify;
+    text-align: left;
 
     &::first-letter {
       font-size: calc(#{$large-text + 0.5rem});
@@ -191,7 +191,8 @@
 
     &-main-img {
       width: 100%;
-      margin-bottom: 1.7rem;
+      height: 250px;
+      margin-bottom: 1.5rem;
     }
     &-main-text {
       max-width: $mobile-post-text-width;

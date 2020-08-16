@@ -5,11 +5,11 @@ export default function SubmitForm() {
         <div className="form-wrapper">
             <h3 className="form-title">Send us your music</h3>
             <p className="form-text">Contact us by email or fill in the form below!</p>
-            <a className="form-email" target="_blank" href="mailto:thequarantinemixtape@gmail.com"><i className="las la-envelope"></i>thequarantinemixtape@gmail.com</a>
+            <a className="form-email" target="_blank" href="mailto:the.quarantine.mixtape@gmail.com"><i className="las la-envelope"></i>Email Us!</a>
             <form>
                 <fieldset>
                     <label htmlFor="name" className="form-label">Artist/band name</label>
-                    <input name="name" type="text" placeholder="Artist/band name*" required aria-required></input>
+                    <input name="name" type="text" placeholder="Name*" required aria-required></input>
                 </fieldset>
 
                 <fieldset>
@@ -19,7 +19,7 @@ export default function SubmitForm() {
 
                 <fieldset>
                     <label htmlFor="music" className="form-label">Link to music</label>
-                    <input name="music" type="url" placeholder="Link to music"></input>
+                    <input name="music" type="url" placeholder="URL"></input>
                 </fieldset>
 
                 <fieldset>

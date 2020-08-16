@@ -17,6 +17,7 @@
     color: $primary-accent;
     text-transform: uppercase;
     margin: 0 0 1.5rem 0;
+    padding: 0 1rem;
   }
 
   .form-text {
@@ -24,12 +25,14 @@
     font-weight: $standard-text-weight;
     color: $text;
     margin: 0 0 1.5rem 0;
+    padding: 0 1rem;
   }
 
   .form-email {
     font-size: $standard-text;
-    border-bottom: 2px solid transparent;
-    margin: 0 auto 2.5rem 0;
+    border-bottom: 2px solid $primary-accent;
+    color: $primary-accent;
+    margin: 0 auto 2.5rem 1rem;
 
     i {
       font-size: calc(#{$standard-text + 0.5rem});
@@ -39,8 +42,8 @@
 
     &:focus,
     &:hover {
-      color: $primary-accent;
-      border-bottom: 2px solid $primary-accent;
+      color: $secondary-accent;
+      border-bottom: 2px solid $secondary-accent;
       cursor: pointer;
     }
   }
@@ -125,7 +128,7 @@
 
     button[type='submit'] {
       grid-column: 1 / span 2;
-      margin: 0 10rem;
+      margin: 1rem 10rem;
       font-size: $standard-text;
       // width: 50%;
     }
@@ -155,9 +158,12 @@
       .upload-btn-wrapper {
         width: 100%;
       }
+      input {
+        margin-bottom: 0.8rem;
+      }
 
       button[type='submit'] {
-        margin: 0;
+        margin: 1rem 0;
         width: 100%;
       }
     }

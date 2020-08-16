@@ -1,13 +1,23 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 import SubmitForm from './components/Functional/SubmitForm'
 
 export default function submit() {
+    const pageSEO = {
+        title: "Submit Music",
+        description: "Submit music for review",
+        openGraph: {
+            title: "Submit Music",
+            description: "Submit music for review"
+        }
+    }
+
+
     return (
         <>
-            <Head>
-                <title>thequarantinemixtape | Submit Music</title>
-            </Head>
+
+            <NextSeo {...pageSEO}></NextSeo>
+
             <div className="page-intro">
                 <h1 className="page-title">Submit Music for Review</h1>
                 <p className="page-description">

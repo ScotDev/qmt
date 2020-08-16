@@ -14,7 +14,6 @@ export default function Home({ articles, posts, banner, reviews }) {
   return (
     <>
       <Head>
-        <title>thequarantinemixtape</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import getConfig from 'next/config';
+import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 
 import axios from 'axios';
@@ -10,6 +10,15 @@ import Error from '../components/Error'
 
 
 export default function articles({ articles, page, numberOfArticles }) {
+
+    const pageSEO = {
+        title: "Articles",
+        description: "Blog posts from The Quarantine Mixtape",
+        openGraph: {
+            title: "Articles",
+            description: "Blog posts from The Quarantine Mixtape"
+        }
+    }
     const router = useRouter();
     const lastPage = Math.ceil(numberOfArticles / 10)
 
@@ -18,9 +27,7 @@ export default function articles({ articles, page, numberOfArticles }) {
     }
     return (<>
 
-        <Head>
-            <title>thequarantinemixtape | Articles</title>
-        </Head>
+        <NextSeo {...pageSEO}></NextSeo>
 
         <div className="articles">
             <h1 className="page-title">Articles</h1>
