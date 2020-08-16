@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 
+import ReactMarkdown from 'react-markdown';
+
 // import dynamic from 'next/dynamic';
 
 // import Spinner from './Spinner';
@@ -71,7 +73,7 @@ export default function Article_post({ data }) {
             </div>
             <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
             {/* <DynamicImg imgPath={imgPath} imgClass={"post-main-img"} imgAlt={imgAlt}></DynamicImg> */}
-            <p className="post-main-text">{data.text}</p>
+            <ReactMarkdown source={data.text} className="post-main-text"></ReactMarkdown>
             <ShareGroup title={data.title}></ShareGroup>
         </div>
     )

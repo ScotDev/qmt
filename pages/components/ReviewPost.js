@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 
+import ReactMarkdown from 'react-markdown';
+
 import Error from './Error';
 import Img from './Img';
 import ShareGroup from './ShareGroup';
@@ -62,7 +64,7 @@ export default function Article_post({ data }) {
                 </div>
             </div>
             <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
-            <p className="post-main-text">{data.text}</p>
+            <ReactMarkdown source={data.text} className="post-main-text"></ReactMarkdown>
             <ShareGroup title={data.title}></ShareGroup>
         </div>
     )

@@ -105,13 +105,35 @@
     font-weight: $standard-text-weight;
     max-width: $desktop-post-text-width;
     line-height: 1.7;
-    text-align: left;
+    text-align: justify;
 
     &::first-letter {
       font-size: calc(#{$large-text + 0.5rem});
       font-weight: $large-text-weight;
       line-height: 1.2;
       letter-spacing: 4px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      border-radius: $card-radius;
+      -webkit-border-radius: $card-radius;
+      -moz-border-radius: $card-radius;
+      -ms-border-radius: $card-radius;
+      -o-border-radius: $card-radius;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    a {
+      color: $primary-accent;
+      border-bottom: 1px solid $primary-accent;
+      &:hover,
+      &:focus {
+        color: $secondary-accent;
+        border-bottom: 1px solid $secondary-accent;
+      }
     }
   }
 }
@@ -121,9 +143,6 @@
     width: 95%;
     &-title {
       max-width: $laptop-post-text-width;
-      // margin-bottom: 2rem;
-      // font-size: calc(#{$giant-text - 0.5rem});
-      // margin-top: 0.25rem;
     }
 
     &-read-time {
