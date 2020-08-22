@@ -30,13 +30,13 @@ const FormikForm = () => {
         }),
         onSubmit: values => {
             console.log("Values:", formik.values)
-            const data = {
-                submitter_name: values.name,
-                submitter_email: values.email,
-                instagram_account: values.instagram,
-                music_link: values.music
-            }
-            axios.post(`${FORM_ENDPOINT}`, data)
+            // const data = {
+            //     submitter_name: values.name,
+            //     submitter_email: values.email,
+            //     instagram_account: values.instagram,
+            //     music_link: values.music
+            // }
+            axios.post(`${FORM_ENDPOINT}`, values)
                 .then(res => {
                     console.log("Data sent")
                 })
