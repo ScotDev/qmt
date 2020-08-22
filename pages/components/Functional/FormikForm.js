@@ -9,6 +9,7 @@ const FormikForm = () => {
 
     const { publicRuntimeConfig } = getConfig();
     const API_URL = publicRuntimeConfig.API_URL;
+    const EMAIL_URL = publicRuntimeConfig.EMAIL_URL;
 
     const formik = useFormik({
         initialValues: {
@@ -36,10 +37,9 @@ const FormikForm = () => {
                 instagram_account: values.instagram,
                 music_link: values.music
             }
-            console.log(data)
-            axios.post("https://kwes.io/api/foreign/forms/UboAaQBZ5ji9LfFBFajU", { data })
+            axios.post(`https://formsubmit.co/${EMAIL_URL}`, { data })
                 .then(res => {
-                    console.log(data)
+                    console.log(values)
                     console.log(res)
                     console.log("Data sent")
                 })
@@ -103,6 +103,8 @@ const FormikForm = () => {
             {formik.touched.music && formik.errors.music ? (
                 <div className="form-error-msg">{formik.errors.music}</div>
             ) : null}
+
+            {/* <input type="text" name="_honey" style="display:none"></input> */}
 
             {/* <label htmlFor="file" className="form-label" id="file-label">Presskit (If applicable)</label> */}
             {/* <button className="upload-btn-wrapper btn"><span><i className="las la-upload"></i> Upload a file</span> */}
