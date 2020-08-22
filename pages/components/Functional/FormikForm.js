@@ -102,7 +102,6 @@ const FormikForm = () => {
                 <div className="form-error-msg">{formik.errors.music}</div>
             ) : null}
 
-            {/* <input type="text" name="_honey" style="display:none"></input> */}
 
             {/* <label htmlFor="file" className="form-label" id="file-label">Presskit (If applicable)</label> */}
             {/* <button className="upload-btn-wrapper btn"><span><i className="las la-upload"></i> Upload a file</span> */}
