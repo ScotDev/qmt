@@ -36,7 +36,7 @@ const FormikForm = () => {
                 instagram_account: values.instagram,
                 music_link: values.music
             }
-            axios.post(`${FORM_ENDPOINT}`, { data })
+            axios.post(`${FORM_ENDPOINT}`, data)
                 .then(res => {
                     console.log("Data sent")
                 })
