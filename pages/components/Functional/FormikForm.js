@@ -37,16 +37,14 @@ const FormikForm = () => {
                 instagram_account: values.instagram,
                 music_link: values.music
             }
-            axios.post(`https://formsubmit.co/${EMAIL_URL}`, { data })
+            axios.post(`https://getform.io/f/d440c3d6-4296-4f6d-9014-590f65a00cad`, { data })
                 .then(res => {
-                    console.log(values)
-                    console.log(res)
                     console.log("Data sent")
                 })
         },
     });
     return (
-        <form className="form kwes-form" onSubmit={formik.handleSubmit}>
+        <form className="form" onSubmit={formik.handleSubmit}>
             <label htmlFor="name">Artist/band name</label>
             <input className="form-input"
                 id="name"
@@ -68,6 +66,7 @@ const FormikForm = () => {
                 name="email"
                 type="email"
                 onChange={formik.handleChange}
+
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
                 maxLength={60}
