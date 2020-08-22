@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 const FormikForm = () => {
 
     const { publicRuntimeConfig } = getConfig();
-    const FORM_ENDPOINT = publicRuntimeConfig.EMAIL_URL;
+    const FORM_ENDPOINT = publicRuntimeConfig.FORM_ENDPOINT;
 
     const formik = useFormik({
         initialValues: {
