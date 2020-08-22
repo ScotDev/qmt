@@ -8,8 +8,7 @@ import * as Yup from 'yup';
 const FormikForm = () => {
 
     const { publicRuntimeConfig } = getConfig();
-    const API_URL = publicRuntimeConfig.API_URL;
-    const EMAIL_URL = publicRuntimeConfig.EMAIL_URL;
+    const FORM_ENDPOINT = publicRuntimeConfig.EMAIL_URL;
 
     const formik = useFormik({
         initialValues: {
@@ -37,7 +36,7 @@ const FormikForm = () => {
                 instagram_account: values.instagram,
                 music_link: values.music
             }
-            axios.post(`https://getform.io/f/d440c3d6-4296-4f6d-9014-590f65a00cad`, { data })
+            axios.post(`${FORM_ENDPOINT}`, { data })
                 .then(res => {
                     console.log("Data sent")
                 })
