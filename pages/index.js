@@ -15,6 +15,7 @@ export default function Home({ articles, posts, banner, reviews }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://kwes.io/js/kwes.js" charset="utf-8"></script>
       </Head>
 
       <Header></Header>
