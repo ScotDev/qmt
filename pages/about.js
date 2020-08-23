@@ -1,6 +1,7 @@
 import getConfig from 'next/config';
 import { NextSeo } from 'next-seo';
 
+import ReactMarkdown from 'react-markdown';
 import axios from 'axios'
 
 export default function about({ data }) {
@@ -20,9 +21,7 @@ export default function about({ data }) {
 
             <div className="page-intro">
                 <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
-                <p className="page-description">
-                    {data ? data.text : null}
-                </p>
+                {data ? <ReactMarkdown source={data.text} className="page-description"></ReactMarkdown> : null}
             </div>
         </>
     )

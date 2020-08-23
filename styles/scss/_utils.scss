@@ -29,6 +29,15 @@
   align-self: center;
   margin-bottom: 3rem;
   color: $text;
+  a {
+    color: $primary-accent;
+    border-bottom: 1px solid $primary-accent;
+    &:hover,
+    &:focus {
+      color: $secondary-accent;
+      border-bottom: 1px solid $secondary-accent;
+    }
+  }
 }
 
 .page-intro {

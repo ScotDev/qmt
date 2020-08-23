@@ -16,7 +16,7 @@ export default function ShareGroup({ title, id }) {
     const url = baseUrl + relativeUrl;
     return (
         <div className="share-group">
-            <p className="share-group-title">Liked this article? Share it!</p>
+            <p className="share-group-title">Liked this post? Share it!</p>
             <ul className="share-buttons">
                 <li className="share-button" id="twitter-share"><TwitterShareButton title={title} url={url}><i className="lab la-twitter"></i></TwitterShareButton></li>
                 <li className="share-button" id="whatsapp-share"><WhatsappShareButton title={title} url={url}><i className="lab la-whatsapp"></i></WhatsappShareButton></li>

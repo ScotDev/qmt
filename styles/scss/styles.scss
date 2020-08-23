@@ -54,6 +54,20 @@ hr {
 .credits {
   padding-bottom: 2rem;
   margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &-tagline {
+    text-transform: uppercase;
+    font-size: $small-text;
+    font-weight: $small-text-weight;
+    margin-bottom: 1.8rem;
+    padding: 0 1rem;
+  }
+
   a {
     color: $text;
     font-size: $small-text;

@@ -8,7 +8,7 @@ export default function Instagram_grid({ posts }) {
     }
 
     return (<div className="instagram">
-        <h2 className="section-title">Instagram</h2>
+        <h2 className="section-title">Follow us</h2>
         <div className="instagram-grid">
 
             {posts.map(item => (
