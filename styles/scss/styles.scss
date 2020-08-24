@@ -72,6 +72,7 @@ hr {
     color: $text;
     font-size: $small-text;
     font-weight: $small-text-weight;
+    border-bottom: 1px solid transparent;
     &:hover,
     &:focus {
       color: $secondary-accent;

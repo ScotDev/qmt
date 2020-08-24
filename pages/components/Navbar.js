@@ -10,8 +10,8 @@ export default function Navbar() {
             <div className="nav-brand"><Link href="/"><a>QMT</a></Link></div>
             <ul className="nav-links">
                 <li className="nav-link"><Link href="/"><a>Home</a></Link></li>
-                <li className="nav-link"><Link href="/articles"><a>Articles</a></Link></li>
                 <li className="nav-link"><Link href="/reviews"><a>Reviews</a></Link></li>
+                <li className="nav-link"><Link href="/articles"><a>Articles</a></Link></li>
                 <li className="nav-link"><Link href="/submit"><a>Submit music</a></Link></li>
                 <li className="nav-link"><Link href="/about"><a>About</a></Link></li>
             </ul>
@@ -24,8 +24,8 @@ export default function Navbar() {
 
                 <ul className="hamburger-links" >
                     <li className="hamburger-link"><Link href="/"><a className="hamburger-link-anchor">Home</a></Link></li>
-                    <li className="hamburger-link"><Link href="/articles"><a className="hamburger-link-anchor">Articles</a></Link></li>
                     <li className="hamburger-link"><Link href="/reviews"><a className="hamburger-link-anchor">Reviews</a></Link></li>
+                    <li className="hamburger-link"><Link href="/articles"><a className="hamburger-link-anchor">Articles</a></Link></li>
                     <li className="hamburger-link"><Link href="/submit"><a className="hamburger-link-anchor">Submit music</a></Link></li>
                     <li className="hamburger-link"><Link href="/about"><a className="hamburger-link-anchor">About</a></Link></li>
                     <li className="hamburger-link">

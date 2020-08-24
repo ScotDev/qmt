@@ -72,7 +72,7 @@
   }
 }
 
-.btn-disabled {
+.btn:disabled {
   @extend .btn;
   color: grey;
   background-color: $primary-bg;
