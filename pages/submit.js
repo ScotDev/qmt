@@ -1,6 +1,5 @@
 import { NextSeo } from 'next-seo';
 
-import FormikForm from './components/Functional/FormikForm'
 import ReactHookForm from './components/Functional/ReactHookForm'
 
 export default function submit() {
