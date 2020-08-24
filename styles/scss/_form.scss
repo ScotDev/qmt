@@ -92,18 +92,56 @@
         }
       }
 
-      input[type='file'] {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        // position: absolute;
-        z-index: -1;
+      textarea {
+        outline: none;
+        resize: none;
+        font-family: inherit;
+        font-size: $standard-text;
+        background-color: transparent;
+        border: 1px solid $text;
+        color: $text;
+        padding: 0.4rem;
+        background: transparent;
       }
+
+      select {
+        border: 1px solid $text;
+        outline: none;
+        padding: 0.25rem 0.25rem 0.4rem 0.4rem;
+        font-family: inherit;
+        font-size: $standard-text;
+        font-weight: $standard-text-weight;
+        width: 100%;
+        background-color: transparent;
+        color: $text;
+        // -webkit-appearance: none;
+        // -moz-appearance: none;
+        // appearance: none;
+
+        option {
+          padding: 0.25rem 0.25rem 0.4rem 0.4rem;
+          font-family: inherit;
+          font-size: $standard-text;
+          font-weight: $standard-text-weight;
+          width: 100%;
+          background-color: $primary-bg;
+          color: $text;
+        }
+      }
+
+      // input[type='file'] {
+      //   // width: 0.1px;
+      //   // height: 0.1px;
+      //   // opacity: 0;
+      //   // overflow: hidden;
+      //   // position: absolute;
+      //   // z-index: -1;
+      // }
       p {
         i {
           color: greenyellow;
-          margin-left: 0.5rem;
+          margin-left: 0.4rem;
+          font-size: $standard-text;
         }
       }
     }
@@ -148,12 +186,12 @@
       // }
     }
 
-    // button[type='submit'] {
-    //   grid-column: 1 / span 2;
-    //   margin: 1rem 10rem;
-    //   font-size: $standard-text;
-    //   // width: 50%;
-    // }
+    button[type='submit'] {
+      grid-column: 1 / span 2;
+      margin: 1rem 18rem;
+      font-size: $standard-text;
+      // width: 50%;
+    }
   }
 }
 
@@ -175,11 +213,15 @@
       }
     }
     form {
-      // grid-template-columns: 1fr;
-      // gap: 1rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
       display: flex;
       flex-direction: column;
       text-align: center;
+
+      textarea {
+        width: 100%;
+      }
 
       .upload-btn-wrapper {
         width: 100%;
