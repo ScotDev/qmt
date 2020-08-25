@@ -17,7 +17,6 @@ export default function about({ data }) {
 
     return (
         <>
-
             <NextSeo {...pageSEO}></NextSeo>
 
             <div className="page-intro">
