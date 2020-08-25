@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import getConfig from 'next/config';
 
+import Loading from '../Helpers/LoadingSmall'
+
 export default function ReactHookForm() {
     const { publicRuntimeConfig } = getConfig();
     const FORM_ENDPOINT = publicRuntimeConfig.FORM_ENDPOINT;
 
     const [fileName, setfileName] = useState(false)
+    const [loading, setloading] = useState(false)
     const [disableBtn, setdisableBtn] = useState(false)
     const [afterSubmitMsg, setafterSubmitMsg] = useState(false)
 
-    const { register, handleSubmit, errors, setValue } = useForm();
+    const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data => {
+        setloading(true)
         let formData = new FormData()
         formData.append("file", data.file[0])
         formData.append("name", data.name)
@@ -29,12 +33,14 @@ export default function ReactHookForm() {
         })
             .then(res => {
                 setdisableBtn(true)
-                setafterSubmitMsg('Submitted successfully')
+                setloading(false)
+                setafterSubmitMsg("Thank you! We'll be in touch soon")
                 console.log("Data sent")
             })
             .catch(err => {
                 console.log(err)
-                setafterSubmitMsg('Data could not be sent')
+                setloading(false)
+                setafterSubmitMsg('Data could not be sent, please try again')
             })
     };
 
@@ -47,50 +53,59 @@ export default function ReactHookForm() {
             <p className="form-text">We want to hear from you</p>
             <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                 <fieldset>
-                    <input type="text" placeholder="Band/artist name*" name="name" required ref={register({ required: true })} />
+                    <input type="text" placeholder="Band/artist name*" name="name" required ref={register({ required: true })} className="standard-input" />
                 </fieldset>
 
                 <fieldset>
-                    <input type="email" placeholder="Email*" name="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} />
+                    <input type="email" placeholder="Email*" name="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} className="standard-input" />
                 </fieldset>
 
                 <fieldset>
-                    <input type="url" placeholder="Instagram" name="instagram" ref={register({ maxLength: 200 })} />
+                    <input type="text" placeholder="Instagram handle" name="instagram" ref={register({ maxLength: 200 })} className="standard-input" />
                 </fieldset>
 
                 <fieldset>
-                    <input type="url" placeholder="Link to music (Spotify/soundcloud)" name="music" ref={register({ required: true })} />
+                    <input type="text" placeholder="Spotify/soundcloud link" name="music" ref={register({ required: true })} className="standard-input" />
                 </fieldset>
 
                 <fieldset>
-                    <input type="text" placeholder="Genre" name="genre" ref={register({ required: true })} />
+                    <input type="text" placeholder="Genre" name="genre" ref={register({ required: true })} className="standard-input" />
                 </fieldset>
 
                 <fieldset>
                     <select name="signed" ref={register({ required: true })}>
-                        <option value="signed">Signed</option>
-                        <option value="unsigned">Unsigned</option>
+                        <option value="Signed">Signed with record label</option>
+                        <option value="Unsigned">Unsigned</option>
                     </select>
                 </fieldset>
 
                 <fieldset>
-                    <p className="form-label" id="file-label">Presskit (If applicable)</p>
-                    {/* <label htmlFor="file" className="btn-secondary file-btn" >Upload a file <i className="las la-upload"></i></label> */}
-                    {/* <button className="btn-secondary">Upload a file <i className="las la-upload"></i></button> */}
-                    <input type="file" name="file" ref={register} onChange={e => {
-                        setfileName(e.target.files[0].name)
-                    }}></input>
+                    <label htmlFor="file" className="form-label">Presskit (If available)</label>
+                    <div className="btn-secondary file-upload-wrapper" >
+                        <span><i className="las la-cloud-upload-alt"></i></span>
+
+                        <input type="file" name="file" ref={register} onChange={e => {
+                            setfileName(e.target.files[0].name)
+                        }}></input>
+                    </div>
+
                     <p>{fileName ? fileName : "No file selected"} {fileName && <i className="las la-check"></i>}</p>
                 </fieldset>
 
                 <fieldset>
                     <label htmlFor="promotion" className="form-label">Are you releasing anything else soon that you would like us to promote?</label>
-                    <textarea type="text" rows="4" cols="50" placeholder="Tell us about it!" name="promotion" ref={register} />
+                    <textarea type="text" placeholder="Tell us about it!" name="promotion" ref={register} />
                 </fieldset>
 
                 <button type="submit" className="btn-primary" disabled={disableBtn}>Submit</button>
-                <p>{afterSubmitMsg}</p>
+
+
+
             </form>
+
+            <p>{afterSubmitMsg}</p>
+
+            {loading && <Loading></Loading>}
         </div>
     );
 }

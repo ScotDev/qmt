@@ -31,7 +31,7 @@ export default function reviews({ reviews, page, numberOfReviews }) {
         <NextSeo {...pageSEO}></NextSeo>
 
         <div className="review">
-            <h1 className="page-title">Album Reviews</h1>
+            <h1 className="page-title">Reviews</h1>
             <div className="review-grid">
 
                 {reviews.map(item => (

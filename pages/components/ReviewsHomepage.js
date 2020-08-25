@@ -11,7 +11,7 @@ export default function Reviews_homepage({ reviews }) {
 
         <div className="post-homepage">
             <Link href="/reviews">
-                <h2 className="section-title">Album Reviews</h2>
+                <h2 className="section-title">Reviews</h2>
             </Link>
             <div className="post-homepage-grid">
 
