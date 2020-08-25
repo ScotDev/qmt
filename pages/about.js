@@ -4,6 +4,7 @@ import { NextSeo } from 'next-seo';
 import ReactMarkdown from 'react-markdown';
 import axios from 'axios'
 
+
 export default function about({ data }) {
     const pageSEO = {
         title: "About",

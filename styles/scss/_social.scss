@@ -52,6 +52,10 @@
   #reddit-share:focus {
     color: #ff4500;
   }
+  #fb-share:hover,
+  #fb-share:focus {
+    color: #2d88ff;
+  }
   #email-share:hover,
   #email-share:focus {
     color: $secondary-accent;

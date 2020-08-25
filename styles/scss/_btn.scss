@@ -72,14 +72,17 @@
   }
 }
 
-.btn:disabled {
+.btn:disabled,
+.btn-disabled {
   @extend .btn;
   color: grey;
   background-color: $primary-bg;
   border: 2px solid grey;
 
   &:hover,
-  &:focus {
+  &:focus,
+  .btn-disabled:hover,
+  .btn-disabled:focus {
     cursor: default;
     transform: none;
     -webkit-transform: none;
