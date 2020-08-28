@@ -1,5 +1,16 @@
+import SpotifyPlayer from 'react-spotify-player';
+
 
 export default function Spotify() {
+
+    // const size = {
+    //     width: '100%',
+    //     height: '500px',
+    // };
+
+    const view = 'list'; // or 'coverart'
+    const theme = 'black'; // or 'white'
+
 
 
     return (<>
@@ -8,12 +19,27 @@ export default function Spotify() {
             <div className="spotify-grid">
                 <div className="spotify-grid-item">
                     <h3 className="spotify-embed-title">Playlist</h3>
-                    <iframe loading="lazy" className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pUfcNaqfNUz4RZj92EQDR" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify playlist" sandbox="allow-scripts"></iframe>
+                    {/* <iframe loading="lazy" className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pUfcNaqfNUz4RZj92EQDR" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify playlist" sandbox="allow-scripts"></iframe> */}
+                    <SpotifyPlayer
+                        className="spotify-embed"
+                        uri="spotify:playlist:1pUfcNaqfNUz4RZj92EQDR"
+                        // size={size}
+                        view={view}
+                        theme={theme}
+                    ></SpotifyPlayer>
 
                 </div>
                 <div className="spotify-grid-item">
                     <h3 className="spotify-embed-title">Podcast</h3>
-                    <iframe loading="lazy" className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pWvASC1XJkMvHrXlaB6GZ" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify podcasts" sandbox="allow-scripts"></iframe>
+                    {/* <iframe loading="lazy" className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pWvASC1XJkMvHrXlaB6GZ" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify podcasts" sandbox="allow-scripts"></iframe> */}
+
+                    <SpotifyPlayer
+                        uri="spotify:playlist:1pWvASC1XJkMvHrXlaB6GZ"
+                        // size={size}
+                        view={view}
+                        theme={theme}
+                    ></SpotifyPlayer>
+
                 </div>
             </div>
 

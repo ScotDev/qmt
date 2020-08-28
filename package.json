@@ -20,6 +20,7 @@
     "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
     "react-share": "^4.2.1",
+    "react-spotify-player": "^1.0.4",
     "yup": "^0.29.3"
   }
 }
