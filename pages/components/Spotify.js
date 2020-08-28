@@ -1,7 +1,7 @@
-import lazysizes from 'lazysizes';
+// import lazysizes from 'lazysizes';
 
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import 'lazysizes/plugins/attrchange/ls.attrchange';
+// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+// import 'lazysizes/plugins/attrchange/ls.attrchange';
 
 
 export default function Spotify() {
@@ -11,12 +11,12 @@ export default function Spotify() {
             <div className="spotify-grid">
                 <div className="spotify-grid-item">
                     <h3 className="spotify-embed-title">Playlist</h3>
-                    <iframe className="spotify-embed lazyload" src="https://open.spotify.com/embed/playlist/1pUfcNaqfNUz4RZj92EQDR" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify playlist"></iframe>
+                    <iframe className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pUfcNaqfNUz4RZj92EQDR" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify playlist" sandbox=""></iframe>
 
                 </div>
                 <div className="spotify-grid-item">
                     <h3 className="spotify-embed-title">Podcast</h3>
-                    <iframe className="spotify-embed lazyload" src="https://open.spotify.com/embed/playlist/1pWvASC1XJkMvHrXlaB6GZ" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify podcasts"></iframe>
+                    <iframe className="spotify-embed lazyload" src="https://open.spotify.com/embed/playlist/1pWvASC1XJkMvHrXlaB6GZ" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify podcasts" sandbox=""></iframe>
                 </div>
             </div>
 
