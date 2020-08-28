@@ -24,6 +24,7 @@ export default function Spotify() {
                         className="spotify-embed"
                         uri="spotify:playlist:1pUfcNaqfNUz4RZj92EQDR"
                         // size={size}
+                        loading="lazy"
                         view={view}
                         theme={theme}
                     ></SpotifyPlayer>
