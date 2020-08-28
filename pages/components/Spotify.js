@@ -1,11 +1,5 @@
-// import React, { useEffect } from 'react'
-
 
 export default function Spotify() {
-
-    // useEffect(() => {
-
-    // }, [])
 
 
     return (<>
