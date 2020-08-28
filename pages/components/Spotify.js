@@ -1,5 +1,13 @@
+// import React, { useEffect } from 'react'
+
 
 export default function Spotify() {
+
+    // useEffect(() => {
+
+    // }, [])
+
+
     return (<>
         <div className="spotify">
             <a className="section-title" href="https://open.spotify.com/user/lv5m4f490qhizetbv10ka61sl?si=XOV0rsXzT9G80-r4m3iepg" alt="Spotify profile">Spotify</a>

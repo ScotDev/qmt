@@ -15,7 +15,9 @@ import ArticlesHomepage from './components/ArticlesHomepage';
 import ReviewsHomepage from './components/ReviewsHomepage';
 
 // import Spotify from './components/Spotify';
-const Spotify = dynamic(import('./components/Spotify'))
+const Spotify = dynamic(import('./components/Spotify'), {
+  ssr: false,
+})
 
 
 export default function Home({ articles, posts, banner, reviews }) {
