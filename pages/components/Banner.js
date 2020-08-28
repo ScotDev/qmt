@@ -16,7 +16,7 @@ export default function Banner({ banner }) {
     return (
         <section className="banner">
             <a href={baseRef.promo_link} alt={bannerAlt} className="banner-img">
-                <Img imgPath={banner_img} imgClass="banner-img" alt={"Promotional banner"}></Img>
+                <Img imgPath={banner_img} imgClass="banner-img" imgAlt={"Promotional banner"}></Img>
             </a>
         </section>
     )
