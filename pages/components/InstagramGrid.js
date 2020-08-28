@@ -8,9 +8,9 @@ export default function Instagram_grid({ posts }) {
         return null
     }
 
-    posts.forEach(post => {
-        console.log(post)
-    });
+    // posts.forEach(post => {
+    //     console.log(post)
+    // });
 
     const getThumbnailUrl = (baseUrl, postUrl) => {
         fetch(baseUrl + postUrl).then(res => {
