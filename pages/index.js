@@ -1,6 +1,11 @@
 import Head from 'next/head';
 import getConfig from 'next/config';
 import axios from 'axios';
+import lazysizes from 'lazysizes';
+
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import 'lazysizes/plugins/attrchange/ls.attrchange';
+
 
 import Header from './components/Header';
 import Banner from './components/Banner';

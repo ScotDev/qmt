@@ -14,7 +14,7 @@ export default function Article_grid({ articles }) {
             <div className="post-homepage-grid">
 
                 {articles.map(item => (
-                    <Link href="/articles/[id]" as={`/articles/${item.id}`} key={item.id}>
+                    <Link href="/articles/[id]" as={`/articles/${item.id}`} key={item.id} >
                         <div className="post-homepage-grid-card">
                             <div className="post-homepage-grid-card-text card-text">
                                 <p className="card-text-title">{item.title}</p>
