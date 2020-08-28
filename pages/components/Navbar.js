@@ -1,9 +1,27 @@
 import Link from 'next/link';
-import Router from 'next/router';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
 
 
 export default function Navbar() {
+    const router = useRouter()
+    const [checked, setchecked] = useState(false);
+
+    const onCheck = () => {
+        setchecked(true)
+    }
+
+    useEffect(() => {
+
+        const handleRouteChange = () => {
+            setchecked(false)
+        }
+        router.events.on('routeChangeStart', handleRouteChange)
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChange)
+        }
+    }, [])
 
     return (
         <nav className="navbar">
@@ -17,7 +35,7 @@ export default function Navbar() {
             </ul>
 
             <div className='hamburger'>
-                <input type='checkbox' id="hamburger-checkbox" ></input>
+                <input type='checkbox' id="hamburger-checkbox" checked={checked} onChange={() => { onCheck() }}></input>
                 <div></div>
                 <div></div>
                 <div></div>

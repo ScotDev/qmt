@@ -12,7 +12,6 @@ export default function Banner({ banner }) {
     const baseRef = banner[0]
     const banner_img = baseRef.banner_img.formats.large.url;
     const bannerAlt = baseRef.title
-    console.log(baseRef)
 
     return (
         <section className="banner">

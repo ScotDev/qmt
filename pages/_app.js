@@ -3,9 +3,7 @@ import Router from 'next/router';
 import { DefaultSeo } from 'next-seo';
 
 import NProgress from 'nprogress';
-
 import 'nprogress/nprogress.css';
-// import "pure-react-carousel/dist/react-carousel.es.css";
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -18,6 +16,7 @@ import SocialBar from './components/SocialBar';
 import Credits from './components/Credits';
 
 import SEO from '../next-seo.config';
+
 
 export default function MyApp({ Component, pageProps }) {
 

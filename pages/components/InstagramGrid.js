@@ -28,7 +28,7 @@ export default function Instagram_grid({ posts }) {
             {posts.map(item => (
                 <a href={item.post_url} target="_blank" key={item.id} rel="noopener">
                     <div className="instagram-grid-item">
-                        <img src={item.post_url + "media/?size=l"} alt="Post from Instagram"></img>
+                        <img src={item.post_url + "media/?size=m"} alt="Post from Instagram"></img>
                         <div className="instagram-grid-item-overlay">
                             <p className="instagram-grid-item-overlay-text">
                                 {item.post_text}
