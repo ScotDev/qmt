@@ -32,6 +32,7 @@
   a {
     color: $primary-accent;
     border-bottom: 1px solid $primary-accent;
+    word-wrap: break-word;
     &:hover,
     &:focus {
       color: $secondary-accent;
@@ -84,6 +85,6 @@
   }
 
   .page-description {
-    font-size: calc(#{$medium-text - 0.5rem});
+    font-size: calc(#{$medium-text - 0.6rem});
   }
 }

@@ -8,7 +8,7 @@ export default function Navbar() {
     const [checked, setchecked] = useState(false);
 
     const onCheck = () => {
-        setchecked(true)
+        setchecked(!checked)
     }
 
     useEffect(() => {
