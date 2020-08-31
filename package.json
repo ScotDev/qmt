@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@hookform/resolvers": "^0.1.0",
     "axios": "^0.19.2",
     "lazysizes": "^5.2.2",
     "moment": "^2.27.0",

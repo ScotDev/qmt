@@ -16,7 +16,7 @@ import ReviewsHomepage from './components/ReviewsHomepage';
 
 // import Spotify from './components/Spotify';
 const Spotify = dynamic(import('./components/Spotify'), {
-  ssr: false
+  ssr: true
 })
 
 
@@ -44,6 +44,26 @@ export async function getServerSideProps() {
 
     const { publicRuntimeConfig } = getConfig();
     const API_URL = publicRuntimeConfig.API_URL;
+
+    // let articles;
+    // let posts;
+    // let banner;
+    // let reviews;
+
+    // axios.all([
+    //   // axios.get(`${API_URL}/articles?_limit=5`),
+    //   axios.get(`${API_URL}/instagrams?_sort=post_position:ASC&_limit=6`),
+    //   axios.get(`${API_URL}/banners?_limit=1`),
+    //   axios.get(`${API_URL}/reviews?_limit=5`)
+    // ])
+    //   .then(axios.spread((res_1, res_2, res_3, res_4) => {
+    //     // articles = res_1.data;
+    //     posts = res_2.data;
+    //     banner = res_3.data;
+    //     reviews = res_4.data;
+    //   }))
+
+
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=5`)
     const res_2 = await axios.get(`${API_URL}/instagrams?_sort=post_position:ASC&_limit=6`)
