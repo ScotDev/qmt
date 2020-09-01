@@ -17,7 +17,7 @@ import ReviewsHomepage from './components/ReviewsHomepage';
 
 // import Spotify from './components/Spotify';
 const Spotify = dynamic(import('./components/Spotify'), {
-  ssr: true
+  ssr: false
 })
 
 
