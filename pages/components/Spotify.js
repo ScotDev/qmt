@@ -1,15 +1,15 @@
-import react, { useEffect, useState } from 'react';
+// import react, { useEffect, useState } from 'react';
 
-export default function Spotify({ showSelf }) {
+export default function Spotify() {
 
-    const [showSelf, setshowSelf] = useState(false);
+    // const [showSelf, setshowSelf] = useState(false);
 
 
-    useEffect(() => { setshowSelf(true); }, [])
+    // useEffect(() => { setshowSelf(true); }, [])
 
-    if (!showSelf) {
-        return <p>Loading...</p>
-    }
+    // if (!showSelf) {
+    //     return <p>Loading...</p>
+    // }
 
     return (<>
         <div className="spotify">
