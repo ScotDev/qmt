@@ -2,6 +2,7 @@ import Head from 'next/head';
 import getConfig from 'next/config';
 import axios from 'axios';
 import dynamic from "next/dynamic";
+import react, { useEffect, useState } from 'react';
 // import lazysizes from 'lazysizes';
 
 // import 'lazysizes/plugins/parent-fit/ls.parent-fit';
@@ -21,6 +22,11 @@ const Spotify = dynamic(import('./components/Spotify'), {
 
 
 export default function Home({ articles, posts, banner, reviews }) {
+  const [showChild, setShowChild] = useState(false);
+
+
+  useEffect(() => { setShowChild(true); }, [])
+
   return (
     <>
       <Head>
@@ -32,7 +38,8 @@ export default function Home({ articles, posts, banner, reviews }) {
       <Instagram posts={posts}></Instagram>
       <ArticlesHomepage articles={articles}></ArticlesHomepage>
       <ReviewsHomepage reviews={reviews}></ReviewsHomepage>
-      {/* <Spotify></Spotify> */}
+
+      <Spotify showChild={showChild}></Spotify>
     </>
   )
 }
