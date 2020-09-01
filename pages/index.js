@@ -15,10 +15,10 @@ import Instagram from './components/InstagramGrid';
 import ArticlesHomepage from './components/ArticlesHomepage';
 import ReviewsHomepage from './components/ReviewsHomepage';
 
-// import Spotify from './components/Spotify';
-const Spotify = dynamic(async () => await import('./components/Spotify'), {
-  ssr: false
-})
+import Spotify from './components/Spotify';
+// const Spotify = dynamic(async () => await import('./components/Spotify'), {
+//   ssr: false
+// })
 
 
 export default function Home({ articles, posts, banner, reviews }) {
