@@ -32,7 +32,7 @@ export default function Home({ articles, posts, banner, reviews }) {
       <Instagram posts={posts}></Instagram>
       <ArticlesHomepage articles={articles}></ArticlesHomepage>
       <ReviewsHomepage reviews={reviews}></ReviewsHomepage>
-      <Spotify></Spotify>
+      {/* <Spotify></Spotify> */}
     </>
   )
 }
