@@ -18,7 +18,7 @@ export default function Spotify() {
                 {/* </div> */}
             </div>
 
-            <a href="https://open.spotify.com/user/lv5m4f490qhizetbv10ka61sl?si=XOV0rsXzT9G80-r4m3iepg" target="_blank" alt="Spotify profile" className="cta-link" rel="noopener">See more <i className="las la-arrow-right"></i></a>
+            <a href="https://open.spotify.com/user/lv5m4f490qhizetbv10ka61sl?si=XOV0rsXzT9G80-r4m3iepg" target="_blank" alt="Spotify profile" className="cta-link" rel="noopener">See more <i className="icon-external-link"></i></a>
             <hr></hr>
         </div>
 

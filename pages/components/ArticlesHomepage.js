@@ -28,7 +28,7 @@ export default function Article_grid({ articles }) {
 
             </div>
             <Link href="/articles">
-                <a alt="Full article list" className="cta-link">See more <i className="las la-arrow-right"></i></a>
+                <a alt="Full article list" className="cta-link">See more <i className="icon-arrow-right"></i></a>
             </Link>
             <hr></hr>
         </div>

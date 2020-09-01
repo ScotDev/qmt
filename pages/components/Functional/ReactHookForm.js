@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
 import getConfig from 'next/config';
@@ -10,8 +10,9 @@ export default function ReactHookForm() {
     const { publicRuntimeConfig } = getConfig();
     const FORM_ENDPOINT = publicRuntimeConfig.FORM_ENDPOINT;
 
-    const [fileName, setfileName] = useState(false)
+    const [fileName, setfileName] = useState("No file selected.")
     const [fileSize, setfileSize] = useState(false)
+    const [fileErrors, setfileErrors] = useState(false)
     const [loading, setloading] = useState(false)
     const [disableBtn, setdisableBtn] = useState(false)
     const [afterSubmitMsg, setafterSubmitMsg] = useState(false)
@@ -29,26 +30,34 @@ export default function ReactHookForm() {
             .max(300, 'Too Long!'),
         genre: yup.string()
             .max(150, 'Too Long!'),
-        // select: yup.string()
-        //     .required('Required'),
         promotion: yup.string()
-            .max(400, 'Too Long!'),
-        // file: yup.mixed().test("size", "Please select a smaller file.", (value) => {
+            .max(400, 'Too Long!')
+        // file: yup.mixed().test("size", "File size may not exceed 5 MB.", (value) => {
+        //     console.log("Errors here ", errors)
         //     return value && value[0].size < 5000000
         // })
-        file: yup.mixed().test("size", "Please select a smaller file.", (value) => {
-            console.log("File size is", value)
-            return value && value[0].size < 5000000
-        })
     });
 
     const { register, handleSubmit, errors } = useForm({
-        resolver: yupResolver(schema),
+        resolver: yupResolver(schema)
     });
 
-    console.log(errors)
+
+    useEffect(() => {
+        if (fileSize > 5) {
+            setfileErrors("File size may not exceed 5 MB")
+            console.log(fileErrors)
+            console.log(fileSize)
+        } else if (fileSize <= 5 || fileSize.length < 1) {
+            setfileErrors(false)
+        }
+
+    }, [fileSize])
+
 
     const onSubmit = data => {
+
+
         setloading(true)
         setdisableBtn(true)
         let formData = new FormData()
@@ -60,22 +69,30 @@ export default function ReactHookForm() {
         formData.append("signed", data.signed)
         formData.append("promotion", data.promotion)
 
-        fetch(`${FORM_ENDPOINT}`, {
-            method: 'post',
-            body: formData
-        })
-            .then(res => {
-                setdisableBtn(true)
-                setloading(false)
-                setafterSubmitMsg("Thank you! We'll be in touch soon")
-                console.log("Data sent")
+        if (fileErrors) {
+            setafterSubmitMsg('Please add a smaller file')
+            setdisableBtn(false)
+            setloading(false)
+        } else {
+            setafterSubmitMsg(false)
+            fetch(`${FORM_ENDPOINT}`, {
+                method: 'post',
+                body: formData
             })
-            .catch(err => {
-                console.log(err)
-                setdisableBtn(false)
-                setloading(false)
-                setafterSubmitMsg('Data could not be sent, please try again')
-            })
+                .then(res => {
+                    setdisableBtn(true)
+                    setloading(false)
+                    setafterSubmitMsg("Thank you! We'll be in touch soon")
+                    console.log("Data sent")
+                })
+                .catch(err => {
+                    console.log(err)
+                    setdisableBtn(false)
+                    setloading(false)
+                    setafterSubmitMsg('Data could not be sent, please try again')
+                })
+        }
+
     };
     return (
         <div className="form-wrapper">
@@ -108,10 +125,10 @@ export default function ReactHookForm() {
                 </fieldset>
 
                 <fieldset>
-                    <select name="signed" ref={register({ required: true })}>
-                        <option disabled defaultValue selected>Please select an option</option>
+                    <select name="signed" ref={register}>
+                        {/* <option disabled defaultValue selected>Please select an option</option> */}
+                        <option value="Unsigned">Unsigned artist/band</option>
                         <option value="Signed">Signed with record label</option>
-                        <option value="Unsigned">Unsigned</option>
                     </select>
                     <p className="form-error">{errors.signed?.message}</p>
                 </fieldset>
@@ -119,7 +136,7 @@ export default function ReactHookForm() {
                 <fieldset>
                     <label htmlFor="file" className="form-label">Presskit (If available)</label>
                     <div className="btn-secondary file-upload-wrapper" >
-                        <span><i className="las la-cloud-upload-alt"></i></span>
+                        <span><i className="icon-upload"></i></span>
 
                         <input type="file" name="file" ref={register} onChange={(e) => {
                             setfileName(e.target.files[0].name)
@@ -127,22 +144,16 @@ export default function ReactHookForm() {
                         }}></input>
                     </div>
 
-                    <p className="file-info">{fileName ? fileName : "No file selected. File size limit is 5 MB"}
-
-                        {errors.file ? <i id="error-icon" className="las la-times"></i> : <i id="success-icon" className="las la-check"></i>}
-
-
-
-
-                        {/* {fileName && <p>{"This file is " + fileSize.toFixed(1) + " MB"}</p>} */}
-
+                    {/* <p className="file-info">{fileName ? fileName : "No file selected. File size limit is 5 MB"} */}
+                    <p className="file-info">{fileName} {fileSize === null && " File size limit is 5 MB"}
+                        {fileErrors ? <i className="icon-cross"></i> : <i className="icon-tick"></i>}
 
                     </p>
 
                     {fileSize && "This file is " + fileSize.toFixed(2) + " MB"}
 
 
-                    <p className="form-error">{errors.file?.message}</p>
+                    <p className="form-error">{fileErrors}</p>
                 </fieldset>
 
                 <fieldset>

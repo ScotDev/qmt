@@ -10,6 +10,7 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 import '../styles/styles.min.css';
+import '../styles/fonts/style.css'
 
 import Navbar from './components/Navbar';
 import SocialBar from './components/SocialBar';

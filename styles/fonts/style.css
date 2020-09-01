@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'qmt-icons';
+  src: url('fonts/qmt-icons.eot?f0nlgt');
+  src: url('fonts/qmt-icons.eot?f0nlgt#iefix') format('embedded-opentype'),
+    url('fonts/qmt-icons.ttf?f0nlgt') format('truetype'),
+    url('fonts/qmt-icons.woff?f0nlgt') format('woff'),
+    url('fonts/qmt-icons.svg?f0nlgt#qmt-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'qmt-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+  content: '\e902';
+}
+.icon-arrow-right:before {
+  content: '\e900';
+}
+.icon-cross:before {
+  content: '\e901';
+  color: #fa3b2d;
+}
+.icon-external-link:before {
+  content: '\e903';
+}
+.icon-facebook:before {
+  content: '\e904';
+}
+.icon-instagram:before {
+  content: '\e905';
+}
+.icon-ko-fi:before {
+  content: '\e906';
+}
+.icon-reddit:before {
+  content: '\e907';
+}
+.icon-send:before {
+  content: '\e908';
+}
+.icon-spotify:before {
+  content: '\e909';
+}
+.icon-tick:before {
+  content: '\e90a';
+  color: yellowgreen;
+}
+.icon-twitter:before {
+  content: '\e90b';
+}
+.icon-upload:before {
+  content: '\e90c';
+}
+.icon-whatsapp:before {
+  content: '\e90d';
+}
+.icon-youtube:before {
+  content: '\e90e';
+}

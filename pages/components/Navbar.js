@@ -48,11 +48,13 @@ export default function Navbar() {
                     <li className="hamburger-link"><Link href="/about"><a className="hamburger-link-anchor">About</a></Link></li>
                     <li className="hamburger-link">
                         <ul className="social-group-mobile">
-                            <li className="social-group-mobile-item"><a href="https://twitter.com/TheQuarantineMx" alt="twitter" target="_blank" rel="noopener"><i className="lab la-twitter"></i></a></li>
-                            <li className="social-group-mobile-item"><a href="https://www.instagram.com/the.quarantine.mixtape/" alt="instagram" target="_blank" rel="noopener"><i className="lab la-instagram"></i></a></li>
-                            <li className="social-group-mobile-item"><a href="https://www.youtube.com/channel/UCprqAXVwiSiPvCpCSZ1ivsg/" alt="youtube" target="_blank" rel="noopener"><i className="lab la-youtube"></i></a></li>
-                            <li className="social-group-mobile-item"><a href="https://ko-fi.com/thequarantinemixtape" alt="ko-fi" target="_blank"><i className="las la-coffee" rel="noopener"></i></a></li>
-                            <li className="social-group-mobile-item"><a href="mailto:the.quarantine.mixtape@gmail.com" alt="email" target="_blank"><i className="las la-envelope" rel="noopener"></i></a></li>
+                            <li className="social-group-mobile-item"><a href="https://www.instagram.com/the.quarantine.mixtape/" alt="instagram" target="_blank" rel="noopener"><i className="icon-instagram"></i></a></li>
+
+                            <li className="social-group-mobile-item"><a href="https://www.youtube.com/channel/UCprqAXVwiSiPvCpCSZ1ivsg/" alt="youtube" target="_blank" rel="noopener"><i className="icon-youtube"></i></a></li>
+                            <li className="social-group-mobile-item"><a href="https://twitter.com/TheQuarantineMx" alt="twitter" target="_blank" rel="noopener"><i className="icon-twitter"></i></a></li>
+                            <li className="social-group-mobile-item"><a href="https://ko-fi.com/thequarantinemixtape" alt="ko-fi" target="_blank"><i className="icon-ko-fi" rel="noopener"></i></a></li>
+                            <li className="social-group-mobile-item" ><a id="spotify" href="https://open.spotify.com/user/lv5m4f490qhizetbv10ka61sl?si=XOV0rsXzT9G80-r4m3iepg" alt="spotify" target="_blank"><i className="icon-spotify" rel="noopener"></i></a></li>
+                            <li className="social-group-mobile-item"><a id="email" href="mailto:the.quarantine.mixtape@gmail.com" alt="email" target="_blank"><i className="icon-email" rel="noopener"></i></a></li>
                         </ul>
                     </li>
                 </ul>

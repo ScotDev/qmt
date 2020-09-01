@@ -166,9 +166,17 @@ div .hamburger input:checked ~ div:nth-child(3) {
   padding: 0;
 
   &-item {
-    padding: 0 0.5rem;
+    padding: 0 0.7rem;
     a {
-      font-size: calc(#{$medium-text - 0.15rem});
+      font-size: calc(#{$medium-text - 0.17rem});
+    }
+
+    #spotify {
+      font-size: calc(#{$medium-text - 0.25rem});
+    }
+
+    #email {
+      padding-left: 0.2rem;
     }
   }
 }

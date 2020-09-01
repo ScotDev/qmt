@@ -52,7 +52,7 @@ export default function Instagram_grid({ posts }) {
 
         </div>
         <Link href="/">
-            <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile" className="cta-link" rel="noopener">See more <i className="las la-arrow-right"></i></a>
+            <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile" className="cta-link" rel="noopener">See more <i className="icon-arrow-right"></i></a>
         </Link>
 
         <hr></hr>

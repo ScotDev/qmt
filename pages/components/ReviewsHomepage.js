@@ -31,7 +31,7 @@ export default function Reviews_homepage({ reviews }) {
 
             </div>
             <Link href="/reviews">
-                <a alt="Full review list" className="cta-link">See more <i className="las la-arrow-right"></i></a>
+                <a alt="Full review list" className="cta-link">See more <i className="icon-arrow-right"></i></a>
             </Link>
             <hr></hr>
         </div>

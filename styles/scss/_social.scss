@@ -1,15 +1,32 @@
 // Social media sidebar on homepage
 .social-group {
   color: $text;
-  font-size: 2rem;
   position: absolute;
 
   &-item {
-    &:hover,
-    &:focus {
-      color: $primary-accent;
-      font-size: 2.5rem;
+    padding-bottom: 0.7rem;
+    padding-left: 0.3rem;
+    a {
+      i {
+        font-size: 2rem;
+        &:hover,
+        &:focus {
+          color: $primary-accent;
+          font-size: 2.5rem;
+        }
+      }
     }
+  }
+
+  #spotify {
+    font-size: 1.9rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.1rem;
+  }
+
+  #email {
+    padding-left: 0.1rem;
+    // font-size: 2.1rem;
   }
 }
 
@@ -30,14 +47,19 @@
   .share-buttons {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
   }
 
   .share-button {
-    font-size: calc(#{$standard-text + 0.75rem});
+    font-size: calc(#{$standard-text + 0.5rem});
+    // font-size: $standard-text;
     outline: 0;
+
+    &:last-child {
+      font-size: calc(#{$standard-text + 0.9rem});
+    }
   }
 
   #twitter-share:hover,
@@ -46,7 +68,7 @@
   }
   #whatsapp-share:hover,
   #whatsapp-share:focus {
-    color: #00e676;
+    color: #25d366;
   }
   #reddit-share:hover,
   #reddit-share:focus {
