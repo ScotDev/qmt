@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import getConfig from 'next/config';
 import axios from 'axios';
-import dynamic from "next/dynamic";
-import react, { useEffect, useState } from 'react';
+// import dynamic from "next/dynamic";
+// import react, { useEffect, useState } from 'react';
 // import lazysizes from 'lazysizes';
 
 // import 'lazysizes/plugins/parent-fit/ls.parent-fit';
@@ -15,20 +15,20 @@ import Instagram from './components/InstagramGrid';
 import ArticlesHomepage from './components/ArticlesHomepage';
 import ReviewsHomepage from './components/ReviewsHomepage';
 
-// import Spotify from './components/Spotify';
+import Spotify from './components/Spotify';
 
-const Spotify = dynamic(async () => await import('./components/Spotify'), {
-  ssr: false
-})
+// const Spotify = dynamic(async () => await import('./components/Spotify'), {
+//   ssr: true
+// })
 
 
 
 export default function Home({ articles, posts, banner, reviews }) {
-  const [showChild, setShowChild] = useState(false);
+  // const [showChild, setShowChild] = useState(false);
 
 
 
-  useEffect(() => { setShowChild(true); }, [])
+  // useEffect(() => { setShowChild(true); }, [])
 
   return (
     <>
@@ -42,7 +42,7 @@ export default function Home({ articles, posts, banner, reviews }) {
       <ArticlesHomepage articles={articles}></ArticlesHomepage>
       <ReviewsHomepage reviews={reviews}></ReviewsHomepage>
 
-      {showChild && <Spotify></Spotify>}
+      <Spotify></Spotify>
 
     </>
   )
