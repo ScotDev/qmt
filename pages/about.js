@@ -27,7 +27,7 @@ export default function about({ data }) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     try {
         const { publicRuntimeConfig } = getConfig();
@@ -45,7 +45,8 @@ export async function getServerSideProps() {
     } catch (error) {
         console.log(error)
         return {
-            props: {}
+            props: {},
+            revalidate: 1
         }
     }
 
