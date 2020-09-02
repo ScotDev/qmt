@@ -78,7 +78,6 @@ export async function getServerSideProps({ query: { page = 1 } }) {
         const numberOfArticlesRes = await axios.get(`${API_URL}/articles/count`)
         const numberOfArticles = numberOfArticlesRes.data;
 
-
         return {
             props: {
                 articles: data,

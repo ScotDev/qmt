@@ -49,7 +49,7 @@ export default function Home({ articles, posts, banner, reviews }) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   try {
 
@@ -91,12 +91,14 @@ export async function getServerSideProps() {
         posts: posts,
         banner: banner,
         reviews: reviews
-      }
+      },
+      revalidate: 1
     }
   } catch (error) {
     console.log(error)
     return {
-      props: {}
+      props: {},
+      revalidate: 1
     }
   }
 
