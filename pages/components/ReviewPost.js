@@ -64,18 +64,19 @@ export default function Article_post({ data }) {
                 </div>
             </div>
             <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
-            <ReactMarkdown source={data.text} className="post-main-text"></ReactMarkdown>
-            <div className="post-bottom-details">
+            <div className="post-main-text">
+                <ReactMarkdown source={data.text}></ReactMarkdown>
+                <div className="post-bottom-details">
 
-                <p>You can find {data.artist} on <a href={data.artist_instagram_url}>Instagram</a> {data.artist_facebook_url && <> & <a href={data.artist_facebook_url}> Facebook</a></>}</p>
+                    <p>You can find {data.artist} on <a href={data.artist_instagram_url}>Instagram</a> {data.artist_facebook_url && <> & <a href={data.artist_facebook_url}> Facebook</a></>}</p>
 
-                {data.artist_spotify_url && <p>Stream {data.artist} on <a href={data.artist_spotify_url}>Spotify</a></p>}
+                    {data.artist_spotify_url && <p>Stream {data.artist} on <a href={data.artist_spotify_url}>Spotify</a></p>}
 
-                {data.artist_website && <p>Find out more about {data.artist}<a href={data.artist_website}> here</a></p>}
+                    {data.artist_website && <p>Find out more about {data.artist}<a href={data.artist_website}> here</a></p>}
 
-                {data.guest_author_instagram && <p>For more from {data.guest_author_name} read <a href={data.guest_author_instagram}>here</a></p>}
+                    {data.guest_author_instagram && <p>For more from {data.guest_author_name} read <a href={data.guest_author_instagram}>here</a></p>}
 
-            </div>
+                </div></div>
             <ShareGroup title={data.title}></ShareGroup>
         </div>
     )

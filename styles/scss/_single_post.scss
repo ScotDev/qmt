@@ -138,23 +138,7 @@
   }
 
   &-bottom-details {
-    max-width: $desktop-post-text-width;
-
-    text-align: left;
-    p {
-      font-size: $standard-text;
-      font-weight: $standard-text-weight;
-      line-height: 1.7;
-      a {
-        color: $primary-accent;
-        border-bottom: 1px solid $primary-accent;
-        &:hover,
-        &:focus {
-          color: $secondary-accent;
-          border-bottom: 1px solid $secondary-accent;
-        }
-      }
-    }
+    margin-top: 5rem;
   }
 }
 
@@ -184,10 +168,6 @@
     &-main-text {
       max-width: $laptop-post-text-width;
       line-height: 1.8;
-    }
-
-    &-bottom-details {
-      max-width: $laptop-post-text-width;
     }
   }
 }
@@ -219,10 +199,6 @@
       margin-bottom: 1.5rem;
     }
     &-main-text {
-      max-width: $mobile-post-text-width;
-      line-height: 1.8;
-    }
-    &-bottom-details {
       max-width: $mobile-post-text-width;
       line-height: 1.8;
     }

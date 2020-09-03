@@ -63,7 +63,9 @@ export default function Article_post({ data }) {
                 </div>
             </div>
             <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
-            <ReactMarkdown source={data.text} className="post-main-text"></ReactMarkdown>
+            <div className="post-main-text">
+                <ReactMarkdown source={data.text}></ReactMarkdown>
+            </div>
             <ShareGroup title={data.title}></ShareGroup>
         </div>
     )
