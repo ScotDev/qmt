@@ -3,15 +3,6 @@ import Moment from 'react-moment';
 
 import ReactMarkdown from 'react-markdown';
 
-// import dynamic from 'next/dynamic';
-
-// import Spinner from './Spinner';
-
-// const DynamicImg = dynamic(
-//     () => import('./Img'),
-//     { loading: () => <Spinner></Spinner> }
-// )
-
 import Error from './Error';
 import Img from './Img';
 import ShareGroup from './ShareGroup';
@@ -65,14 +56,13 @@ export default function Article_post({ data }) {
             <h2 className="post-description">{data.description_preview}</h2>
             {data.category === "Sponsored" ? <p className="post-category">Sponsored <i class="las la-comments-dollar"></i></p> : null}
             <div className="post-author-chip">
-                <img className="post-author-chip-icon" src="https://bucketeer-22d646bf-cc53-432e-a8c1-70360c95d911.s3.amazonaws.com/avatar_690655d741.jpg"></img>
+                <Img imgClass="post-author-chip-icon" author={data.created_by.firstname} imgAlt="Author"></Img>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
                     <p className="post-author-chip-details-date"><Moment format="Do MMM, YYYY">{data.updatedAt}</Moment></p>
                 </div>
             </div>
             <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
-            {/* <DynamicImg imgPath={imgPath} imgClass={"post-main-img"} imgAlt={imgAlt}></DynamicImg> */}
             <ReactMarkdown source={data.text} className="post-main-text"></ReactMarkdown>
             <ShareGroup title={data.title}></ShareGroup>
         </div>

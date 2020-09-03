@@ -7,7 +7,7 @@ export default function Error({ statusCode }) {
             <h1 className="error-title">Page could not be loaded</h1>
             <p className="error-status-code">{statusCode}</p>
             <Link href="/">
-                <a alt="Return to homepage" className="error-return-link">Go Back <i className="las la-arrow-right"></i></a>
+                <a alt="Return to homepage" className="error-return-link">Go Back <i className="icon-arrow-right"></i></a>
             </Link>
         </div>
     )

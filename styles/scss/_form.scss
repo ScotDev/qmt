@@ -72,11 +72,6 @@
       .standard-input {
         outline: 0;
         border: 0;
-        // border-radius: $btn-radius;
-        // -webkit-border-radius: $btn-radius;
-        // -moz-border-radius: $btn-radius;
-        // -ms-border-radius: $btn-radius;
-        // -o-border-radius: $btn-radius;
         padding: 0.4rem 0.25rem 0.4rem 0.4rem;
         font-family: inherit;
         font-size: $standard-text;
@@ -190,7 +185,14 @@
   }
 }
 
-@media only screen and (max-width: 1250px) {
+// Extra wide screens
+@media only screen and (min-width: 2000px) {
+  .form-wrapper {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
   .form-wrapper {
     padding: 2rem 1rem;
     .form-text {
@@ -213,7 +215,6 @@
       fieldset {
         .file-upload-wrapper {
           span {
-            // padding: 5px 40% 44%;
             padding: 0 44%;
           }
         }

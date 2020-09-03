@@ -100,22 +100,22 @@ export default function ReactHookForm() {
             <p className="form-text">We want to hear from you</p>
             <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                 <fieldset>
-                    <input type="text" placeholder="Band/artist name*" name="name" ref={register({ required: true })} className="standard-input" />
+                    <input type="text" placeholder="Band/artist name*" name="name" ref={register({ required: true })} className="standard-input" autoComplete="off" autoCapitalize="on" />
                     <p className="form-error">{errors.name?.message}</p>
                 </fieldset>
 
                 <fieldset>
-                    <input type="email" placeholder="Email*" name="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} className="standard-input" />
+                    <input type="email" placeholder="Email*" name="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} className="standard-input" inputMode="email" autoComplete="email" />
                     <p className="form-error">{errors.email?.message}</p>
                 </fieldset>
 
                 <fieldset>
-                    <input type="text" placeholder="Instagram handle" name="instagram" ref={register({ maxLength: 200 })} className="standard-input" />
+                    <input type="text" placeholder="Instagram handle" name="instagram" ref={register({ maxLength: 200 })} className="standard-input" autoComplete="off" />
                     <p className="form-error">{errors.instagram?.message}</p>
                 </fieldset>
 
                 <fieldset>
-                    <input type="text" placeholder="Spotify/soundcloud link" name="music" ref={register({ required: true })} className="standard-input" />
+                    <input type="text" placeholder="Spotify/soundcloud link" name="music" ref={register({ required: true })} className="standard-input" inputMode="url" autoComplete="url" />
                     <p className="form-error">{errors.music?.message}</p>
                 </fieldset>
 

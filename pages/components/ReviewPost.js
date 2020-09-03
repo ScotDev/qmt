@@ -57,7 +57,7 @@ export default function Article_post({ data }) {
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <div className="post-author-chip">
                 {/* Change img src for production */}
-                <Img imgClass={"post-author-chip-icon"} imgPath="https://bucketeer-22d646bf-cc53-432e-a8c1-70360c95d911.s3.amazonaws.com/avatar_690655d741.jpg" imgAlt="Author profile photo"></Img>
+                <Img imgClass={"post-author-chip-icon"} author={data.created_by.firstname} imgAlt="Author"></Img>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
                     <p className="post-author-chip-details-date"><Moment format="Do MMM, YYYY">{data.updatedAt}</Moment></p>
@@ -65,6 +65,17 @@ export default function Article_post({ data }) {
             </div>
             <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
             <ReactMarkdown source={data.text} className="post-main-text"></ReactMarkdown>
+            <div className="post-bottom-details">
+
+                <p>You can find {data.artist} on <a href={data.artist_instagram_url}>Instagram</a> {data.artist_facebook_url && <> & <a href={data.artist_facebook_url}> Facebook</a></>}</p>
+
+                {data.artist_spotify_url && <p>Stream {data.artist} on <a href={data.artist_spotify_url}>Spotify</a></p>}
+
+                {data.artist_website && <p>Find out more about {data.artist}<a href={data.artist_website}> here</a></p>}
+
+                {data.guest_author_instagram && <p>For more from {data.guest_author_name} read <a href={data.guest_author_instagram}>here</a></p>}
+
+            </div>
             <ShareGroup title={data.title}></ShareGroup>
         </div>
     )
