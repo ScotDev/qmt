@@ -41,7 +41,7 @@
 }
 
 .hamburger {
-  z-index: 1;
+  z-index: 3;
 
   padding: 0;
   margin: 0;
@@ -55,6 +55,7 @@
   user-select: none;
 
   .hamburger-links {
+    z-index: 1000;
     display: flex;
     height: auto;
     width: 100%;
