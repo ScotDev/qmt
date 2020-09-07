@@ -78,11 +78,16 @@
         font-weight: $standard-text-weight;
         width: 100%;
         background: transparent;
-        border-bottom: 1px solid $text;
         color: $text;
         margin-bottom: 0.5rem;
+        border-bottom: 1px solid $text;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
 
-        &::-webkit-input-placeholder {
+        &:-webkit-input-placeholder {
           color: $text;
         }
       }

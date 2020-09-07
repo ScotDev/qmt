@@ -11,9 +11,9 @@ export default function Img({ author, imgPath, imgClass, imgAlt }) {
     if (author === "Celia") {
         imgPath = "https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/celia_1e763a2b73.jpg"
     } else if (author === "Admin") {
-        imgPath = "https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/admin_7244ee3f71.jpg"
+        imgPath = "https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/D_Bzg_Del8_400x400_1_8f2c6bd3ba.jpg"
     } else if (author === "" || null) {
-        imgPath = "https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/anon_eba98a4ae4.jpg"
+        imgPath = "https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/D_Bzg_Del8_400x400_1_8f2c6bd3ba.jpg"
     } else {
         imgPath = imgPath
     }

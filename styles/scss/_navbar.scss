@@ -6,12 +6,13 @@
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
 
   .nav-brand {
     font-size: 2rem;
     margin: 0 auto 0 0;
     text-transform: uppercase;
+    z-index: 6;
 
     a:hover,
     a:focus {
@@ -41,7 +42,7 @@
 }
 
 .hamburger {
-  z-index: 1;
+  // z-index: 1;
 
   padding: 0;
   margin: 0;
@@ -73,9 +74,7 @@
     /*StopsflickeringoftextinSafari*/
     background-color: $primary-bg;
     border-bottom: 4px solid $secondary-accent;
-
     transform-origin: 0% 0%;
-
     transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1),
       opacity 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
     -webkit-transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1),
@@ -91,7 +90,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // height: auto;
       height: 40px;
       margin: 0.5rem 0.25rem;
       overflow: hidden;
@@ -109,9 +107,9 @@
   }
 
   input:checked ~ .hamburger-links {
+    // height: 450px;
     opacity: 1;
     transform: translate(-100%, 0);
-    // display: flex !important;
   }
 
   input {

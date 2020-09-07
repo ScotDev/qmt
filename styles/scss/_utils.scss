@@ -76,6 +76,7 @@
   &:hover,
   &:focus {
     border-bottom: 2px solid $text;
+    cursor: pointer;
   }
 }
 

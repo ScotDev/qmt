@@ -56,7 +56,6 @@ export default function Article_post({ data }) {
             <h3 className="post-description">{data.description_preview}</h3>
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <div className="post-author-chip">
-                {/* Change img src for production */}
                 <Img imgClass={"post-author-chip-icon"} author={data.created_by.firstname} imgAlt="Author"></Img>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>

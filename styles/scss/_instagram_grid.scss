@@ -53,6 +53,7 @@
           animation-name: hoverReveal;
           animation-duration: 0.2s;
           animation-fill-mode: forwards;
+          cursor: pointer;
         }
 
         &-text {
@@ -87,7 +88,7 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
   .instagram {
     width: 95%;
     &-grid {
@@ -96,30 +97,29 @@
       &-item {
         &-overlay {
           &-text {
-            font-size: $standard-text;
-            padding: 1.5rem 0.4rem 1rem 0.4rem;
-            height: calc(#{$grid-item-height} + 10%);
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .instagram {
-    &-grid {
-      grid-template-columns: 1fr 1fr;
-
-      &-item {
-        &-overlay {
-          &-text {
-            // No need for text on mobile, if user is clicking
-            //  on the image they will go straight to the instagram app
             display: none;
+            // font-size: $standard-text;
+            // padding: 1.5rem 0.4rem 1rem 0.4rem;
+            // height: calc(#{$grid-item-height} + 10%);
           }
         }
       }
     }
   }
 }
+
+// @media only screen and (max-width: 700px) {
+//   .instagram {
+//     &-grid {
+//       grid-template-columns: 1fr 1fr;
+
+//       &-item {
+//         &-overlay {
+//           &-text {
+//             display: none;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
