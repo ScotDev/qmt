@@ -47,6 +47,7 @@ export async function getStaticProps() {
 
     const res_1 = await axios.get(`${API_URL}/articles?_limit=2`)
     const res_2 = await axios.get(`${API_URL}/instagrams?_sort=post_position:ASC&_limit=6`)
+    // Should be single-type in CMS but end functionity is the same
     const res_3 = await axios.get(`${API_URL}/banners?_limit=1`)
     const res_4 = await axios.get(`${API_URL}/reviews?_limit=2`)
     const articles = res_1.data;

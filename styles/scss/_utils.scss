@@ -39,6 +39,19 @@
       border-bottom: 1px solid $secondary-accent;
     }
   }
+
+  img {
+    width: 100%;
+    max-height: 450px;
+    border-radius: $card-radius;
+    -webkit-border-radius: $card-radius;
+    -moz-border-radius: $card-radius;
+    -ms-border-radius: $card-radius;
+    -o-border-radius: $card-radius;
+    object-fit: cover;
+    object-position: center;
+    margin: 1rem 0;
+  }
 }
 
 .page-intro {

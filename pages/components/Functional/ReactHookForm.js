@@ -31,6 +31,8 @@ export default function ReactHookForm() {
         genre: yup.string()
             .max(150, 'Too Long!'),
         promotion: yup.string()
+            .max(400, 'Too Long!'),
+        description: yup.string()
             .max(400, 'Too Long!')
         // file: yup.mixed().test("size", "File size may not exceed 5 MB.", (value) => {
         //     console.log("Errors here ", errors)
@@ -57,6 +59,8 @@ export default function ReactHookForm() {
 
     const onSubmit = data => {
 
+        sessionStorage.setItem('submitterEmail', data.email)
+        // const sessionEmail = sessionStorage.getItem('submitterEmail')
 
         setloading(true)
         setdisableBtn(true)
@@ -68,12 +72,19 @@ export default function ReactHookForm() {
         formData.append("music", data.music)
         formData.append("signed", data.signed)
         formData.append("promotion", data.promotion)
+        formData.append("description", data.promotion)
 
         if (fileErrors) {
             setafterSubmitMsg('Please add a smaller file')
             setdisableBtn(false)
             setloading(false)
-        } else {
+        }
+        // else if (sessionEmail == data.email) {
+        //     setafterSubmitMsg('Submission limit per session is 1')
+        //     setdisableBtn(false)
+        //     setloading(false)
+        // }
+        else {
             setafterSubmitMsg(false)
             fetch(`${FORM_ENDPOINT}`, {
                 method: 'post',
@@ -96,7 +107,7 @@ export default function ReactHookForm() {
     };
     return (
         <div className="form-wrapper">
-            <h2 className="form-title">Send us your music</h2>
+            {/* <h2 className="form-title">Send us your music</h2> */}
             <p className="form-text">We want to hear from you</p>
             <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                 <fieldset>
@@ -134,6 +145,18 @@ export default function ReactHookForm() {
                 </fieldset>
 
                 <fieldset>
+                    <label htmlFor="description" className="form-label">Short bio/description</label>
+                    <textarea type="text" placeholder="Tell us about you" name="description" ref={register} />
+                    <p className="form-error">{errors.description?.message}</p>
+                </fieldset>
+
+                <fieldset>
+                    <label htmlFor="promotion" className="form-label">Are you releasing anything else soon that you would like us to promote?</label>
+                    <textarea type="text" placeholder="Tell us about it!" name="promotion" ref={register} />
+                    <p className="form-error">{errors.promotion?.message}</p>
+                </fieldset>
+
+                <fieldset>
                     <label htmlFor="file" className="form-label">Presskit (If available)</label>
                     <div className="btn-secondary file-upload-wrapper" >
                         <span><i className="icon-upload"></i></span>
@@ -154,12 +177,6 @@ export default function ReactHookForm() {
 
 
                     <p className="form-error">{fileErrors}</p>
-                </fieldset>
-
-                <fieldset>
-                    <label htmlFor="promotion" className="form-label">Are you releasing anything else soon that you would like us to promote?</label>
-                    <textarea type="text" placeholder="Tell us about it!" name="promotion" ref={register} />
-                    <p className="form-error">{errors.promotion?.message}</p>
                 </fieldset>
 
                 <button type="submit" className="btn-primary" disabled={disableBtn}>Submit</button>
