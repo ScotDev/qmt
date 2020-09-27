@@ -54,7 +54,8 @@ export default function Article_post({ data }) {
             <h1 className="post-title">{data.title}</h1>
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <h2 className="post-description">{data.description_preview}</h2>
-            {data.category === "Sponsored" ? <p className="post-category">Sponsored <i class="las la-comments-dollar"></i></p> : null}
+            {/* Sponsored icon to be added into conditional */}
+            {data.category === "Sponsored" ? <p className="post-category">Sponsored</p> : <p className="post-category">Editorial</p>}
             <div className="post-author-chip">
                 <Img imgClass="post-author-chip-icon" author={data.created_by.firstname} imgAlt="Author"></Img>
                 <div className="post-author-chip-details">
