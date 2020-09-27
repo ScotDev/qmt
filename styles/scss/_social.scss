@@ -9,6 +9,12 @@
     a {
       i {
         font-size: 2rem;
+        transition: font-size ease 0.2s;
+        -webkit-transition: font-size ease 0.2s;
+        -moz-transition: font-size ease 0.2s;
+        -ms-transition: font-size ease 0.2s;
+        -o-transition: font-size ease 0.2s;
+
         &:hover,
         &:focus {
           color: $primary-accent;
