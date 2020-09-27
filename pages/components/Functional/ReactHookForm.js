@@ -59,7 +59,7 @@ export default function ReactHookForm() {
 
     const onSubmit = data => {
 
-        sessionStorage.setItem('submitterEmail', data.email)
+        // sessionStorage.setItem('submitterEmail', data.email)
         // const sessionEmail = sessionStorage.getItem('submitterEmail')
 
         setloading(true)

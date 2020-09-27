@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
   return <>
     <Head>
       <link rel="manifest" href="/site.webmanifest"></link>
-      <meta name="theme-color" content="#111111"></meta>
+      <meta name="theme-color" content="#171923"></meta>
     </Head>
 
     <DefaultSeo {...SEO}></DefaultSeo>
