@@ -35,7 +35,7 @@ export default function Instagram_grid({ posts }) {
 
         </div>
         <Link href="/">
-            <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile" className="cta-link" rel="noopener">See more <i className="icon-arrow-right"></i></a>
+            <a href="https://www.instagram.com/the.quarantine.mixtape/" target="_blank" alt="Instagram profile" className="cta-link" rel="noopener">See more <i className="icon-external-link"></i></a>
         </Link>
 
         <hr></hr>
