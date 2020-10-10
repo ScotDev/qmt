@@ -34,6 +34,7 @@
 
   &-description {
     font-size: calc(#{$standard-text + 0.5rem});
+    line-height: 1.25;
     font-weight: 300;
     margin-bottom: 2rem;
     max-width: $desktop-post-text-width;

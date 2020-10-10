@@ -60,8 +60,9 @@
           color: $text;
           overflow: hidden;
           padding: 0.25rem 0.5rem 1rem 0.5rem;
+          line-height: 1.5;
 
-          height: calc(#{$grid-item-height} - 15%);
+          height: calc(#{$grid-item-height} - 10%);
           font-size: $small-text;
           font-weight: 300;
           // width: calc(#{$grid-item-width} - 10%);
