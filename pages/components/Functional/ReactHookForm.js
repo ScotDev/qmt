@@ -34,6 +34,8 @@ export default function ReactHookForm() {
             .max(400, 'Too Long!'),
         description: yup.string()
             .max(400, 'Too Long!')
+
+        // Yup file validation is buggy, opted for basic manual validation for now
         // file: yup.mixed().test("size", "File size may not exceed 5 MB.", (value) => {
         //     console.log("Errors here ", errors)
         //     return value && value[0].size < 5000000
@@ -65,7 +67,15 @@ export default function ReactHookForm() {
         setloading(true)
         setdisableBtn(true)
         let formData = new FormData()
-        formData.append("file", data.file[0])
+        let fileExists;
+
+        if (data.file.length > 0) {
+            formData.append("file", data.file[0])
+        } else {
+            fileExists = "No file included"
+            formData.append("file", fileExists)
+        }
+
         formData.append("name", data.name)
         formData.append("email", data.email)
         formData.append("instagram", data.instagram)
