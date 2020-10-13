@@ -54,21 +54,53 @@
     border: 2px solid $secondary-accent;
   }
 }
+
 .btn-info {
   @extend .btn;
-  color: $text;
+  color: $secondary-accent;
   background-color: $primary-bg;
-  border: 2px solid $text;
-  padding: 0 1rem;
+  border: 2px solid $secondary-accent;
+  padding: 0.25rem 1.25rem;
+  height: 48px;
+  font-size: $standard-text;
+
+  transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -ms-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
 
   &:hover,
   &:focus {
-    cursor: default;
-    transform: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+  }
+}
+.btn-cta {
+  @extend .btn;
+  color: $text;
+  background-color: $secondary-accent;
+  border: 2px solid $secondary-accent;
+  padding: 0.25rem 1.25rem;
+  font-size: $standard-text;
+  height: 48px;
+
+  transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -ms-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
   }
 }
 

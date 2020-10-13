@@ -4,31 +4,184 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 4rem 0 2rem 0;
   width: 100%;
-  height: 425px;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  margin-bottom: 2rem;
+  height: 450px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  overflow: hidden;
 
-  &-img {
-    object-fit: cover;
-    object-position: center;
+  // &-img  {
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // height: 100%;
+  // width: 100%;
+  // border-radius: 7px;
+  // -webkit-border-radius: 7px;
+  // -moz-border-radius: 7px;
+  // -ms-border-radius: 7px;
+  // -o-border-radius: 7px;
+  // }
+
+  &-content {
+    background-attachment: unset;
+    background-repeat: no-repeat;
+    background-position: center;
+    // Careful with auto here
+    background-size: auto;
     height: 100%;
     width: 100%;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    margin: 0;
+    padding: 0.5rem 0 0 14rem;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    overflow: hidden;
+
+    &-title {
+      font-size: $giant-text;
+      font-weight: $standard-text-weight;
+      overflow: hidden;
+      margin: 2.5rem 0 2rem 0;
+      width: 75%;
+    }
+    &-subtitle {
+      font-size: $medium-text;
+      font-weight: $medium-text-weight;
+      color: $secondary-accent;
+      overflow: hidden;
+      width: 75%;
+      margin: 0 0 2rem 0;
+    }
+
+    &-btn-group {
+      margin: 0 0 0 0;
+      width: 90%;
+
+      button {
+        margin-bottom: 1rem;
+      }
+
+      button:first-of-type {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+// Quick fix for spacing issue on ultra wides
+@media only screen and (max-width: 1600px) {
+  .banner {
+    &-content {
+      padding: 0.5rem 0 0 2rem;
+      &-title {
+        width: 95%;
+        margin: 1rem 0 2rem 0;
+      }
+      &-subtitle {
+        width: 95%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .banner {
+    &-content {
+      padding: 1rem 0 0 1rem;
+      &-title {
+        font-size: calc(#{$large-text + 0.5rem});
+        width: 90%;
+      }
+      &-subtitle {
+        font-size: calc(#{$medium-text - 0.25rem});
+        width: 90%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .banner {
+    height: 390px;
+    &-content {
+      padding: 0 0 0 1.2rem;
+      background-position-x: right;
+
+      &-title {
+        font-size: calc(#{$large-text + 0.25rem});
+        width: 95%;
+      }
+      &-subtitle {
+        font-size: calc(#{$standard-text + 0.4rem});
+        width: 90%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .banner {
+    height: 325px;
+    &-content {
+      padding: 0 0 0 1rem;
+      background-size: cover;
+
+      &-title {
+        font-size: $large-text;
+        width: 95%;
+      }
+      &-subtitle {
+        font-size: calc(#{$standard-text + 0.2rem});
+        width: 90%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner {
+    height: 350px;
+    &-content {
+      &-title {
+        width: 100%;
+      }
+      &-subtitle {
+        width: 100%;
+        margin-bottom: 1.25rem;
+      }
+
+      &-btn-group {
+        button {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 400px) {
   .banner {
-    height: 350px;
+    height: 390px;
+
+    &-content {
+      &-title {
+        margin: 0.5rem 0;
+      }
+      &-subtitle {
+        margin-bottom: 0.4rem;
+      }
+
+      &-btn-group {
+        width: 100%;
+
+        button {
+          height: 42px;
+          padding: 0.1rem 0.75rem;
+        }
+      }
+    }
   }
 }
