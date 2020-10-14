@@ -4,60 +4,38 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 4rem 0 2rem 0;
-  width: 100%;
+  margin: 3.5rem 0 2rem 0;
+  width: 100vw;
   height: 450px;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
   overflow: hidden;
-
-  // &-img  {
-  // background-attachment: fixed;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-  // height: 100%;
-  // width: 100%;
-  // border-radius: 7px;
-  // -webkit-border-radius: 7px;
-  // -moz-border-radius: 7px;
-  // -ms-border-radius: 7px;
-  // -o-border-radius: 7px;
-  // }
 
   &-content {
     background-attachment: unset;
     background-repeat: no-repeat;
     background-position: center;
-    // Careful with auto here
-    background-size: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0.5rem 0 0 14rem;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+
     overflow: hidden;
 
     &-title {
       font-size: $giant-text;
       font-weight: $standard-text-weight;
-      overflow: hidden;
-      margin: 2.5rem 0 2rem 0;
-      width: 75%;
+      margin-bottom: 2rem;
+      width: 60%;
     }
     &-subtitle {
       font-size: $medium-text;
       font-weight: $medium-text-weight;
       color: $secondary-accent;
-      overflow: hidden;
-      width: 75%;
+      width: 60%;
       margin: 0 0 2rem 0;
     }
 
@@ -75,32 +53,16 @@
     }
   }
 }
-// Quick fix for spacing issue on ultra wides
-@media only screen and (max-width: 1600px) {
-  .banner {
-    &-content {
-      padding: 0.5rem 0 0 2rem;
-      &-title {
-        width: 95%;
-        margin: 1rem 0 2rem 0;
-      }
-      &-subtitle {
-        width: 95%;
-      }
-    }
-  }
-}
+
 @media only screen and (max-width: 1200px) {
   .banner {
     &-content {
-      padding: 1rem 0 0 1rem;
       &-title {
-        font-size: calc(#{$large-text + 0.5rem});
-        width: 90%;
+        width: 75%;
       }
       &-subtitle {
         font-size: calc(#{$medium-text - 0.25rem});
-        width: 90%;
+        width: 75%;
       }
     }
   }
@@ -109,7 +71,6 @@
   .banner {
     height: 390px;
     &-content {
-      padding: 0 0 0 1.2rem;
       background-position-x: right;
 
       &-title {
@@ -127,7 +88,6 @@
   .banner {
     height: 325px;
     &-content {
-      padding: 0 0 0 1rem;
       background-size: cover;
 
       &-title {
@@ -146,10 +106,11 @@
     height: 350px;
     &-content {
       &-title {
-        width: 100%;
+        width: 98%;
+        margin: 1.5rem 0 2rem 0;
       }
       &-subtitle {
-        width: 100%;
+        width: 95%;
         margin-bottom: 1.25rem;
       }
 
@@ -171,7 +132,7 @@
         margin: 0.5rem 0;
       }
       &-subtitle {
-        margin-bottom: 0.4rem;
+        margin-bottom: 1rem;
       }
 
       &-btn-group {
