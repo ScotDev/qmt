@@ -17,7 +17,7 @@ export default function Banner({ banner }) {
         <div className="banner">
             {/* <a href={baseRef.promo_link} alt={bannerAlt} className="banner-img"> */}
             <div className="banner-content" style={{ backgroundImage: `url(${banner_img})` }}>
-                <h1 className="banner-content-title">Welcome to the Quarantine Mixtape</h1>
+                <h1 className="banner-content-title">Welcome to The Quarantine Mixtape</h1>
                 <h2 className="banner-content-subtitle">Promoting small and unsigned artists</h2>
 
                 <div className="banner-content-btn-group">
