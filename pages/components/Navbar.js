@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="nav-brand"><Link href="/"><a>QMT</a></Link></div>
+            <div className="nav-brand"><Link href="/"><a>TQM</a></Link></div>
             <ul className="nav-links">
                 <li className="nav-link"><Link href="/"><a>Home</a></Link></li>
                 <li className="nav-link"><Link href="/reviews"><a>Reviews</a></Link></li>
