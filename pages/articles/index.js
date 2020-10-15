@@ -22,11 +22,10 @@ export default function articles({ articles, page, numberOfArticles }) {
     const router = useRouter();
     const lastPage = Math.ceil(numberOfArticles / 10)
 
-    if (!articles) {
-        return <Error statusCode={404}></Error>
+    if (articles === undefined || articles.length == 0) {
+        return <Error statusCode={204} errorTitle={"Looks like there's nothing here yet!"}></Error>
     }
     return (<>
-
         <NextSeo {...pageSEO}></NextSeo>
 
         <div className="articles">

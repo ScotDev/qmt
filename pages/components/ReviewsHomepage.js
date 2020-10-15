@@ -3,7 +3,7 @@ import Moment from 'react-moment';
 import Img from './Img'
 
 export default function Reviews_homepage({ reviews }) {
-    if (!reviews) {
+    if (reviews === undefined || reviews.length == 0) {
         console.log("No review prop available")
         return null
     }

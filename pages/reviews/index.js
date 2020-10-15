@@ -22,8 +22,8 @@ export default function reviews({ reviews, page, numberOfReviews }) {
     const router = useRouter();
     const lastPage = Math.ceil(numberOfReviews / 10)
 
-    if (!reviews) {
-        return <Error statusCode={404}></Error>
+    if (reviews === undefined || reviews.length == 0) {
+        return <Error statusCode={204} errorTitle={"Looks like there's nothing here yet!"}></Error>
     }
 
     return (<>

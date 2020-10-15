@@ -20,6 +20,8 @@ import Spotify from './components/Spotify';
 
 export default function Home({ articles, posts, banner, reviews }) {
 
+
+
   return (
     <>
       <Head>
@@ -29,8 +31,8 @@ export default function Home({ articles, posts, banner, reviews }) {
       <Header></Header>
       <Banner banner={banner}></Banner>
       <Instagram posts={posts}></Instagram>
-      <ArticlesHomepage articles={articles}></ArticlesHomepage>
       <ReviewsHomepage reviews={reviews}></ReviewsHomepage>
+      <ArticlesHomepage articles={articles}></ArticlesHomepage>
       <Spotify></Spotify>
 
     </>

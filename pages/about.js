@@ -2,7 +2,9 @@ import getConfig from 'next/config';
 import { NextSeo } from 'next-seo';
 
 import ReactMarkdown from 'react-markdown';
-import axios from 'axios'
+import axios from 'axios';
+
+import Error from './components/Error';
 
 
 export default function about({ data }) {
@@ -13,6 +15,10 @@ export default function about({ data }) {
             title: "About",
             description: "About The Quarantine Mixtape"
         }
+    }
+
+    if (!data || data === undefined || data.length == 0) {
+        return <Error statusCode={204} errorTitle={"Looks like there's nothing here yet!"}></Error>
     }
 
     return (
@@ -44,7 +50,6 @@ export async function getStaticProps() {
             revalidate: 1
         }
     } catch (error) {
-        console.log(error)
         return {
             props: {},
             revalidate: 1
