@@ -82,7 +82,7 @@ export default function ReactHookForm() {
         formData.append("music", data.music)
         formData.append("signed", data.signed)
         formData.append("promotion", data.promotion)
-        formData.append("description", data.promotion)
+        formData.append("description", data.description)
 
         if (fileErrors) {
             setafterSubmitMsg('Please add a smaller file')
