@@ -89,6 +89,7 @@ export default function ReactHookForm() {
             setdisableBtn(false)
             setloading(false)
         }
+        // Submit count soft limit to be developed
         // else if (sessionEmail == data.email) {
         //     setafterSubmitMsg('Submission limit per session is 1')
         //     setdisableBtn(false)
@@ -177,7 +178,6 @@ export default function ReactHookForm() {
                         }}></input>
                     </div>
 
-                    {/* <p className="file-info">{fileName ? fileName : "No file selected. File size limit is 5 MB"} */}
                     <p className="file-info">{fileName} {fileSize === null && " File size limit is 5 MB"}
                         {fileErrors ? <i className="icon-cross"></i> : <i className="icon-tick"></i>}
 
@@ -190,8 +190,6 @@ export default function ReactHookForm() {
                 </fieldset>
 
                 <button type="submit" className="btn-primary" disabled={disableBtn}>Submit</button>
-
-
 
             </form>
 
