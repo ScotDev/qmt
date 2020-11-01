@@ -25,7 +25,7 @@ export default function Article_post({ data }) {
         if (!rawText) {
             minutes = 0
         } else if (totalWordCount <= avgWordsPerMinute) {
-            minutes = 1;
+            minutes = 2;
         } else {
             minutes = totalWordCount / avgWordsPerMinute;
         }
