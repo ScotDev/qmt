@@ -129,13 +129,21 @@
     }
 
     a {
-      color: $primary-accent;
-      border-bottom: 1px solid $primary-accent;
+      color: $secondary-accent;
+      border-bottom: 1px solid $secondary-accent;
       &:hover,
       &:focus {
-        color: $secondary-accent;
-        border-bottom: 1px solid $secondary-accent;
+        color: $primary-accent;
+        border-bottom: 1px solid $primary-accent;
       }
+    }
+    // This allows a colour distinction via the markdown editor in the CMS
+    h6 {
+      font-size: $standard-text;
+      color: $primary-accent;
+      border-left: 5px solid $text;
+      padding: 1rem 0 1rem 1.5rem;
+      margin-left: 1.5rem;
     }
   }
 

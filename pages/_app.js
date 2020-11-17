@@ -18,8 +18,6 @@ import Credits from './components/Credits';
 
 import SEO from '../next-seo.config';
 
-// import 'lazysizes/plugins/attrchange/ls.attrchange';
-
 
 export default function MyApp({ Component, pageProps }) {
 
