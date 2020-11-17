@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 
+import { motion } from "framer-motion"
+
 import ReactMarkdown from 'react-markdown';
 
 import Error from './Error';
@@ -50,7 +52,7 @@ export default function Article_post({ data }) {
     }
 
     return (
-        <div className="post" key={data.id}>
+        <motion.div className="post" key={data.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h1 className="post-title">{data.title}</h1>
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <h2 className="post-description">{data.description_preview}</h2>
@@ -79,6 +81,6 @@ export default function Article_post({ data }) {
                 </div>
             </div>
             <ShareGroup title={data.title}></ShareGroup>
-        </div>
+        </motion.div>
     )
 }

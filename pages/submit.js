@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import { motion } from "framer-motion"
 
 import ReactHookForm from './components/Functional/ReactHookForm'
 
@@ -17,9 +18,9 @@ export default function submit() {
 
         <NextSeo {...pageSEO}></NextSeo>
 
-        <div className="page-intro">
+        <motion.div className="page-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h1 className="page-title">Submit Music for Review</h1>
-        </div>
+        </motion.div>
         <ReactHookForm></ReactHookForm>
 
     </>

@@ -3,6 +3,8 @@ import getConfig from 'next/config';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 
+import { motion } from "framer-motion"
+
 import axios from 'axios';
 import Moment from 'react-moment';
 
@@ -30,7 +32,7 @@ export default function reviews({ reviews, page, numberOfReviews }) {
 
         <NextSeo {...pageSEO}></NextSeo>
 
-        <div className="review">
+        <motion.div className="review" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h1 className="page-title">Reviews</h1>
             <div className="review-grid">
 
@@ -49,7 +51,7 @@ export default function reviews({ reviews, page, numberOfReviews }) {
 
             </div>
 
-        </div>
+        </motion.div>
         <div className="btn-group">
             <button className={page <= 1 ? "btn-disabled" : "btn-primary"} disabled={page <= 1} onClick={() => router.push(`/reviews?page=${page - 1}`)}>Previous</button>
 

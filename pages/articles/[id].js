@@ -1,6 +1,7 @@
 import getConfig from 'next/config';
 import { NextSeo } from 'next-seo';
 
+
 import axios from 'axios';
 import Moment from 'react-moment';
 

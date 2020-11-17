@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers';
 import getConfig from 'next/config';
 import * as yup from "yup";
 
+import { motion } from "framer-motion"
+
 import Loading from '../Helpers/LoadingSmall'
 
 export default function ReactHookForm() {
@@ -117,7 +119,7 @@ export default function ReactHookForm() {
 
     };
     return (
-        <div className="form-wrapper">
+        <motion.div className="form-wrapper" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {/* <h2 className="form-title">Send us your music</h2> */}
             <p className="form-text">We want to hear from you</p>
             <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
@@ -196,6 +198,6 @@ export default function ReactHookForm() {
             <p className="after-submit-msg">{afterSubmitMsg}</p>
 
             {loading && <Loading></Loading>}
-        </div>
+        </motion.div>
     );
 }

@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo';
 
 import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
+import { motion } from "framer-motion"
 
 import Error from './components/Error';
 
@@ -25,10 +26,10 @@ export default function about({ data }) {
         <>
             <NextSeo {...pageSEO}></NextSeo>
 
-            <div className="page-intro">
+            <motion.div className="page-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
                 {data ? <ReactMarkdown source={data.text} className="page-description"></ReactMarkdown> : null}
-            </div>
+            </motion.div>
         </>
     )
 }
