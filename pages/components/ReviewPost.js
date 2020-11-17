@@ -71,9 +71,9 @@ export default function Article_post({ data }) {
 
                     {data.artist_spotify_url && <p>Stream {data.artist} on <a href={data.artist_spotify_url}>Spotify</a></p>}
 
-                    {data.artist_website && <p>Find out more about {data.artist}<a href={data.artist_website}> here</a></p>}
+                    {data.artist_website && <p><a href={data.artist_website}>Find out more about {data.artist}</a></p>}
 
-                    {data.guest_author_instagram && <p>For more from {data.guest_author_name} read <a href={data.guest_author_instagram}>here</a></p>}
+                    {data.guest_author_instagram && <p>For more from {data.guest_author_name} read <a href={data.guest_author_instagram}>have a look here</a></p>}
 
                 </div></div>
             <ShareGroup title={data.title}></ShareGroup>
