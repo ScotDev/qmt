@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link'
 
+import { motion } from "framer-motion"
+
 
 export default function Banner({ banner }) {
 
@@ -14,7 +16,7 @@ export default function Banner({ banner }) {
     // const bannerAlt = baseRef.title
 
     return (
-        <div className="banner">
+        <motion.div className="banner" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {/* <a href={baseRef.promo_link} alt={bannerAlt} className="banner-img"> */}
             <div className="banner-content" style={{ backgroundImage: `url(${banner_img})` }}>
                 <h1 className="banner-content-title">Welcome to The Quarantine Mixtape</h1>
@@ -25,6 +27,6 @@ export default function Banner({ banner }) {
                     <Link href="/about"><button className="btn-info">About us</button></Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
