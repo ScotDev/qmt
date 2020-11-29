@@ -7,6 +7,8 @@ import ReactMarkdown from 'react-markdown';
 
 import Error from './Error';
 import Img from './Img';
+import Image from './Image'
+import AuthorIcon from './Helpers/AuthorIcon';
 import ShareGroup from './ShareGroup';
 
 export default function Article_post({ data }) {
@@ -52,19 +54,19 @@ export default function Article_post({ data }) {
     }
 
     return (
-        <motion.div className="post" key={data.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="post" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h1 className="post-title">{data.title}</h1>
             <h2 className="post-artist">{data.artist}</h2>
             <h3 className="post-description">{data.description_preview}</h3>
             <p className="post-read-time">{readTimeEstimate && readTimeEstimate + " min read"}</p>
             <div className="post-author-chip">
-                <Img imgClass={"post-author-chip-icon"} author={data.created_by.firstname} imgAlt="Author"></Img>
+                <AuthorIcon imgClass={"post-author-chip-icon"} author={data.created_by.firstname} imgAlt="Author"></AuthorIcon>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
                     <p className="post-author-chip-details-date"><Moment format="Do MMM, YYYY">{data.updatedAt}</Moment></p>
                 </div>
             </div>
-            <Img imgPath={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
+            <Image src={data.album_img.url} imgClass={"post-main-img"} imgAlt={imgAlt} thumb={data.album_img.formats.thumbnail.url} imgWidth={data.album_img.width}></Image>
             <div className="post-main-text">
                 <ReactMarkdown source={data.text}></ReactMarkdown>
                 <div className="post-bottom-details">

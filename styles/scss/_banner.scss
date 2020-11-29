@@ -22,8 +22,10 @@
     height: 100%;
     width: 100%;
     margin: 0;
-
     overflow: hidden;
+    animation: IMAGE-BLUR-UP;
+    -webkit-animation: IMAGE-BLUR-UP;
+    animation-duration: 1s;
 
     &-title {
       font-size: $giant-text;

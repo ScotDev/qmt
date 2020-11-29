@@ -6,7 +6,8 @@ import { motion } from "framer-motion"
 import ReactMarkdown from 'react-markdown';
 
 import Error from './Error';
-import Img from './Img';
+import Image from './Image';
+import AuthorIcon from './Helpers/AuthorIcon';
 import ShareGroup from './ShareGroup';
 
 export default function Article_post({ data }) {
@@ -59,13 +60,13 @@ export default function Article_post({ data }) {
             {/* Sponsored icon to be added into conditional */}
             <p className="post-category">{data.category}</p>
             <div className="post-author-chip">
-                <Img imgClass="post-author-chip-icon" author={data.created_by.firstname} imgAlt="Author"></Img>
+                <AuthorIcon imgClass="post-author-chip-icon" author={data.created_by.firstname} imgAlt="Author"></AuthorIcon>
                 <div className="post-author-chip-details">
                     <p className="post-author-chip-details-name">{data.created_by.firstname}</p>
                     <p className="post-author-chip-details-date"><Moment format="Do MMM, YYYY">{data.updatedAt}</Moment></p>
                 </div>
             </div>
-            <Img imgPath={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Img>
+            <Image src={data.main_img.url} imgClass={"post-main-img"} imgAlt={imgAlt}></Image>
             <div className="post-main-text">
                 <ReactMarkdown source={data.text}></ReactMarkdown>
                 <div className="post-bottom-details">

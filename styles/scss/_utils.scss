@@ -1,3 +1,21 @@
+@keyframes IMAGE-BLUR-UP {
+  0% {
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    opacity: 0;
+  }
+  100% {
+    filter: none;
+    -webkit-filter: none;
+    //opacity: 1;
+    transition: opacity 400ms ease 0ms;
+    -webkit-transition: opacity 400ms ease 0ms;
+    -moz-transition: opacity 400ms ease 0ms;
+    -ms-transition: opacity 400ms ease 0ms;
+    -o-transition: opacity 400ms ease 0ms;
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -52,6 +70,10 @@
     object-fit: cover;
     object-position: center;
     margin: 1rem 0;
+    overflow: hidden;
+    animation: IMAGE-BLUR-UP;
+    -webkit-animation: IMAGE-BLUR-UP;
+    animation-duration: 1s;
   }
 }
 
@@ -103,3 +125,38 @@
     font-size: $standard-text;
   }
 }
+
+.blur-up-image {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  animation: IMAGE-BLUR-UP;
+  -webkit-animation: IMAGE-BLUR-UP;
+  animation-duration: 1s;
+}
+
+// WIP responsive image component
+
+// .full {
+//   transition: opacity 400ms ease 0ms;
+//   animation: IMAGE-BLUR-UP;
+//   -webkit-animation: IMAGE-BLUR-UP;
+//   animation-duration: 1s;
+// }
+
+// .thumb {
+//   filter: blur(20px);
+//   transform: scale(1.1);
+// transition: visibility 0ms ease 400ms;
+// -webkit-transition: visibility 0ms ease 400ms;
+// -moz-transition: visibility 0ms ease 400ms;
+// -ms-transition: visibility 0ms ease 400ms;
+// -o-transition: visibility 0ms ease 400ms;
+// }
+
+// Find way to improve appearance of low res pictures. Blurring is a bit off
+// .undersized-image {
+//   // filter: blur(1.5px);
+//   // -webkit-filter: blur(1.5px);
+// }

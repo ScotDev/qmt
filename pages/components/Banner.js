@@ -1,22 +1,27 @@
 import React from 'react';
 import Link from 'next/link'
 
-import { motion } from "framer-motion"
+import Image from './Image';
+
+// import { motion } from "framer-motion"
 
 
-export default function Banner({ banner }) {
 
-    if (!banner) {
+
+export default function Banner(props) {
+
+    if (!props.banner) {
         return null
     }
 
-    const baseRef = banner[0]
+    const baseRef = props.banner[0]
     // const banner_img = baseRef.banner_img.formats.large.url;
-    const banner_img = baseRef.banner_img.url;
+    let banner_img = baseRef.banner_img.url;
+
     // const bannerAlt = baseRef.title
 
     return (
-        <motion.div className="banner" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div className="banner">
             {/* <a href={baseRef.promo_link} alt={bannerAlt} className="banner-img"> */}
             <div className="banner-content" style={{ backgroundImage: `url(${banner_img})` }}>
                 <h1 className="banner-content-title">Welcome to The Quarantine Mixtape</h1>
@@ -27,6 +32,6 @@ export default function Banner({ banner }) {
                     <Link href="/about"><button className="btn-info">About us</button></Link>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }

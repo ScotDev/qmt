@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Moment from 'react-moment';
-import Img from './Img'
+import Image from './Image'
 
 export default function Reviews_homepage({ reviews }) {
     if (reviews === undefined || reviews.length == 0) {
@@ -18,7 +18,7 @@ export default function Reviews_homepage({ reviews }) {
                 {reviews.map(item => (
                     <Link href="/reviews/[id]" as={`/reviews/${item.id}`} key={item.id}>
                         <div className="post-homepage-grid-card">
-                            <Img imgPath={item.album_img.url} imgClass={"card-img"} imgAlt={item.title}></Img>
+                            <Image src={item.album_img.url} imgClass={"card-img"} imgAlt={item.title}></Image>
                             <div className="post-homepage-grid-card-text card-text">
                                 <p className="card-text-title">{item.title}</p>
                                 <p className="card-text-subtitle">{item.artist}</p>

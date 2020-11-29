@@ -9,7 +9,8 @@ import axios from 'axios';
 import Moment from 'react-moment';
 
 import Error from '../components/Error'
-import Img from '../components/Img'
+// import Img from '../components/Img'
+import Image from '../components/Image'
 
 export default function reviews({ reviews, page, numberOfReviews }) {
     const pageSEO = {
@@ -39,7 +40,8 @@ export default function reviews({ reviews, page, numberOfReviews }) {
                 {reviews.map(item => (
                     <Link href="/reviews/[id]" as={`/reviews/${item.id}`} key={item.id}>
                         <div className="review-grid-card" key={item.id}>
-                            <Img imgPath={item.album_img.url} imgClass={"card-img"} imgAlt={item.title}></Img>
+                            {/* <Img imgPath={item.album_img.url} imgClass={"card-img"} imgAlt={item.title}></Img> */}
+                            <Image src={item.album_img.url} imgClass={"card-img"} imgAlt={item.title} thumb={item.album_img.formats.thumbnail.url}></Image>
                             <div className="review-grid-card-text">
                                 <p className="card-text-subtitle">{item.artist}</p>
                                 <p className="card-text-title">{item.title}</p>
