@@ -50,11 +50,11 @@ export default function ReactHookForm() {
 
 
     useEffect(() => {
-        if (fileSize > 5) {
-            setfileErrors("File size may not exceed 5 MB")
+        if (fileSize > 10) {
+            setfileErrors("File size may not exceed 10 MB")
             console.log(fileErrors)
             console.log(fileSize)
-        } else if (fileSize <= 5 || fileSize.length < 1) {
+        } else if (fileSize <= 10 || fileSize.length < 1) {
             setfileErrors(false)
         }
 
@@ -87,7 +87,7 @@ export default function ReactHookForm() {
         formData.append("description", data.description)
 
         if (fileErrors) {
-            setafterSubmitMsg('Please add a smaller file')
+            setafterSubmitMsg('Please select a smaller file')
             setdisableBtn(false)
             setloading(false)
         }
@@ -120,7 +120,6 @@ export default function ReactHookForm() {
     };
     return (
         <motion.div className="form-wrapper" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            {/* <h2 className="form-title">Send us your music</h2> */}
             <p className="form-text">We want to hear from you</p>
             <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                 <fieldset>

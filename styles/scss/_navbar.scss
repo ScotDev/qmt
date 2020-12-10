@@ -49,9 +49,7 @@
   display: none;
   flex-direction: column;
   justify-content: center;
-  display: none;
   overflow: hidden;
-
   -webkit-user-select: none;
   user-select: none;
 
@@ -71,7 +69,7 @@
     list-style-type: none;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
-    /*StopsflickeringoftextinSafari*/
+    /*Stops flickering text in Safari*/
     background-color: $primary-bg;
     border-bottom: 4px solid $secondary-accent;
     transform-origin: 0% 0%;
