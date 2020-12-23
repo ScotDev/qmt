@@ -11,21 +11,12 @@
   -moz-border-radius: $btn-radius;
   -ms-border-radius: $btn-radius;
   -o-border-radius: $btn-radius;
-  // transition: transform 0.2s ease;
-  // -webkit-transition: transform 0.2s ease;
-  // -moz-transition: transform 0.2s ease;
-  // -ms-transition: transform 0.2s ease;
-  // -o-transition: transform 0.2s ease;
+
   text-align: center;
   vertical-align: middle;
 
   &:hover,
   &:focus {
-    // transform: translateY(-3px);
-    // -webkit-transform: translateY(-3px);
-    // -moz-transform: translateY(-3px);
-    // -ms-transform: translateY(-3px);
-    // -o-transform: translateY(-3px);
     cursor: pointer;
   }
 }
@@ -34,7 +25,11 @@
   @extend .btn;
   color: $text;
   background-color: $primary-accent;
-
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s, border 0.2s;
   &:hover,
   &:focus {
     color: $primary-accent;
@@ -43,10 +38,14 @@
   }
 }
 .btn-secondary {
-  @extend .btn;
+  @extend.btn;
   color: $text;
   background-color: $secondary-accent;
-
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s, border 0.2s;
   &:hover,
   &:focus {
     color: $secondary-accent;
@@ -64,19 +63,17 @@
   height: 48px;
   font-size: $standard-text;
 
-  transition: transform 0.2s ease;
-  -webkit-transition: transform 0.2s ease;
-  -moz-transition: transform 0.2s ease;
-  -ms-transition: transform 0.2s ease;
-  -o-transition: transform 0.2s ease;
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s;
 
   &:hover,
   &:focus {
-    transform: translateY(-4px);
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
+    color: $text;
+    background-color: $secondary-accent;
+    border: 2px solid $text;
   }
 }
 .btn-cta {
@@ -87,20 +84,16 @@
   padding: 0.25rem 1.25rem;
   font-size: $standard-text;
   height: 48px;
-
-  transition: transform 0.2s ease;
-  -webkit-transition: transform 0.2s ease;
-  -moz-transition: transform 0.2s ease;
-  -ms-transition: transform 0.2s ease;
-  -o-transition: transform 0.2s ease;
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s;
+  -ms-transition: background-color 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s;
 
   &:hover,
   &:focus {
-    transform: translateY(-4px);
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
+    color: $secondary-accent;
+    background-color: $text;
   }
 }
 
