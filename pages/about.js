@@ -6,6 +6,7 @@ import axios from 'axios';
 import { motion } from "framer-motion"
 
 import Error from './components/Error';
+import Image from './components/Image';
 
 
 export default function about({ data }) {
@@ -26,10 +27,24 @@ export default function about({ data }) {
         <>
             <NextSeo {...pageSEO}></NextSeo>
 
-            <motion.div className="page-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
-                {data ? <ReactMarkdown source={data.text} className="page-description"></ReactMarkdown> : null}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <div className="page-intro">
+                    <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
+                </div>
+
+                <div className="about">
+
+                    <Image src={data.profile_image.url} imgClass={"profile-image"} imgAlt={"Profile of website owner"} thumb={data.profile_image.formats.thumbnail.url} imgWidth={data.profile_image.width}></Image>
+                    <div className="post-main-text">
+                        {data ? <ReactMarkdown source={data.text} ></ReactMarkdown> : null}
+                    </div>
+
+                    <Image src={data.final_image.url} imgClass={"final-image"} imgAlt={"Generic stage with dry ice"} thumb={data.final_image.formats.thumbnail.url} imgWidth={data.final_image.width}></Image>
+                </div>
             </motion.div>
+
+
+
         </>
     )
 }

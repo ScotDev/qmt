@@ -1,0 +1,94 @@
+@mixin Image($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+}
+
+.about {
+  @extend .post;
+  width: 100%;
+
+  // The default image styles for the about page differ from single posts
+  // as they are instagram sized
+  img {
+    @include Image($card-radius);
+    width: 50%;
+    // height: 30vw;
+    // max-height: 500px;
+    // max-width: 450px;
+    // Clean margin up with mixin + maths
+    margin: 2rem 25%;
+  }
+
+  img.profile-image {
+    @include Image(50%);
+    width: 350px;
+    height: 350px;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    // border: 3px solid $secondary-accent;
+    background-color: $secondary-accent;
+  }
+
+  img.final-image {
+    @include Image($card-radius);
+    width: 80%;
+    height: 450px;
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .about {
+    img {
+      width: 70%;
+      margin: 2rem 15%;
+    }
+
+    img.profile-image {
+      width: 300px;
+      height: 300px;
+      margin: 0 0 1rem 0;
+    }
+
+    img.final-image {
+      width: 100%;
+      max-height: 70vw;
+      margin: 2rem 0 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+    img {
+      width: 90%;
+      margin: 2rem 5%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .about {
+    img {
+      width: 40%;
+      // height: 80vw;
+      margin: 2rem 30%;
+    }
+
+    // img.profile-image {
+    //   width: 250px;
+    //   height: 250px;
+    // }
+
+    // img.final-image {
+    //   width: 100%;
+    //   margin: 1rem 0 3rem 0;
+    // }
+  }
+}
