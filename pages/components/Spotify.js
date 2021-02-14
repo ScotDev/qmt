@@ -4,10 +4,10 @@ export default function Spotify() {
 
     return (<>
         <div className="spotify">
-            <a className="section-title" href="https://open.spotify.com/user/lv5m4f490qhizetbv10ka61sl?si=XOV0rsXzT9G80-r4m3iepg" alt="Spotify profile">Playlist</a>
+            <a className="section-title" href="https://open.spotify.com/user/lv5m4f490qhizetbv10ka61sl?si=XOV0rsXzT9G80-r4m3iepg" alt="Spotify profile">Playlists</a>
             <div className="spotify-grid">
                 <div className="spotify-grid-item">
-                    <h3 className="spotify-embed-title">Playlists</h3>
+                    <h3 className="spotify-embed-title">Playlist</h3>
                     <iframe loading="lazy" className="spotify-embed" src="https://open.spotify.com/embed/playlist/1pUfcNaqfNUz4RZj92EQDR" frameBorder="0" allowtransparency="true" allow="encrypted-media" title="Spotify playlist" sandbox="allow-scripts"></iframe>
 
 
