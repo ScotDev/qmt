@@ -26,8 +26,8 @@ export default function Home({ articles, posts, banner, reviews }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/D_Bzg_Del8_400x400_1_8f2c6bd3ba.jpg" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://bucketeer-5a8ae918-5ea2-4eb8-aeb4-3d222713feda.s3.eu-west-1.amazonaws.com/D_Bzg_Del8_400x400_1_8f2c6bd3ba.jpg" /> */}
       </Head>
 
       <Header></Header>
