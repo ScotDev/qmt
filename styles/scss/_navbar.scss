@@ -30,6 +30,13 @@
       text-transform: uppercase;
       margin: 0 0 0 2rem;
       a {
+        border-bottom: 2px solid transparent;
+        transition: color ease 0.2s, border-bottom 0.2s;
+        -webkit-transition: color ease 0.2s, border-bottom 0.2s;
+        -moz-transition: color ease 0.2s, border-bottom 0.2s;
+        -ms-transition: color ease 0.2s, border-bottom 0.2s;
+        -o-transition: color ease 0.2s, border-bottom 0.2s;
+
         &:hover,
         &:focus {
           color: $primary-accent;
