@@ -28,9 +28,9 @@ export default function about({ data }) {
             <NextSeo {...pageSEO}></NextSeo>
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <div className="page-intro">
-                    <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
-                </div>
+                {/* <div className="page-intro"> */}
+                <h1 className="page-title">ABOUT THE QUARANTINE MIXTAPE</h1>
+                {/* </div> */}
 
                 <div className="about">
 

@@ -18,7 +18,7 @@ export default function submit() {
 
         <NextSeo {...pageSEO}></NextSeo>
 
-        <motion.div className="page-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h1 className="page-title">Submit Music for Review</h1>
             {/* <p className="page-description">Submissions are currently closed until 2021</p> */}
         </motion.div>
